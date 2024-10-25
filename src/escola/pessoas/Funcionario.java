@@ -6,6 +6,7 @@ import java.time.Period;
 public abstract class Funcionario extends Pessoa {
     private static int contador = 0;
     private int codigo;
+    private double salario;
 
     public Funcionario() {
         this.codigo = ++contador;
