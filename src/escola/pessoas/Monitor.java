@@ -1,5 +1,5 @@
 package escola.pessoas;
 
-public class Monitor extends Aluno{
+public class Monitor extends Aluno {
     Disciplina disciplinaMonitorada;
 }
