@@ -8,6 +8,8 @@ public abstract class Funcionario extends Pessoa {
     private int codigo;
     private double salario;
 
+
+
     public Funcionario() {
         this.codigo = ++contador;
     }
