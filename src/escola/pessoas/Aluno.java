@@ -4,10 +4,10 @@ import java.time.LocalDate;
 import escola.boletim.Boletim;
 import java.util.ArrayList;
 import escola.administracao.Turma;
+import escola.boletim.Nota;
 
 public class Aluno extends Pessoa {
     private String matricula;
-    private ArrayList<Boletim> notas;
     private double frequencia;
     private Turma turma;
     private Boletim boletim;
@@ -40,12 +40,12 @@ public class Aluno extends Pessoa {
         }
     }
 
-    public void calcularMedia() {
+    public double calcularMedia() {
         double soma = 0;
-        for (double nota : notas) {
-            soma = soma + nota;
+        for (Nota nota : boletim.getNotas()) {
+            soma = soma + nota.getValor();
         }
-        return soma / notas.size();
+        return soma / boletim.getNotas().size();
     }
 
 
@@ -57,13 +57,13 @@ public class Aluno extends Pessoa {
         this.matricula = matricula;
     }
 
-    public ArrayList<Boletim> getNotas() {
-        return notas;
+    public ArrayList<Nota> getNotas() {
+        return boletim.getNotas();
     }
 
-    public void setNotas(ArrayList<Boletim> notas) {
-        this.notas = notas;
-    }
+//    public void setNotas(ArrayList<Nota> notas) {
+//        this.notas = notas;
+//    }
 
     public double getFrequencia() {
         return frequencia;

@@ -1,27 +1,30 @@
 package escola.pessoas;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import escola.pessoas.Aluno;
 
 public class Responsavel extends Pessoa {
-    private ArrayList<Aluno> alunos;
 
-    public Aluno Responsavel(Aluno aluno) {
-        alunos.add(aluno);
+    public Responsavel(String nome, String CPF, LocalDate dataNascimento, String endereco, ArrayList<Aluno> alunos) {
+        super(nome, CPF, dataNascimento, endereco);
+        this.alunos = alunos;
     }
+
+    private ArrayList<Aluno> alunos;
 
     public void adicionarAluno(Aluno aluno) {
         alunos.add(aluno);
     }
 
     public void visualizarBoletim() {
-        for (aluno a : alunos) {
+        for (Aluno a : alunos) {
             a.visualizarBoletim();
         }
     }
 
     public void calcularMedia() {
-        for (aluno a : alunos) {
+        for (Aluno a : alunos) {
             a.calcularMedia();
         }
     }

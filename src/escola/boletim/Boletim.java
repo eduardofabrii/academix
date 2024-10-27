@@ -2,12 +2,15 @@ package escola.boletim;
 
 import escola.administracao.Disciplina;
 import escola.pessoas.Professor;
+
+import java.util.ArrayList;
 import java.util.List;
+import escola.boletim.Nota;
 
 public class Boletim  {
     private List<Disciplina> disciplinas;
     private double mediaFinal;
-    private List<Double> notas;
+    private ArrayList<Nota> notas;
 
 
     public double calcularMedia() {
@@ -16,12 +19,20 @@ public class Boletim  {
         }
 
         double soma = 0;
-        for (Double nota : notas) {
-            soma += nota;
+        for (Nota nota : notas) {
+            soma += nota.getValor();
         }
 
         mediaFinal = soma / notas.size();
         return mediaFinal;
+    }
+
+    public void registrarNota(Nota nota){
+
+    }
+
+    public ArrayList<Nota> getNotas() {
+        return notas;
     }
 
     // Getters e setters para as listas e a média final podem ser adicionados conforme necessário

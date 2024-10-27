@@ -2,10 +2,16 @@ package escola.pessoas;
 
 import escola.cantina.Produto;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Merendeiro extends Funcionario {
     private static ArrayList<Produto> estoque;
+
+    public Merendeiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, List<String> registrosPonto) {
+        super(nome, CPF, dataNascimento, endereco, codigo, salario, registrosPonto);
+    }
 
     public void criarNovoProduto(String nomeProduto, String descricaoProduto) {
         estoque.add(new Produto(nomeProduto, descricaoProduto, 0));

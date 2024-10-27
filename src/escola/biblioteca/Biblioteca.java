@@ -1,6 +1,7 @@
 package escola.biblioteca;
 
 import java.util.ArrayList;
+import escola.sala.SalaBiblioteca;
 
 public class Biblioteca {
     private ArrayList<Livro> catalogo;

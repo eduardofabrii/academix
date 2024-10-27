@@ -1,5 +1,6 @@
 package escola.pessoas;
 
+import escola.administracao.Turma;
 import escola.boletim.Nota;
 import escola.administracao.Disciplina;
 import escola.administracao.Escola;
@@ -10,13 +11,6 @@ public class Professor extends Funcionario{
     private String registro;
     private double salario;
     private ArrayList<Disciplina> disciplinas;
-
-    public Professor(int codigo, double salario, String registro, ArrayList<Disciplina> disciplinas, double salario1) {
-        super(codigo, salario);
-        this.registro = registro;
-        this.disciplinas = disciplinas;
-        this.salario = salario1;
-    }
 
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String registro, ArrayList<Disciplina> disciplinas, double salario1) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);
@@ -32,9 +26,9 @@ public class Professor extends Funcionario{
     }
 
     public ArrayList<Nota> consultarNotas(Aluno aluno, Disciplina disciplina) {
-        ArrayList<Nota> notasDisciplina = new ArrayList<>();
-        for (Nota nota : aluno.getBoletim().notas) {
-            if (nota.getDisciplina == disciplina) {
+        ArrayList<Nota> notasDisciplina = new ArrayList<>(); //ArrayList para armazenar notas em relação a disciplina do professor
+        for (Nota nota : aluno.getBoletim().getNotas()) { // varrendo ArrayList das notas do aluno
+            if (nota.getDisciplina() == disciplina) {
                 notasDisciplina.add(nota);
             }
         }
@@ -42,8 +36,8 @@ public class Professor extends Funcionario{
     }
 
     public ArrayList<Aluno> consultarTurma(Escola escola, String nomeTurma){
-        for (Turma turma : escola.getListaTurma()){
-            if (turma.getNome.equals(nomeTurma)){
+        for (Turma turma : escola.getTurmas()){
+            if (turma.getNome().equals(nomeTurma)){
                 return turma.getListaAlunos();
             }
         }

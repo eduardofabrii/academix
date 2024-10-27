@@ -9,6 +9,7 @@ public class Escola {
     private ArrayList<Funcionario> funcionarios = new ArrayList<>();
     private ArrayList<Aluno> alunos = new ArrayList<>();
     private ArrayList<Disciplina> disciplinas = new ArrayList<>();
+    private ArrayList<Turma> turmas = new ArrayList<>();
 
     public void adicionarFuncionario(Funcionario f) {
         if (f != null) {
@@ -125,5 +126,9 @@ public class Escola {
             }
         }
         return null;
+    }
+
+    public ArrayList<Turma> getTurmas() {
+        return turmas;
     }
 }
