@@ -1,5 +1,7 @@
 package escola.boletim;
 
+
+
 public class Nota {
     private Disciplina disciplina;
     private Aluno aluno;

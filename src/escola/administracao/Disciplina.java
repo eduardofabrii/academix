@@ -83,14 +83,6 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
     }
 
-//    public Sala getSala() {
-//        return sala;
-//    }
-//
-//    public void setSala(Sala sala) {
-//        this.sala = sala;
-//    }
-
     public Professor getProfessor() {
         return professor;
     }

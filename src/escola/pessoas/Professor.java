@@ -1,13 +1,29 @@
 package escola.pessoas;
 
 import escola.boletim.Nota;
-
+import escola.administracao.Disciplina;
+import escola.administracao.Escola;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Professor extends Funcionario{
     private String registro;
     private double salario;
     private ArrayList<Disciplina> disciplinas;
+
+    public Professor(int codigo, double salario, String registro, ArrayList<Disciplina> disciplinas, double salario1) {
+        super(codigo, salario);
+        this.registro = registro;
+        this.disciplinas = disciplinas;
+        this.salario = salario1;
+    }
+
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String registro, ArrayList<Disciplina> disciplinas, double salario1) {
+        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        this.registro = registro;
+        this.disciplinas = disciplinas;
+        this.salario = salario1;
+    }
 
     public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor){
         Nota nota = new Nota(aluno, disciplina, valor);
