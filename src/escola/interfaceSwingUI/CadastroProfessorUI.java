@@ -1,0 +1,24 @@
+package escola.interfaceSwingUI;
+
+import javax.swing.*;
+
+public class CadastroProfessorUI {
+    private JPanel painelPrincipal;
+    private JPanel painelBase2;
+    private JPanel painelBase;
+    private JPanel painelTitulo;
+    private JLabel escolhasLabel;
+    private JLabel professorLabel;
+    private JButton cadastrarProfessor;
+    private JTextField textField1;
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Tela de Cadastro Professor");
+        frame.setContentPane((new CadastroProfessorUI()).painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 300);
+        frame.setVisible(true);
+    }
+}
