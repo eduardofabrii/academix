@@ -18,7 +18,7 @@ public abstract class Funcionario extends Pessoa {
 
     public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
         super(nome, CPF, dataNascimento, endereco);
-
+        this.codigo = ++contador;
     }
 
     public String baterPontoEntrada(Pessoa pessoa) {

@@ -13,7 +13,9 @@ public class EscolaApp {
     public static void main(String[] args) {
         Escola escola = new Escola();
 
-        Funcionario marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900, "Sim");
+        Funcionario marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900);
+
+        Funcionario pedro = new Professor("Pedro Silva", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900);
 
         Aluno eduardo = new Aluno("Eduardo Henrique Fabri", "13588182901", LocalDate.of(2006, 8, 23), "Roberto Vichinhenski");
 
@@ -25,7 +27,13 @@ public class EscolaApp {
         escola.adicionarAluno(eduardo);
         escola.adicionarFuncionario(marina);
         turmaA.adicionarProfessor((Professor) marina);
-        turmaA.
 
+        escola.listarFuncionarios();
+        escola.listarDisciplinas();
+        escola.listarAlunos();
+
+
+        System.out.println(        marina.getCodigo());
+        System.out.println(        pedro.getCodigo());
     }
 }

@@ -7,13 +7,11 @@ import escola.administracao.Escola;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Professor extends Funcionario{
-    private String registro;
+public class Professor extends Funcionario {
     private ArrayList<Disciplina> disciplinas;
 
-    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario, String registro) {
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
         super(nome, CPF, dataNascimento, endereco, salario);
-        this.registro = registro;
     }
 
     public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor) {
