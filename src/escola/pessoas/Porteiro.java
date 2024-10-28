@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Porteiro extends Funcionario {
 
-    public Porteiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, List<String> registrosPonto) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario, registrosPonto);
+    public Porteiro(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
     }
 
     public void registrarEntrada(Pessoa pessoa) {
@@ -17,13 +17,13 @@ public class Porteiro extends Funcionario {
 
     }
 
-    public List<registroEntrada> consultarRegistroEntrada() {
-        //implementar
-    }
-
-    public List<registroSaida> consultarRegistroSaida() {
-        //implementar
-    }
+//    public List<registroEntrada> consultarRegistroEntrada() {
+//        //implementar
+//    }
+//
+//    public List<registroSaida> consultarRegistroSaida() {
+//        //implementar
+//    }
 
     public void reportarOcorrencia(String ocorrencia) {
     }

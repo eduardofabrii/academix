@@ -9,8 +9,8 @@ import java.util.List;
 public class Merendeiro extends Funcionario {
     private static ArrayList<Produto> estoque;
 
-    public Merendeiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, List<String> registrosPonto) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario, registrosPonto);
+    public Merendeiro(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
     }
 
     public void criarNovoProduto(String nomeProduto, String descricaoProduto) {

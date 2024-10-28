@@ -3,7 +3,6 @@ package escola.pessoas;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,27 +12,14 @@ public abstract class Funcionario extends Pessoa {
     private double salario;
     private List<String> registrosPonto;
 
-<<<<<<< HEAD
-    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, List<String> registrosPonto) {
-        super(nome, CPF, dataNascimento, endereco);
-        this.codigo = codigo;
-        this.salario = salario;
-        this.registrosPonto = registrosPonto;
+    public Funcionario() {
+        this.codigo = ++contador;
     }
 
-    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
+    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
         super(nome, CPF, dataNascimento, endereco);
-        this.codigo = codigo;
-        this.salario = salario;
+
     }
-
-
-//=======
-//    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco) {
-//        super(nome, CPF, dataNascimento, endereco);
-//>>>>>>> bebce82beab6621a3b36e6a63f90ad018171407b
-//        this.codigo = ++contador;
-//    }
 
     public String baterPontoEntrada(Pessoa pessoa) {
         String mascara = "dd 'de' MMMM 'de' yyyy ' | Horário:' HH:mm";
@@ -66,32 +52,11 @@ public abstract class Funcionario extends Pessoa {
         return codigo;
     }
 
-<<<<<<< HEAD
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    public static int getContador() {
-        return contador;
-    }
-
-    public static void setContador(int contador) {
-        Funcionario.contador = contador;
-=======
     public List<String> getRegistrosPonto() {
         return registrosPonto;
     }
 
     public void setRegistrosPonto(List<String> registrosPonto) {
         this.registrosPonto = registrosPonto;
->>>>>>> bebce82beab6621a3b36e6a63f90ad018171407b
     }
 }

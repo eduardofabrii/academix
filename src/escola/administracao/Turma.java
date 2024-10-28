@@ -11,15 +11,14 @@ public class Turma {
     private ArrayList<Aluno> listaAlunos ;
     private List listaDisciplinas;
 
-    public void verAlunos(){};
-    public void adicionarProfessor(){};
-
-    public Turma(ArrayList<Aluno> listaAlunos, String nome, int ano, List listaDisciplinas) {
-        this.listaAlunos = listaAlunos;
+    public Turma(String nome, int ano) {
         this.nome = nome;
         this.ano = ano;
-        this.listaDisciplinas = listaDisciplinas;
     }
+
+    public void verAlunos(){};
+
+    public void adicionarProfessor(Professor professor){};
 
     public String getNome() {
         return nome;

@@ -11,7 +11,7 @@ public class Faxineiro extends Funcionario {
        System.out.println("Implementar dps"); //arrumar depois
    }
 
-    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, List<String> registrosPonto) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario, registrosPonto);
+    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
     }
 }
