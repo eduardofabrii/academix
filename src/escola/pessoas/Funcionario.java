@@ -3,7 +3,6 @@ package escola.pessoas;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -13,9 +12,13 @@ public abstract class Funcionario extends Pessoa {
     private double salario;
     private List<String> registrosPonto;
 
-    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco) {
-        super(nome, CPF, dataNascimento, endereco);
+    public Funcionario() {
         this.codigo = ++contador;
+    }
+
+    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco);
+
     }
 
     public String baterPontoEntrada(Pessoa pessoa) {

@@ -11,6 +11,9 @@ public abstract class Pessoa {
     private String endereco;
     private ArrayList<Livro> livrosEmprestados;
 
+    public Pessoa() {
+    }
+
     public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco) {
         this.nome = nome;
         this.CPF = CPF;

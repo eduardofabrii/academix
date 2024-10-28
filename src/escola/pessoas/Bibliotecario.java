@@ -3,12 +3,14 @@ package escola.pessoas;
 import escola.biblioteca.Biblioteca;
 import escola.biblioteca.Livro;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Bibliotecario extends Funcionario {
     Biblioteca biblioteca;
 
-    public Bibliotecario(Biblioteca biblioteca) {
+    public Bibliotecario(String nome, String CPF, LocalDate dataNascimento, String endereco, Biblioteca biblioteca, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
         this.biblioteca = biblioteca;
     }
 

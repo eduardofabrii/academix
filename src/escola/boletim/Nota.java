@@ -1,5 +1,8 @@
 package escola.boletim;
 
+import escola.administracao.Disciplina;
+import escola.pessoas.Aluno;
+
 public class Nota {
     private Disciplina disciplina;
     private Aluno aluno;
@@ -14,8 +17,8 @@ public class Nota {
     @Override
     public String toString() {
         return  "Disciplina: " + disciplina +
-                "- aluno: " + aluno +
-                "- nota:" + valor;
+                ", Aluno: " + aluno +
+                ", Nota:" + valor;
     }
 
     public double getValor() {

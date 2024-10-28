@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Biblioteca {
     private ArrayList<Livro> catalogo;
-    private ArrayList<SalaBiblioteca> listaSalas;
+//    private ArrayList<SalaBiblioteca> listaSalas;
     private ArrayList<Livro> livrosEmprestados;
 
     public void adicionarLivro(Livro livro){
