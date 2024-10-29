@@ -11,6 +11,7 @@ public class Aluno extends Pessoa {
     private double frequencia;
     private Turma turma;
     private Boletim boletim;
+    private boolean matriculado; // Adicionando o atributo booleano
 
     public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco) {
         super(nome, CPF, dataNascimento, endereco);
@@ -24,7 +25,7 @@ public class Aluno extends Pessoa {
                 ", Turma: " + getTurma();
     }
 
-  public void visualizarBoletim() {
+    public void visualizarBoletim() {
         if (boletim != null) {
             System.out.println(boletim);
         } else {
@@ -48,6 +49,15 @@ public class Aluno extends Pessoa {
         return soma / boletim.getNotas().size();
     }
 
+    // Método que verifica se o aluno está matriculado
+    public boolean isMatriculado() {
+        return matriculado;
+    }
+
+    // Método para definir o status de matrícula do aluno
+    public void setMatriculado(boolean matriculado) {
+        this.matriculado = matriculado;
+    }
 
     public String getMatricula() {
         return matricula;
@@ -60,10 +70,6 @@ public class Aluno extends Pessoa {
     public ArrayList<Nota> getNotas() {
         return boletim.getNotas();
     }
-
-//    public void setNotas(ArrayList<Nota> notas) {
-//        this.notas = notas;
-//    }
 
     public double getFrequencia() {
         return frequencia;

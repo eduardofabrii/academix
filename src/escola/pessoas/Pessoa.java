@@ -10,6 +10,7 @@ public abstract class Pessoa {
     private LocalDate dataNascimento;
     private String endereco;
     private ArrayList<Livro> livrosEmprestados;
+    private String numero;
 
     public Pessoa() {
     }
@@ -20,6 +21,7 @@ public abstract class Pessoa {
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
         this.livrosEmprestados = new ArrayList<>();
+        this.numero = numero;
     }
 
     public String exibirInformacoes() {
@@ -80,5 +82,13 @@ public abstract class Pessoa {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 }

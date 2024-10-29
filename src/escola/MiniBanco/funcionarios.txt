@@ -1,0 +1,12 @@
+Nome: Marina de Lara
+CPF: 1234567890
+Data de Nascimento: 12/04/1998
+Endereço: Rua das Flores
+Salário: 0.0
+----
+Nome: Carlos Oliveira
+CPF: 12345678900
+Data de Nascimento: 10/05/1985
+Endereço: Rua das Flores, 100
+Salário: 0.0
+----

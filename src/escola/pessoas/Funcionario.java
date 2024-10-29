@@ -59,4 +59,12 @@ public abstract class Funcionario extends Pessoa {
     public void setRegistrosPonto(List<String> registrosPonto) {
         this.registrosPonto = registrosPonto;
     }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public static int getContador() {
+        return contador;
+    }
 }

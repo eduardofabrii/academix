@@ -1,39 +1,31 @@
 package escola.principal;
 
+import escola.MiniBanco.ArquivoTxt;
 import escola.administracao.Disciplina;
 import escola.administracao.Escola;
 import escola.administracao.Turma;
-import escola.pessoas.Aluno;
-import escola.pessoas.Funcionario;
-import escola.pessoas.Professor;
+import escola.pessoas.*;
 
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class EscolaApp {
     public static void main(String[] args) {
-        Escola escola = new Escola();
+        Professor marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900);
+        Faxineiro carlos = new Faxineiro("Carlos Oliveira", "12345678900", LocalDate.of(1985, 5, 10), "Rua das Flores, 100", 1500.0);
 
-        Funcionario marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900);
+        ArquivoTxt arquivo = new ArquivoTxt("funcionarios.txt");
 
-        Funcionario pedro = new Professor("Pedro Silva", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900);
+        try {
+            arquivo.salvarFuncionario(marina);
+            arquivo.salvarFuncionario(carlos);
+            System.out.println("Funcionários salvos com sucesso!");
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar funcionários: " + e.getMessage());
+        }
 
-        Aluno eduardo = new Aluno("Eduardo Henrique Fabri", "13588182901", LocalDate.of(2006, 8, 23), "Roberto Vichinhenski");
-
-        Disciplina disciplina = new Disciplina("Programação Orientada a Objetos", 120, (Professor) marina);
-
-        Turma turmaA = new Turma("A", 3);
-
-        escola.adicionarDisciplina(disciplina);
-        escola.adicionarAluno(eduardo);
-        escola.adicionarFuncionario(marina);
-        turmaA.adicionarProfessor((Professor) marina);
-
-        escola.listarFuncionarios();
-        escola.listarDisciplinas();
-        escola.listarAlunos();
-
-
-        System.out.println(        marina.getCodigo());
-        System.out.println(        pedro.getCodigo());
     }
 }
