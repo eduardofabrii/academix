@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class Bibliotecario extends Funcionario {
     private Biblioteca biblioteca;
 
-    public Bibliotecario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, Biblioteca biblioteca) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+    public Bibliotecario(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario, Biblioteca biblioteca) {
+        super(nome, CPF, dataNascimento, endereco, salario);
         this.biblioteca = biblioteca;
     }
 

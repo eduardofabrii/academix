@@ -1,21 +1,36 @@
 package escola.pessoas;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
-import escola.registro.RegistroLimpeza;
 
 public class Faxineiro extends Funcionario {
-    public void reportarProblemasDeManutencao(String problema){};
+    private List<String> problemasReportados; // Lista para armazenar problemas reportados
 
-    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
+    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
+        this.problemasReportados = new ArrayList<>(); // Inicializa a lista de problemas
+    }
+  
+      public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);
     }
 
-    public void consultarRegistroLimpeza(){
-       System.out.println("Implementar dps"); //arrumar depois
-   }
 
-    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, List<String> registrosPonto) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario, registrosPonto);
+    public void reportarProblemasDeManutencao(String problema) {
+        problemasReportados.add(problema); // Adiciona o problema à lista
+        System.out.println("Problema reportado: " + problema);
+    }
+
+    public void consultarRegistroLimpeza() {
+        if (problemasReportados.isEmpty()) {
+            System.out.println("Nenhum problema de manutenção reportado até o momento.");
+        } else {
+            System.out.println("Problemas reportados:");
+            for (String problema : problemasReportados) {
+                System.out.println("- " + problema);
+            }
+        }
     }
 }
+

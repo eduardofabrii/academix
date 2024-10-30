@@ -34,5 +34,8 @@ public abstract class Sala {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public abstract boolean verificarDisponibilidade();
+    public abstract void reservarSala();
 }
 

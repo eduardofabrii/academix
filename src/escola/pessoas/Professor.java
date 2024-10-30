@@ -10,6 +10,10 @@ import java.util.ArrayList;
 public class Professor extends Funcionario {
     private ArrayList<Disciplina> disciplinas;
 
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
+    }
+
     public Professor() {
     }
 
@@ -28,7 +32,7 @@ public class Professor extends Funcionario {
         return this.getNome();
     }
 
-    public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor){
+    public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor) {
         Nota nota = new Nota(aluno, disciplina, valor);
         aluno.getBoletim().registrarNota(nota);
 //        colocando nota no arraylist do boletim
