@@ -15,8 +15,6 @@ public abstract class Pessoa {
     public Pessoa() {
     }
 
-    public Pessoa() {
-    }
 
     public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco) {
         this.nome = nome;

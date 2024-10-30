@@ -9,10 +9,9 @@ public class ArquivoTxt {
     private String caminhoArquivo;
 
     public ArquivoTxt(String nomeArquivo) {
-        this.caminhoArquivo = "src/escola/MiniBanco/" + nomeArquivo;  // Define o caminho dentro da pasta src/escola/MiniBanco
+        this.caminhoArquivo = "src/escola/MiniBanco/" + nomeArquivo;
     }
 
-    // Método para formatar dados de um funcionário
     private String formatarFuncionario(Funcionario funcionario) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return "Nome: " + funcionario.getNome() + "\n" +
@@ -23,7 +22,6 @@ public class ArquivoTxt {
                 "----";
     }
 
-    // Método para salvar um funcionário no arquivo
     public void salvarFuncionario(Funcionario funcionario) throws IOException {
         String funcionarioFormatado = formatarFuncionario(funcionario);
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo, true))) {

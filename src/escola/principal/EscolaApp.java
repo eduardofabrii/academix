@@ -14,8 +14,8 @@ import java.util.Date;
 
 public class EscolaApp {
     public static void main(String[] args) {
-        Professor marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900);
-        Faxineiro carlos = new Faxineiro("Carlos Oliveira", "12345678900", LocalDate.of(1985, 5, 10), "Rua das Flores, 100", 1500.0);
+        Professor marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 1, 14900);
+        Faxineiro carlos = new Faxineiro("Carlos Oliveira", "12345678900", LocalDate.of(1985, 5, 10), "Rua das Flores, 100", 1,1500.0);
 
         ArquivoTxt arquivo = new ArquivoTxt("funcionarios.txt");
 

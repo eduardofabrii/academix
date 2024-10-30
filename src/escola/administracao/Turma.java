@@ -2,6 +2,7 @@ package escola.administracao;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
 import escola.administracao.Disciplina;
@@ -17,6 +18,10 @@ public class Turma {
         this.ano = ano;
         this.listaAlunos = new ArrayList<>();
         this.listaDisciplinas = new ArrayList<>();
+    }
+
+    public Turma(String nome) {
+
     }
 
     public void verAlunos() {
@@ -69,6 +74,7 @@ public class Turma {
                 System.out.println(disciplina.getNome());
             }
         }
+    }
 
     @Override
     public String toString() {
@@ -79,25 +85,6 @@ public class Turma {
                 ", listaDisciplinas=" + listaDisciplinas +
                 '}';
     }
-
-    public Turma(String nome, int ano) {
-        this.nome = nome;
-        this.listaAlunos = new ArrayList<>();
-        this.listaDisciplinas = new ArrayList<>();
-    }
-
-    public Turma(String nome) {
-        this.nome = nome;
-        this.listaAlunos = new ArrayList<>();
-        this.listaDisciplinas = new ArrayList<>();
-    }
-
-    public Turma(String nome, int ano, ArrayList<Aluno> listaAlunos, List<Disciplina> listaDisciplinas) {
-        this.nome = nome;
-        this.ano = ano;
-        this.listaAlunos = listaAlunos;
-        this.listaDisciplinas = listaDisciplinas;
-
 
     public String getNome() {
         return nome;
@@ -117,5 +104,17 @@ public class Turma {
 
     public ArrayList<Aluno> getListaAlunos() {
         return listaAlunos;
+    }
+
+    public void setListaAlunos(ArrayList<Aluno> listaAlunos) {
+        this.listaAlunos = listaAlunos;
+    }
+
+    public List<Disciplina> getListaDisciplinas() {
+        return listaDisciplinas;
+    }
+
+    public void setListaDisciplinas(List<Disciplina> listaDisciplinas) {
+        this.listaDisciplinas = listaDisciplinas;
     }
 }

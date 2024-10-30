@@ -6,11 +6,6 @@ import java.util.List;
 
 public class Faxineiro extends Funcionario {
     private List<String> problemasReportados; // Lista para armazenar problemas reportados
-
-    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
-        super(nome, CPF, dataNascimento, endereco, salario);
-        this.problemasReportados = new ArrayList<>(); // Inicializa a lista de problemas
-    }
   
       public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);

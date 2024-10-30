@@ -10,19 +10,14 @@ import java.util.ArrayList;
 public class Professor extends Funcionario {
     private ArrayList<Disciplina> disciplinas;
 
-    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
-        super(nome, CPF, dataNascimento, endereco, salario);
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
+        super(nome, CPF, dataNascimento, endereco, codigo, salario);
     }
 
     public Professor() {
     }
 
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, ArrayList<Disciplina> disciplinas) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
-        this.disciplinas = new ArrayList<>();
-    }
-
-    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);
         this.disciplinas = new ArrayList<>();
     }
