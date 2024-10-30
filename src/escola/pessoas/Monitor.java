@@ -12,5 +12,4 @@ public class Monitor extends Aluno {
         super(nome, CPF, dataNascimento, endereco);
         this.disciplinaMonitorada = disciplinaMonitorada;
     }
-
 }

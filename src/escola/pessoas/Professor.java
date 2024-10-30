@@ -7,16 +7,25 @@ import escola.administracao.Escola;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Professor extends Funcionario{
-    private String registro;
-    private double salario;
+public class Professor extends Funcionario {
     private ArrayList<Disciplina> disciplinas;
 
-    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String registro, ArrayList<Disciplina> disciplinas, double salario1) {
+    public Professor() {
+    }
+
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, ArrayList<Disciplina> disciplinas) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);
-        this.registro = registro;
-        this.disciplinas = disciplinas;
-        this.salario = salario1;
+        this.disciplinas = new ArrayList<>();
+    }
+
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
+        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        this.disciplinas = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return this.getNome();
     }
 
     public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor){

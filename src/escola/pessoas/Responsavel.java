@@ -5,13 +5,12 @@ import java.util.ArrayList;
 import escola.pessoas.Aluno;
 
 public class Responsavel extends Pessoa {
-
-    public Responsavel(String nome, String CPF, LocalDate dataNascimento, String endereco, ArrayList<Aluno> alunos) {
-        super(nome, CPF, dataNascimento, endereco);
-        this.alunos = alunos;
-    }
-
     private ArrayList<Aluno> alunos;
+
+    public Responsavel(String nome, String CPF, LocalDate dataNascimento, String endereco) {
+        super(nome, CPF, dataNascimento, endereco);
+        this.alunos = new ArrayList<>();
+    }
 
     public void adicionarAluno(Aluno aluno) {
         alunos.add(aluno);

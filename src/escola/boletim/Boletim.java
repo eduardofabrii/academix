@@ -12,7 +12,6 @@ public class Boletim  {
     private double mediaFinal;
     private ArrayList<Nota> notas;
 
-
     public double calcularMedia() {
         if (notas == null || notas.isEmpty()) {
             return 0; // Retorna 0 se a lista de notas estiver vazia ou for nula

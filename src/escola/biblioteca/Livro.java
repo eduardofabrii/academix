@@ -5,6 +5,15 @@ public class Livro {
     private String autor;
     private int anoPublicado;
 
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", anoPublicado=" + anoPublicado +
+                '}';
+    }
+
     public Livro() {
     }
 

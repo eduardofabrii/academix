@@ -10,9 +10,7 @@ public class Secretario extends Funcionario {
     }
 
     public void gerenciarMatriculas(Aluno aluno){};
-    public List<Documento> consultarDocumentos(int idAluno){};
-    public void agendarReuniao (Pessoa pessoa, Date data){};
+//    public List<Documento> consultarDocumentos(int idAluno){};
+//    public void agendarReuniao (Pessoa pessoa, Date data){};
     public void atualizarInformacoesPessoais(Pessoa pessoa){};
-
-
 }

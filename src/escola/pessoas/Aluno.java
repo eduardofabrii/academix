@@ -16,6 +16,14 @@ public class Aluno extends Pessoa {
         super(nome, CPF, dataNascimento, endereco);
     }
 
+    public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String matricula) {
+        super(nome, CPF, dataNascimento, endereco);
+        this.matricula = matricula;
+    }
+
+    public Aluno(String nomeAluno) {
+    }
+
     @Override
     public String toString() {
         return "Aluno: " + getNome() +
