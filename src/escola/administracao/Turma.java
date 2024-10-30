@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
-import escola.administracao.Disciplina; // Supondo que você tenha uma classe Disciplina
+import escola.administracao.Disciplina;
 
 public class Turma {
     private String nome;
@@ -44,7 +44,6 @@ public class Turma {
     }
 
     public void adicionarProfessor(Professor professor) {
-        // Método para adicionar um professor à turma
         System.out.println("Professor " + professor.getNome() + " adicionado à turma " + nome + ".");
     }
 
@@ -70,21 +69,53 @@ public class Turma {
                 System.out.println(disciplina.getNome());
             }
         }
+
+    @Override
+    public String toString() {
+        return "Turma{" +
+                "nome='" + nome + '\'' +
+                ", ano=" + ano +
+                ", listaAlunos=" + listaAlunos +
+                ", listaDisciplinas=" + listaDisciplinas +
+                '}';
     }
+
+    public Turma(String nome, int ano) {
+        this.nome = nome;
+        this.listaAlunos = new ArrayList<>();
+        this.listaDisciplinas = new ArrayList<>();
+    }
+
+    public Turma(String nome) {
+        this.nome = nome;
+        this.listaAlunos = new ArrayList<>();
+        this.listaDisciplinas = new ArrayList<>();
+    }
+
+    public Turma(String nome, int ano, ArrayList<Aluno> listaAlunos, List<Disciplina> listaDisciplinas) {
+        this.nome = nome;
+        this.ano = ano;
+        this.listaAlunos = listaAlunos;
+        this.listaDisciplinas = listaDisciplinas;
+
 
     public String getNome() {
         return nome;
     }
 
-    public ArrayList<Aluno> getListaAlunos() {
-        return listaAlunos;
-    }
-
-    public List<Disciplina> getListaDisciplinas() {
-        return listaDisciplinas;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public int getAno() {
         return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public ArrayList<Aluno> getListaAlunos() {
+        return listaAlunos;
     }
 }

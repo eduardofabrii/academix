@@ -20,7 +20,6 @@ public class Secretario extends Funcionario {
         }
     }
 
-
 //    // Método para consultar documentos de um aluno específico/ não sei implementar
 //    public List<Documento> consultarDocumentos(List<Documento> documentos, int idAluno) {
 //        return documentos.stream()
@@ -39,4 +38,5 @@ public class Secretario extends Funcionario {
         pessoa.setNumero("Novo Telefone Exemplo"); // Exemplo de atualização do telefone
         System.out.println("Informações pessoais atualizadas para " + pessoa.getNome());
     }
+
 }

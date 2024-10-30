@@ -13,6 +13,10 @@ public class Merendeiro extends Funcionario {
         super(nome, CPF, dataNascimento, endereco, salario);
     }
 
+    public Merendeiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
+        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+    }
+
     public void criarNovoProduto(String nomeProduto, String descricaoProduto) {
         estoque.add(new Produto(nomeProduto, descricaoProduto, 0));
     }

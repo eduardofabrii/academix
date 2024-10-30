@@ -14,6 +14,24 @@ public class Professor extends Funcionario {
         super(nome, CPF, dataNascimento, endereco, salario);
     }
 
+    public Professor() {
+    }
+
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, ArrayList<Disciplina> disciplinas) {
+        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        this.disciplinas = new ArrayList<>();
+    }
+
+    public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
+        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        this.disciplinas = new ArrayList<>();
+    }
+
+    @Override
+    public String toString() {
+        return this.getNome();
+    }
+
     public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor) {
         Nota nota = new Nota(aluno, disciplina, valor);
         aluno.getBoletim().registrarNota(nota);

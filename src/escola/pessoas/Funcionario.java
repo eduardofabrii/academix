@@ -14,6 +14,14 @@ public abstract class Funcionario extends Pessoa {
 
     public Funcionario() {
         this.codigo = ++contador;
+=======
+    }
+
+    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, List<String> registrosPonto) {
+        super(nome, CPF, dataNascimento, endereco);
+        this.codigo = codigo;
+        this.salario = salario;
+        this.registrosPonto = registrosPonto;
     }
 
     public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
@@ -50,21 +58,5 @@ public abstract class Funcionario extends Pessoa {
 
     public int getCodigo() {
         return codigo;
-    }
-
-    public List<String> getRegistrosPonto() {
-        return registrosPonto;
-    }
-
-    public void setRegistrosPonto(List<String> registrosPonto) {
-        this.registrosPonto = registrosPonto;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public static int getContador() {
-        return contador;
     }
 }

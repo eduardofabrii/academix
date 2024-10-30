@@ -2,21 +2,28 @@ package escola.administracao;
 
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
-import escola.sala.Sala;
+import escola.sala.SalaAula;
 
 import java.util.ArrayList;
 
 public class Disciplina {
     private String nome;
     private int cargaHoraria;
-//    private SalaAula sala;
+    private SalaAula sala;
     private Professor professor;
     private ArrayList<Aluno> alunos;
 
     public Disciplina(String nome, int cargaHoraria, Professor professor) {
         this.nome = nome;
         this.cargaHoraria = cargaHoraria;
-//        this.sala = sala;
+        this.professor = professor;
+        this.alunos = new ArrayList<>();
+    }
+
+    public Disciplina(String nome, int cargaHoraria, SalaAula sala, Professor professor) {
+        this.nome = nome;
+        this.cargaHoraria = cargaHoraria;
+        this.sala = sala;
         this.professor = professor;
         this.alunos = new ArrayList<>();
     }
@@ -24,7 +31,7 @@ public class Disciplina {
     public String exibirInformacoes() {
         return "Disciplina: " + getNome() +
                 ", Carga Horária: " + getCargaHoraria() +
-//                ", Sala: " + sala.getNome() +
+                ", Sala: " + sala.getNome() +
                 ", Professor: " + professor.getNome();
     }
 
