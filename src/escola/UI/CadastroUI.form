@@ -78,7 +78,7 @@
                       <text value=""/>
                     </properties>
                   </component>
-                  <component id="4dc02" class="javax.swing.JButton">
+                  <component id="4dc02" class="javax.swing.JButton" binding="disciplinaButton">
                     <constraints>
                       <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -99,7 +99,7 @@
                       <text value=""/>
                     </properties>
                   </component>
-                  <component id="55d7f" class="javax.swing.JButton">
+                  <component id="55d7f" class="javax.swing.JButton" binding="turmaButton">
                     <constraints>
                       <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -120,7 +120,7 @@
                       <text value=""/>
                     </properties>
                   </component>
-                  <component id="ab9fd" class="javax.swing.JButton">
+                  <component id="ab9fd" class="javax.swing.JButton" binding="livroButton">
                     <constraints>
                       <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
