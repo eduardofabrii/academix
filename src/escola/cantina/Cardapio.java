@@ -3,7 +3,7 @@ package escola.cantina;
 import java.util.ArrayList;
 
 public class Cardapio {
-    private diaSemanaCardapio diaSemana;
+    private DiaSemanaCardapio diaSemana;
     private ArrayList<Refeicao> refeicoes;
 
     public void adicionarRefeicao(Refeicao refeicao){

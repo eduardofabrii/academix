@@ -1,16 +1,10 @@
 package escola.principal;
 
-import escola.MiniBanco.ArquivoTxt;
-import escola.administracao.Disciplina;
-import escola.administracao.Escola;
-import escola.administracao.Turma;
+import escola.minibanco.ArquivoTxt;
 import escola.pessoas.*;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class EscolaApp {
     public static void main(String[] args) {

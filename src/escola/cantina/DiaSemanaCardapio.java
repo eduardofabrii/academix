@@ -1,6 +1,6 @@
 package escola.cantina;
 
-public enum diaSemanaCardapio {
+public enum DiaSemanaCardapio {
     SEGUNDA_FEIRA,
     TERCA_FEIRA,
     QUARTA_FEIRA,

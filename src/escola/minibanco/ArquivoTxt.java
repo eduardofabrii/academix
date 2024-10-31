@@ -1,4 +1,4 @@
-package escola.MiniBanco;
+package escola.minibanco;
 
 import escola.pessoas.Funcionario;
 import java.io.*;
