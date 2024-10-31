@@ -28,7 +28,9 @@ public abstract class Funcionario extends Pessoa {
 
         String registro = pessoa.getNome() + " registrou ponto de entrada em " + sdf.format(new java.util.Date());
 
+        // cria uma lista com o único registro
         setRegistrosPonto(Collections.singletonList(registro));
+
 
         return registro;
     }
@@ -39,6 +41,7 @@ public abstract class Funcionario extends Pessoa {
 
         String registro = pessoa.getNome() + " registrou ponto de saída em " + sdf.format(new java.util.Date());
 
+        // cria uma lista com o único registro
         setRegistrosPonto(Collections.singletonList(registro));
 
         return registro;

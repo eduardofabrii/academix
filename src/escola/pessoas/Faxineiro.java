@@ -11,7 +11,6 @@ public class Faxineiro extends Funcionario {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);
     }
 
-
     public void reportarProblemasDeManutencao(String problema) {
         problemasReportados.add(problema); // Adiciona o problema à lista
         System.out.println("Problema reportado: " + problema);

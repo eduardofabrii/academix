@@ -21,10 +21,7 @@ public class Disciplina {
     }
 
     public Disciplina(String nome, int cargaHoraria, SalaAula sala, Professor professor) {
-        this.nome = nome;
-        this.cargaHoraria = cargaHoraria;
-        this.sala = sala;
-        this.professor = professor;
+        this(nome, cargaHoraria, professor);
         this.alunos = new ArrayList<>();
     }
 
