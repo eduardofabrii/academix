@@ -20,19 +20,17 @@ public class Secretario extends Funcionario {
         }
     }
 
-//    // Método para consultar documentos de um aluno específico/ não sei implementar
+//    //método para consultar documentos de um aluno específico/ não sei implementar
 //    public List<Documento> consultarDocumentos(List<Documento> documentos, int idAluno) {
 //        return documentos.stream()
 //                .filter(doc -> doc.getIdAluno() == idAluno)
 //                .toList();
 //    }
-
-    // Método para agendar reunião com uma pessoa em uma data específica
     public void agendarReuniao(Pessoa pessoa, Date data) {
         System.out.println("Reunião agendada com " + pessoa.getNome() + " para a data: " + data);
     }
 
-    // Método para atualizar informações pessoais de uma pessoa
+
     public void atualizarInformacoesPessoais(Pessoa pessoa) {
         pessoa.setEndereco("Novo Endereço Exemplo"); // Exemplo de atualização do endereço
         pessoa.setNumero("Novo Telefone Exemplo"); // Exemplo de atualização do telefone
