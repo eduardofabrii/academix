@@ -32,8 +32,8 @@ public class Secretario extends Funcionario {
 
 
     public void atualizarInformacoesPessoais(Pessoa pessoa) {
-        pessoa.setEndereco("Novo Endereço Exemplo"); // Exemplo de atualização do endereço
-        System.out.println("Informações pessoais atualizadas para " + pessoa.getNome());
+        pessoa.setEndereco("Novo Endereço Exemplo"); //exemplo de atualização do endereço
+        System.out.println("Informações pessoais atualizadas para a(o)" + pessoa.getNome());
     }
 
 }
