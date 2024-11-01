@@ -1,4 +1,4 @@
-package escola.UI;
+package escola.UI.serum.pessoas;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package escola.UI;
+package escola.UI.serum.entrada;
 
 import escola.UI.cadastro.outros.CadastroDisciplinaUI;
 import escola.UI.cadastro.outros.CadastroLivroUI;
