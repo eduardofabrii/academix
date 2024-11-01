@@ -1,7 +1,7 @@
 package escola.boletim;
 
 import escola.administracao.Disciplina;
-import escola.pessoas.Aluno; // Supondo que você tenha uma classe Aluno
+import escola.pessoas.Aluno;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +29,16 @@ public class Boletim {
 
         mediaFinal = soma / notas.size();
         return mediaFinal;
+    }
+
+    @Override
+    public String toString() {
+        return "Boletim{" +
+                "disciplinas=" + disciplinas +
+                ", mediaFinal=" + mediaFinal +
+                ", notas=" + notas +
+                ", aluno=" + aluno +
+                '}';
     }
 
     public void registrarNota(Nota nota) {
@@ -79,5 +89,5 @@ public class Boletim {
         }
     }
 
-    // Getters e setters para as listas e a média final podem ser adicionados conforme necessário
+    //getters e setters para as listas e a média final podem ser adicionados conforme necessário
 }

@@ -26,11 +26,11 @@ public class Porteiro extends Funcionario {
     }
 
     public List<Pessoa> consultarRegistroEntrada() {
-        return registroEntrada; // Retorna a lista de entradas registradas
+        return registroEntrada;
     }
 
     public List<Pessoa> consultarRegistroSaida() {
-        return registroSaida; // Retorna a lista de saídas registradas
+        return registroSaida;
     }
 
     public void reportarOcorrencia(String ocorrencia) {
