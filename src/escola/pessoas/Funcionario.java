@@ -31,7 +31,6 @@ public abstract class Funcionario extends Pessoa {
         // cria uma lista com o único registro
         setRegistrosPonto(Collections.singletonList(registro));
 
-
         return registro;
     }
 

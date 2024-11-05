@@ -1,5 +1,6 @@
 package escola.UI.cadastro.outros;
 
+import escola.biblioteca.Biblioteca;
 import escola.biblioteca.Livro;
 
 import javax.swing.*;
@@ -18,6 +19,8 @@ public class CadastroLivroUI {
     private JTextField autorTextField;
     private JTextField anoPublicacaoTextField;
 
+    private Biblioteca biblioteca = new Biblioteca();
+
     public CadastroLivroUI() {
         cadastrarLivroButton.addActionListener(new ActionListener() {
             @Override
@@ -34,6 +37,8 @@ public class CadastroLivroUI {
                 }
 
                 Livro novoLivro = new Livro(titulo, autor, anoPublicacao);
+
+                biblioteca.adicionarLivro(novoLivro);
 
                 System.out.println(novoLivro.toString());
 

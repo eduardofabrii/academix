@@ -15,7 +15,7 @@ public class ProfessorUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JButton atribuirNotaButton;
-    private JButton buscarBoletimButton;
+    private JButton gerarRelatorioDesempenhoButton;
     private JButton consultarNotaButton;
     private JButton consultarTurmaButton;
 

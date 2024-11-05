@@ -1,28 +1,28 @@
 package escola.UI.serum.entrada;
 
-import escola.UI.cadastro.pessoas.*;
+import escola.UI.serum.pessoas.BibliotecarioUI;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class CadastroFuncionariosUI {
-    private JPanel painelPrincipal;
+public class EntrarComoUI {
+    public JPanel painelPrincipal;
     private JPanel painelBase2;
     private JPanel painelBase;
     private JButton professorButton;
     private JLabel professorLabel;
-    private JButton faxineiroButton;
+    private JPanel painelTitulo;
+    private JLabel escolhasLabel;
+    private JButton diretorButton;
     private JButton pedagogoButton;
     private JButton secretarioButton;
     private JButton merendeiroButton;
-    private JButton bibliotecarioButton;
-    private JButton diretorButton;
     private JButton porteiroButton;
-    private JPanel painelTitulo;
-    private JLabel escolhasLabel;
+    private JButton bibliotecarioButton;
+    private JButton faxineiroButton;
 
-    public CadastroFuncionariosUI() {
+    public EntrarComoUI() {
         professorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -56,6 +56,7 @@ public class CadastroFuncionariosUI {
         bibliotecarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoBibliotecario();
             }
         });
 
@@ -73,9 +74,19 @@ public class CadastroFuncionariosUI {
 
     }
 
+    public static void entrarComoBibliotecario() {
+        JFrame frame = new JFrame("Bibliotecário");
+        frame.setContentPane(new BibliotecarioUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(800, 400);
+        frame.setVisible(true);
+    }
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela de Cadastro Funcionarios");
-        frame.setContentPane((new escola.UI.cadastro.pessoas.CadastroFuncionariosUI()).painelPrincipal);
+        frame.setContentPane((new EntrarComoUI()).painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);

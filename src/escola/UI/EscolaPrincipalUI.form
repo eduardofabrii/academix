@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="escola.UI.serum.pessoas.ProfessorUI">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="escola.UI.EscolaPrincipalUI">
   <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="585" height="400"/>
+      <xy x="20" y="20" width="586" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="57f89" binding="painelPrincipal" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="e09d3" binding="painelPrincipal" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -16,7 +16,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="3c36" binding="painelBase2" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="cbb17" binding="painelBase2" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -26,7 +26,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <grid id="1499" binding="painelBase" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="d35b7" binding="painelBase" layout-manager="GridLayoutManager" row-count="4" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -36,57 +36,66 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="c1c94" class="javax.swing.JButton" binding="gerarRelatorioDesempenhoButton">
+                  <component id="3d937" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <background color="-16119286"/>
-                      <font name="Calibri" size="16" style="1"/>
-                      <foreground color="-592129"/>
-                      <hideActionText value="false"/>
-                      <text value="Gerar Relatorio Desempenho"/>
+                      <background color="-1"/>
+                      <foreground color="-1"/>
+                      <text value="Escolha o que quer fazer"/>
                     </properties>
                   </component>
-                  <component id="a2a31" class="javax.swing.JButton" binding="consultarNotaButton">
+                  <hspacer id="acfb0">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="0" row-span="1" col-span="5" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </hspacer>
+                  <component id="e0990" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <background color="-16119286"/>
-                      <font name="Calibri" size="16" style="1"/>
-                      <foreground color="-592129"/>
-                      <hideActionText value="false"/>
-                      <text value="Consultar Nota"/>
+                      <icon value="escola/UI/images/porteiro.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
-                  <component id="91acd" class="javax.swing.JButton" binding="consultarTurmaButton">
+                  <component id="795c3" class="javax.swing.JButton" binding="cadastroButton">
                     <constraints>
-                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <background color="-16119286"/>
                       <font name="Calibri" size="16" style="1"/>
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
-                      <text value="Consultar Turma"/>
+                      <text value="Cadastros"/>
                     </properties>
                   </component>
-                  <component id="ad037" class="javax.swing.JButton" binding="atribuirNotaButton">
+                  <component id="bddf6" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <icon value="escola/UI/images/porteiro.png"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="9b018" class="javax.swing.JButton" binding="entrarComoButton">
+                    <constraints>
+                      <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <background color="-16119286"/>
                       <font name="Calibri" size="16" style="1"/>
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
-                      <text value="Atribuir Nota"/>
+                      <text value="Entrar Como"/>
                     </properties>
                   </component>
                 </children>
               </grid>
-              <grid id="739ae" binding="painelTitulo" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="cc1d3" binding="painelTitulo" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -96,23 +105,14 @@
                 </properties>
                 <border type="none"/>
                 <children>
-                  <component id="5254" class="javax.swing.JLabel" binding="escolhasLabel">
+                  <component id="8fc7d" class="javax.swing.JLabel" binding="escolhasLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <font name="Calibri" size="28" style="1"/>
                       <foreground color="-1"/>
-                      <text value="Painel do Professor"/>
-                    </properties>
-                  </component>
-                  <component id="c13cb" class="javax.swing.JLabel" binding="professorLabel">
-                    <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <icon value="escola/UI/images/professor.png"/>
-                      <text value=""/>
+                      <text value="Escola"/>
                     </properties>
                   </component>
                 </children>

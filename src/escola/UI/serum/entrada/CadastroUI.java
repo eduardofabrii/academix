@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class CadastroUI {
-    private JPanel painelPrincipal;
+    public JPanel painelPrincipal;
     private JPanel painelBase2;
     private JPanel painelBase;
     private JButton professorButton;

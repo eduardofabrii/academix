@@ -26,6 +26,7 @@ public class Secretario extends Funcionario {
 //                .filter(doc -> doc.getIdAluno() == idAluno)
 //                .toList();
 //    }
+
     public void agendarReuniao(Pessoa pessoa, Date data) {
         System.out.println("Reunião agendada com " + pessoa.getNome() + " para a data: " + data);
     }

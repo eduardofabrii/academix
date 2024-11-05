@@ -2,18 +2,21 @@ package escola.administracao;
 
 import escola.pessoas.Aluno;
 import escola.pessoas.Funcionario;
+import escola.pessoas.Pessoa;
 
 import java.util.ArrayList;
 
 public class Escola {
     private ArrayList<Funcionario> funcionarios = new ArrayList<>();
     private ArrayList<Aluno> alunos = new ArrayList<>();
+    private ArrayList<Pessoa> pessoas = new ArrayList<>();
     private ArrayList<Disciplina> disciplinas = new ArrayList<>();
     private ArrayList<Turma> turmas = new ArrayList<>();
 
     public void adicionarFuncionario(Funcionario f) {
         if (f != null) {
             funcionarios.add(f);
+            pessoas.add(f);
             System.out.println("Funcionario adicionado: " + f.getNome());
         } else {
             System.out.println("Funcionario não pode ser nulo.");
@@ -23,6 +26,7 @@ public class Escola {
     public void removerFuncionario(Funcionario f) {
         if (f != null && funcionarios.contains(f)) {
             funcionarios.remove(f);
+            pessoas.remove(f);
             System.out.println("Funcionario removido: " + f.getNome());
         } else {
             System.out.println("Funcionario não encontrado na lista de Funcionarios.");
@@ -53,6 +57,7 @@ public class Escola {
     public void adicionarAluno(Aluno aluno) {
         if (aluno != null) {
             alunos.add(aluno);
+            pessoas.add(aluno);
             System.out.println("Aluno adicionado: " + aluno.getNome());
         } else {
             System.out.println("Aluno não pode ser nulo.");
@@ -62,6 +67,7 @@ public class Escola {
     public void removerAluno(Aluno aluno) {
         if (aluno != null && alunos.contains(aluno)) {
             alunos.remove(aluno);
+            pessoas.remove(aluno);
             System.out.println("Aluno removido: " + aluno.getNome());
         } else {
             System.out.println("Aluno não encontrado na lista de Alunos.");
@@ -123,6 +129,15 @@ public class Escola {
         for (Disciplina d: disciplinas) {
             if (d.getNome().equalsIgnoreCase(nome)) {
                 return d;
+            }
+        }
+        return null;
+    }
+
+    public Pessoa buscarPessoaPorNome(String nome) {
+        for (Pessoa p: pessoas) {
+            if (p.getNome().equalsIgnoreCase(nome)) {
+                return p;
             }
         }
         return null;
