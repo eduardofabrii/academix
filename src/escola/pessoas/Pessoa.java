@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Pessoa {
+public abstract class Pessoa {
     private String nome;
     private String CPF;
     private LocalDate dataNascimento;
@@ -15,13 +15,7 @@ public class Pessoa {
     private String tipo;
 
 
-    public Pessoa(String nome) {
-        this.nome = nome;
-        this.livrosEmprestados = new ArrayList<>();
-    }
-
     public Pessoa() {
-        this.livrosEmprestados = new ArrayList<>();
     }
 
 

@@ -5,7 +5,6 @@ import escola.pessoas.Funcionario;
 import escola.pessoas.Pessoa;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Escola {
     private ArrayList<Funcionario> funcionarios = new ArrayList<>();
@@ -146,41 +145,5 @@ public class Escola {
 
     public ArrayList<Turma> getTurmas() {
         return turmas;
-    }
-
-    public ArrayList<Funcionario> getFuncionarios() {
-        return funcionarios;
-    }
-
-    public void setFuncionarios(ArrayList<Funcionario> funcionarios) {
-        this.funcionarios = funcionarios;
-    }
-
-    public ArrayList<Aluno> getAlunos() {
-        return alunos;
-    }
-
-    public void setAlunos(ArrayList<Aluno> alunos) {
-        this.alunos = alunos;
-    }
-
-    public ArrayList<Pessoa> getPessoas() {
-        return pessoas;
-    }
-
-    public void setPessoas(ArrayList<Pessoa> pessoas) {
-        this.pessoas = pessoas;
-    }
-
-    public ArrayList<Disciplina> getDisciplinas() {
-        return disciplinas;
-    }
-
-    public void setDisciplinas(ArrayList<Disciplina> disciplinas) {
-        this.disciplinas = disciplinas;
-    }
-
-    public void setTurmas(ArrayList<Turma> turmas) {
-        this.turmas = turmas;
     }
 }

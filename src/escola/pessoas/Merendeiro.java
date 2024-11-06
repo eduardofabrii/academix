@@ -10,8 +10,7 @@ public class Merendeiro extends Funcionario {
     private static ArrayList<Produto> estoque;
 
     public Merendeiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
-        this.estoque = new ArrayList<>();
+        super(nome, CPF, dataNascimento, endereco, codigo, salario, "Merendeiro(a)");
     }
 
     public void criarNovoProduto(String nomeProduto, String descricaoProduto) {
@@ -38,9 +37,5 @@ public class Merendeiro extends Funcionario {
         for (Produto p : estoque) {
             System.out.println(p.getNomeProduto() + " : " + p.getUnidadesProduto());
         }
-    }
-
-    public static ArrayList<Produto> getEstoque() {
-        return estoque;
     }
 }

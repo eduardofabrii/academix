@@ -43,9 +43,7 @@ public class Professor extends Funcionario {
         return notasDisciplina;
     }
 
-    public ArrayList<Aluno> consultarTurma(String nomeTurma) {
-        Escola escola = new Escola();
-
+    public ArrayList<Aluno> consultarTurma(Escola escola, String nomeTurma){
         for (Turma turma : escola.getTurmas()){
             if (turma.getNome().equals(nomeTurma)){
                 return turma.getListaAlunos();
