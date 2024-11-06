@@ -7,6 +7,7 @@ import java.util.List;
 public class Diretor extends Funcionario {
     public Diretor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Diretor(a)");
+        super(nome, CPF, dataNascimento, endereco, codigo, salario);
     }
 
     public void gerenciarProfessores(List<Professor> professores) {
