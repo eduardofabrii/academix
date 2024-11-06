@@ -4,6 +4,10 @@ import escola.administracao.Turma;
 import escola.boletim.Nota;
 import escola.administracao.Disciplina;
 import escola.administracao.Escola;
+import escola.excecoes.BoletimNaoRegistradoException;
+import escola.excecoes.DisciplinaInvalidaException;
+import escola.excecoes.TurmaSemAlunosException;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -12,9 +16,11 @@ public class Professor extends Funcionario {
 
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        this.disciplinas = new ArrayList<>();
     }
 
     public Professor() {
+        this.disciplinas = new ArrayList<>();
     }
 
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, ArrayList<Disciplina> disciplinas) {
@@ -27,10 +33,27 @@ public class Professor extends Funcionario {
         return this.getNome();
     }
 
-    public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor) {
+    public void lecionarDisciplina(Disciplina disciplina) {
+        if (!disciplinas.contains(disciplina)) {
+            disciplinas.add(disciplina);
+            System.out.println("Disciplina " + disciplina.getNome() + " adicionada ao professor " + this.getNome());
+        } else {
+            System.out.println("O professor já leciona a disciplina " + disciplina.getNome());
+        }
+    }
+
+    public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor) throws DisciplinaInvalidaException, BoletimNaoRegistradoException {
+        if (!disciplinas.contains(disciplina)) {
+            throw new DisciplinaInvalidaException("O professor não leciona a disciplina: " + disciplina.getNome());
+        }
+
+        if (aluno.getBoletim() == null) {
+            throw new BoletimNaoRegistradoException("O aluno " + aluno.getNome() + " não possui boletim registrado.");
+        }
+
         Nota nota = new Nota(aluno, disciplina, valor);
-        aluno.getBoletim().registrarNota(nota);
 //        colocando nota no arraylist do boletim
+        aluno.getBoletim().registrarNota(nota);
     }
 
     public ArrayList<Nota> consultarNotas(Aluno aluno, Disciplina disciplina) {
@@ -52,15 +75,29 @@ public class Professor extends Funcionario {
         return null; //analisar depois
     }
 
-    public void gerarRelatorioDesempenho(Turma turma, Disciplina disciplina){
+    public void gerarRelatorioDesempenho(Turma turma, Disciplina disciplina) throws TurmaSemAlunosException {
         double somaNota = 0;
         int quantidadeNota = 0;
-        for (Aluno aluno : turma.getListaAlunos()){
-            for (Nota nota : consultarNotas(aluno, disciplina)) {
-                somaNota = nota.getValor();
-                quantidadeNota ++;
+
+        for (Aluno aluno : turma.getListaAlunos()) {
+            if (turma.getListaAlunos().isEmpty()) {
+                throw new TurmaSemAlunosException("Não há alunos na turma " + turma.getNome() + " para gerar o relatório.");
+            } else {
+                for (Nota nota : consultarNotas(aluno, disciplina)) {
+                    somaNota = nota.getValor();
+                    quantidadeNota ++;
+                }
             }
         }
-        System.out.println("Nota total da turma: " + somaNota + "\n Nota média da turma: " + somaNota/quantidadeNota);
+
+        System.out.println("Nota total da turma: " + somaNota + "\nNota média da turma: " + somaNota/quantidadeNota);
+    }
+
+    public ArrayList<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(ArrayList<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
     }
 }

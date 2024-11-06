@@ -21,10 +21,9 @@ public class Turma {
     }
 
     public Turma(String nome) {
-
+        this.listaAlunos = new ArrayList<>();
+        this.listaDisciplinas = new ArrayList<>();
     }
-
-
 
     public void verAlunos() {
         if (listaAlunos.isEmpty()) {
