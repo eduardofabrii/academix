@@ -1,11 +1,12 @@
 package escola.pessoas;
 
 import escola.biblioteca.Livro;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class Pessoa implements Serializable {
+public abstract class Pessoa {
     private String nome;
     private String CPF;
     private LocalDate dataNascimento;
@@ -15,7 +16,6 @@ public abstract class Pessoa implements Serializable {
 
 
     public Pessoa() {
-        this.livrosEmprestados = new ArrayList<>();
     }
 
 
@@ -27,8 +27,6 @@ public abstract class Pessoa implements Serializable {
         this.livrosEmprestados = new ArrayList<>();
         this.tipo = tipo;
     }
-
-
 
 
     public void emprestarLivro(Livro livro) {
