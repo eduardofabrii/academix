@@ -7,13 +7,10 @@ import java.util.List;
 public class Faxineiro extends Funcionario {
     private List<String> problemasReportados;
 
+
     public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Faxineiro(a)");
         this.problemasReportados = new ArrayList<>();
-    }
-    
-      public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
     }
 
     public void reportarProblemasDeManutencao(String problema) {
@@ -31,6 +28,8 @@ public class Faxineiro extends Funcionario {
             }
         }
     }
+
+
 }
 
 
