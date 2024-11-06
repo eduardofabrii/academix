@@ -22,7 +22,7 @@ public class EscolaPrincipalUI {
         cadastroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cadastros();
+                abrirCadastros();
             }
         });
 
@@ -44,7 +44,7 @@ public class EscolaPrincipalUI {
         frame.setVisible(true);
     }
 
-    public static void cadastros() {
+    public static void abrirCadastros() {
         JFrame frame = new JFrame("Tela de Cadastros");
         frame.setContentPane((new CadastroUI()).painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
