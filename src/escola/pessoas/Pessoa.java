@@ -4,14 +4,20 @@ import escola.biblioteca.Livro;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class Pessoa {
+public class Pessoa {
     private String nome;
     private String CPF;
     private LocalDate dataNascimento;
     private String endereco;
     private ArrayList<Livro> livrosEmprestados;
 
+    public Pessoa(String nome) {
+        this.nome = nome;
+        this.livrosEmprestados = new ArrayList<>();
+    }
+
     public Pessoa() {
+        this.livrosEmprestados = new ArrayList<>();
     }
 
 

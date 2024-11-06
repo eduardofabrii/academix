@@ -1,7 +1,7 @@
 package escola.sala;
 
 public class SalaBiblioteca extends Sala {
-    int quantidadeLivros;
+    private int quantidadeLivros;
 
     public SalaBiblioteca(int id, String nome, int capacidade, int quantidadeLivros) {
         super(id, nome, capacidade);

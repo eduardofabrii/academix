@@ -1,10 +1,15 @@
 package escola.UI.serum.entrada;
 
-import escola.UI.serum.pessoas.BibliotecarioUI;
+import escola.UI.cadastro.pessoas.CadastroPedagogoUI;
+import escola.UI.serum.pessoas.*;
+import escola.administracao.Escola;
+import escola.pessoas.Porteiro;
+import escola.pessoas.Professor;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalDate;
 
 public class EntrarComoUI {
     public JPanel painelPrincipal;
@@ -21,35 +26,41 @@ public class EntrarComoUI {
     private JButton porteiroButton;
     private JButton bibliotecarioButton;
     private JButton faxineiroButton;
+    private JButton alunoButton;
 
     public EntrarComoUI() {
         professorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoProfessor();
             }
         });
 
         faxineiroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoFaxineiro();
             }
         });
 
         pedagogoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoPedagogo();
             }
         });
 
         secretarioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoSecretario();
             }
         });
 
         merendeiroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoMerendeiro();
             }
         });
 
@@ -63,15 +74,34 @@ public class EntrarComoUI {
         diretorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoDiretor();
             }
         });
 
         porteiroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                entrarComoPorteiro();
             }
         });
 
+        alunoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                entrarComoAluno();
+            }
+        });
+
+    }
+
+    public static void entrarComoProfessor() {
+        JFrame frame = new JFrame("Professor");
+        frame.setContentPane((new ProfessorUI().painelPrincipal));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 300);
+        frame.setVisible(true);
     }
 
     public static void entrarComoBibliotecario() {
@@ -81,6 +111,76 @@ public class EntrarComoUI {
         frame.pack();
         frame.setResizable(false);
         frame.setSize(800, 400);
+        frame.setVisible(true);
+    }
+
+    public static void entrarComoPedagogo() {
+        JFrame frame = new JFrame("Pedagogo");
+        frame.setContentPane(new PedagogoUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 225);
+        frame.setVisible(true);
+    }
+
+    public static void entrarComoPorteiro() {
+        JFrame frame = new JFrame("Porteiro");
+        frame.setContentPane(new PorteiroUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 225);
+        frame.setVisible(true);
+    }
+
+    public static void entrarComoFaxineiro() {
+        JFrame frame = new JFrame("Faxineiro");
+        frame.setContentPane(new FaxineiroUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 300);
+        frame.setVisible(true);
+    }
+
+    public static void entrarComoSecretario() {
+        JFrame frame = new JFrame("Secretário");
+        frame.setContentPane(new SecretarioUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 300);
+        frame.setVisible(true);
+    }
+
+    public static void entrarComoMerendeiro() {
+        JFrame frame = new JFrame("Merendeiro");
+        frame.setContentPane(new MerendeiroUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(600, 230);
+        frame.setVisible(true);
+    }
+
+    public static void entrarComoDiretor() {
+        JFrame frame = new JFrame("Tela do Diretor");
+        frame.setContentPane(new DiretorUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 300);
+        frame.setVisible(true);
+    }
+
+    public static void entrarComoAluno() {
+        JFrame frame = new JFrame("Aluno");
+        frame.setContentPane((new AlunoUI()).painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 300);
         frame.setVisible(true);
     }
 

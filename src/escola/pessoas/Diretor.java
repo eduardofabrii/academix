@@ -9,6 +9,9 @@ public class Diretor extends Funcionario {
         super(nome, CPF, dataNascimento, endereco, codigo, salario);
     }
 
+    public Diretor() {
+    }
+
     public void gerenciarProfessores(List<Professor> professores) {
         System.out.println("Gerenciando professores:");
         for (Professor professor : professores) {
