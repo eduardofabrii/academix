@@ -13,12 +13,12 @@ public class Aluno extends Pessoa {
     private Boletim boletim;
     private boolean matriculado;
 
-    public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco) {
-        super(nome, CPF, dataNascimento, endereco);
+    public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String tipo) {
+        super(nome, CPF, dataNascimento, endereco, tipo);
     }
 
-    public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String matricula) {
-        super(nome, CPF, dataNascimento, endereco);
+    public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String matricula, String tipo) {
+        super(nome, CPF, dataNascimento, endereco, tipo);
         this.matricula = matricula;
     }
 
@@ -57,12 +57,12 @@ public class Aluno extends Pessoa {
         return soma / boletim.getNotas().size();
     }
 
-    // método que verifica se o aluno está matriculado
+
     public boolean isMatriculado() {
         return matriculado;
     }
 
-    // método para definir o status de matrícula do aluno
+
     public void setMatriculado(boolean matriculado) {
         this.matriculado = matriculado;
     }

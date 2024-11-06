@@ -16,8 +16,8 @@ public abstract class Funcionario extends Pessoa {
         this.codigo = ++contador;
     }
 
-    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco);
+    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String tipo) {
+        super(nome, CPF, dataNascimento, endereco, tipo);
         this.codigo = ++contador;
         this.salario = salario;
     }
@@ -40,7 +40,6 @@ public abstract class Funcionario extends Pessoa {
 
         String registro = pessoa.getNome() + " registrou ponto de saída em " + sdf.format(new java.util.Date());
 
-        // cria uma lista com o único registro
         setRegistrosPonto(Collections.singletonList(registro));
 
         return registro;

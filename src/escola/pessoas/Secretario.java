@@ -8,7 +8,7 @@ import java.util.List;
 public class Secretario extends Funcionario {
 
     public Secretario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        super(nome, CPF, dataNascimento, endereco, codigo, salario ,"Secretario(a)");
     }
 
     public void gerenciarMatriculas(Aluno aluno) {

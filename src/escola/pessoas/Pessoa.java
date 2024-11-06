@@ -1,34 +1,35 @@
 package escola.pessoas;
 
 import escola.biblioteca.Livro;
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements Serializable {
     private String nome;
     private String CPF;
     private LocalDate dataNascimento;
     private String endereco;
     private ArrayList<Livro> livrosEmprestados;
+    private String tipo;
+
 
     public Pessoa() {
+        this.livrosEmprestados = new ArrayList<>();
     }
 
 
-    public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco) {
+    public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco, String tipo) {
         this.nome = nome;
         this.CPF = CPF;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
         this.livrosEmprestados = new ArrayList<>();
+        this.tipo = tipo;
     }
 
-    public String exibirInformacoes() {
-        return "Nome: " + getNome() +
-                ", CPF: " + getCPF() +
-                ", Nascimento: " + getDataNascimento() +
-                ", endereço: " + getEndereco();
-    }
+
+
 
     public void emprestarLivro(Livro livro) {
         if (livro != null) {
@@ -47,9 +48,6 @@ public abstract class Pessoa {
         }
     }
 
-    public ArrayList<Livro> getLivrosEmprestados() {
-        return livrosEmprestados;
-    }
 
     public String getNome() {
         return nome;
@@ -81,5 +79,26 @@ public abstract class Pessoa {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public ArrayList<Livro> getLivrosEmprestados() {
+        return livrosEmprestados;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+
+    public String exibirInformacoes() {
+        return "Nome: " + nome +
+                ", CPF: " + CPF +
+                ", Nascimento: " + dataNascimento +
+                ", Endereço: " + endereco +
+                ", Tipo: " + tipo;
     }
 }

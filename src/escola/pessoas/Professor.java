@@ -11,14 +11,14 @@ public class Professor extends Funcionario {
     private ArrayList<Disciplina> disciplinas;
 
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        super(nome, CPF, dataNascimento, endereco, codigo, salario, "Professor(a)");
     }
 
     public Professor() {
     }
 
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, ArrayList<Disciplina> disciplinas) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        super(nome, CPF, dataNascimento, endereco, codigo, salario, "Professor(a)");
         this.disciplinas = new ArrayList<>();
     }
 
