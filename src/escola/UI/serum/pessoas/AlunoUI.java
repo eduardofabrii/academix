@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class AlunoUI {
-    public JPanel painelPrincipal;
+    JPanel painelPrincipal;
     private JPanel painelBase2;
     private JPanel painelBase;
     private JButton calcularMediaButton;

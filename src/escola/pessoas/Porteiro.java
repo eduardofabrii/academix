@@ -8,13 +8,8 @@ public class Porteiro extends Funcionario {
     private List<Pessoa> registroEntrada;
     private List<Pessoa> registroSaida;
 
-    public Porteiro() {
-        registroEntrada = new ArrayList<>();
-        registroSaida = new ArrayList<>();
-    }
-
     public Porteiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        super(nome, CPF, dataNascimento, endereco, codigo, salario, "Porteiro");
         registroEntrada = new ArrayList<>();
         registroSaida = new ArrayList<>();
     }

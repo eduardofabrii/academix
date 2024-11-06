@@ -61,6 +61,8 @@
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
                       <text value="Cadastrar"/>
+                      <icon value="escola/UI/images/porteiro.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="9b018" class="javax.swing.JButton" binding="entrarComoButton">
@@ -73,6 +75,7 @@
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
                       <text value="Entrar Como"/>
+                      <text value="Cadastros"/>
                     </properties>
                   </component>
                   <component id="73022" class="javax.swing.JLabel">
@@ -82,6 +85,8 @@
                     <properties>
                       <icon value="escola/UI/images/cadastro.png"/>
                       <text value="&#10;"/>
+                      <icon value="escola/UI/images/porteiro.png"/>
+                      <text value=""/>
                     </properties>
                   </component>
                   <component id="72746" class="javax.swing.JLabel">

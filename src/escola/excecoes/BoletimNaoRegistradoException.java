@@ -9,3 +9,4 @@ public class BoletimNaoRegistradoException extends Exception {
         super("O aluno não possui boletim registrado.");
     }
 }
+

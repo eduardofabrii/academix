@@ -1,32 +1,66 @@
 package escola.minibanco;
 
 import escola.pessoas.Funcionario;
+import escola.pessoas.Pessoa;
+
 import java.io.*;
-import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class ArquivoTxt {
 
     private String caminhoArquivo;
 
     public ArquivoTxt(String nomeArquivo) {
-        this.caminhoArquivo = "src/escola/MiniBanco/" + nomeArquivo;
+        this.caminhoArquivo = "src/escola/minibanco/" + nomeArquivo;
     }
 
+    public void salvarFuncionario(List<Funcionario> funcionarios) throws IOException {
+        try (FileWriter writer = new FileWriter(caminhoArquivo, true);
+             BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
+
+
+            bufferedWriter.write(formatarCabecalho());
+            bufferedWriter.newLine();
+            bufferedWriter.write(formatarDivisoria());
+            bufferedWriter.newLine();
+
+         
+            for (Funcionario f : funcionarios) {
+                bufferedWriter.write(formatarFuncionario(f));
+                bufferedWriter.newLine();
+                bufferedWriter.write(formatarDivisoria());
+                bufferedWriter.newLine();
+            }
+        }
+    }
+
+   
+    private String formatarCabecalho() {
+        return "+---------------------------+-----------------+-----------------------+---------------------------+-----------------+------------+-----------------+" +
+                "\n| Nome                      | CPF             | Data de Nascimento    | Endereço                  | Tipo            | Código     | Salário         |";
+    }
+
+   
     private String formatarFuncionario(Funcionario funcionario) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        return "Nome: " + funcionario.getNome() + "\n" +
-                "CPF: " + funcionario.getCPF() + "\n" +
-                "Data de Nascimento: " + funcionario.getDataNascimento().format(formatter) + "\n" +
-                "Endereço: " + funcionario.getEndereco() + "\n" +
-                "Salário: " + funcionario.getSalario() + "\n" +
-                "----";
+        return String.format("| %-25s | %-15s | %-21s | %-25s | %-15s | %-10d | %-15.2f |",
+                funcionario.getNome(),
+                funcionario.getCPF(),
+                funcionario.getDataNascimento(),
+                funcionario.getEndereco(),
+                funcionario.getTipo(),
+                funcionario.getCodigo(),
+                funcionario.getSalario());
     }
 
-    public void salvarFuncionario(Funcionario funcionario) throws IOException {
-        String funcionarioFormatado = formatarFuncionario(funcionario);
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo, true))) {
-            writer.write(funcionarioFormatado);
-            writer.newLine();
+
+    private String formatarDivisoria() {
+        return "+---------------------------+-----------------+-----------------------+---------------------------+-----------------+------------+-----------------+";
+    }
+
+
+    public List<Pessoa> carregarPessoas() throws IOException, ClassNotFoundException {
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(caminhoArquivo))) {
+            return (List<Pessoa>) in.readObject();
         }
     }
 }
