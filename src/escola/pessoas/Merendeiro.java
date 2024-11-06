@@ -10,7 +10,7 @@ public class Merendeiro extends Funcionario {
     private static ArrayList<Produto> estoque;
 
     public Merendeiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario);
+        super(nome, CPF, dataNascimento, endereco, codigo, salario, "Merendeiro(a)");
     }
 
     public void criarNovoProduto(String nomeProduto, String descricaoProduto) {

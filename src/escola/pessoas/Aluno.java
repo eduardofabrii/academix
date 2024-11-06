@@ -25,6 +25,9 @@ public class Aluno extends Pessoa {
     public Aluno(String nomeAluno) {
     }
 
+    public Aluno(String eduardoHenriqueFabri, String number, LocalDate of, String robertoTeste) {
+    }
+
     @Override
     public String toString() {
         return "Aluno: " + getNome() +

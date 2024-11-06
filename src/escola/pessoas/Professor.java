@@ -63,4 +63,8 @@ public class Professor extends Funcionario {
         }
         System.out.println("Nota total da turma: " + somaNota + "\n Nota média da turma: " + somaNota/quantidadeNota);
     }
+
+    public void lecionarDisciplina(Disciplina poo) {
+
+    }
 }
