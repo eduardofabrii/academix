@@ -20,6 +20,11 @@ public class Disciplina {
         this.alunos = new ArrayList<>();
     }
 
+    public Disciplina(String nome) {
+        this.nome = nome;
+        this.alunos = new ArrayList<>();
+    }
+
     public Disciplina(String nome, int cargaHoraria, SalaAula sala, Professor professor) {
         this(nome, cargaHoraria, professor);
         this.alunos = new ArrayList<>();
