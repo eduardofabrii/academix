@@ -21,6 +21,7 @@ public class Turma {
     }
 
     public Turma(String nome) {
+        this.nome = nome;
         this.listaAlunos = new ArrayList<>();
         this.listaDisciplinas = new ArrayList<>();
     }
