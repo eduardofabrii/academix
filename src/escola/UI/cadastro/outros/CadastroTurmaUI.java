@@ -1,10 +1,12 @@
 package escola.UI.cadastro.outros;
 
 import escola.administracao.Turma;
+import escola.minibanco.turmas.TurmaTxt;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class CadastroTurmaUI {
     public JPanel painelPrincipal;
@@ -26,6 +28,12 @@ public class CadastroTurmaUI {
             public void actionPerformed(ActionEvent e) {
                 String nome = nomeTurmaTextField.getText();
                 turma = new Turma(nome); // Cria nova turma com o nome informado
+
+                try{
+                    TurmaTxt.salvarTurma(turma);
+                } catch (IOException i) {
+                    System.out.println("Erro: Turma não salva");
+                }
 
                 if (!anoTurmaTextField.getText().isEmpty()) {
                     int ano = Integer.parseInt(anoTurmaTextField.getText());
