@@ -1,10 +1,12 @@
 package escola.UI.cadastro.pessoas;
 
+import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Secretario;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class CadastroSecretarioUI {
@@ -32,6 +34,12 @@ public class CadastroSecretarioUI {
                 double salario = Double.parseDouble(salarioTextField.getText());
 
                 Secretario novoSecretario = new Secretario(nome, cpf, dataNascimento, endereco, 0, salario);
+
+                try{
+                    PessoaTxt.salvarPessoa(novoSecretario);
+                } catch(IOException i){
+                    System.out.println("Erro: Secretario não salvo");
+                }
 
                 System.out.println(novoSecretario.exibirInformacoes());
 
