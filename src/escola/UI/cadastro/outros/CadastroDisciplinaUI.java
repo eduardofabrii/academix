@@ -1,11 +1,13 @@
 package escola.UI.cadastro.outros;
 
 import escola.administracao.Disciplina;
+import escola.minibanco.disciplina.DisciplinaTxt;
 import escola.pessoas.Professor;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class CadastroDisciplinaUI {
@@ -43,6 +45,12 @@ public class CadastroDisciplinaUI {
                 Professor professor = (Professor) professorComboBox.getSelectedItem();
 
                 Disciplina novaDisciplina = new Disciplina(nome, cargaHoraria, professor);
+
+                try{
+                    DisciplinaTxt.salvarDisciplina(novaDisciplina);
+                } catch (IOException i){
+                    System.out.println("Erro: Disciplina não salva");
+                }
 
                 System.out.println(novaDisciplina.exibirInformacoes());
 
