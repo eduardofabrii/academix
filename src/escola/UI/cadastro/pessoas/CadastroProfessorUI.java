@@ -1,6 +1,7 @@
 package escola.UI.cadastro.pessoas;
 
 import escola.minibanco.ArquivoTxt;
+import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Professor;
 
 import javax.swing.*;
@@ -37,8 +38,8 @@ public class CadastroProfessorUI {
                 Professor novoProfessor = new Professor(nome, cpf, dataNascimento, endereco, 0, salario);
 
                 try{
-                    new ArquivoTxt("professor.txt").salvarFuncionario(novoProfessor);
-
+                    PessoaTxt.salvarPessoa(novoProfessor);
+                    new ArquivoTxt("Professor").salvarFuncionario(novoProfessor);
                 } catch(IOException i){
                     i.getStackTrace();
                 }
