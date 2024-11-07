@@ -8,8 +8,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class PessoaTxt{
+
     public static void salvarPessoa(Pessoa p) throws IOException {
-        FileOutputStream fos = new FileOutputStream("src/escola/minibanco/pessoas/pessoa.txt");
+        File f = new File("src/escola/minibanco/pessoas/pessoa.txt");
+        FileOutputStream fos = new FileOutputStream(f);
         ObjectOutputStream os = new ObjectOutputStream(fos);
 
         os.writeObject(p);
