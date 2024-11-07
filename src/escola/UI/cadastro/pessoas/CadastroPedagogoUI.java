@@ -29,7 +29,12 @@ public class CadastroPedagogoUI {
 //                double salario = Double.parseDouble(salarioTextField.getText());
 //
 //                Pedagogo novoPedagogo = new Pedagogo(nome, cpf, dataNascimento, endereco, 0, salario);
-//
+//                try{
+//                    PessoaTxt.salvarPessoa(novoPedagogo);
+//                } catch(IOException i){
+//                    System.out.println("Erro: Pedagogo não salvo");
+//                }
+
 //                System.out.println(novoPedagogo.exibirInformacoes());
 //
 //                JOptionPane.showMessageDialog(null, "Pedagogo " + nome + " cadastrado com sucesso!");
