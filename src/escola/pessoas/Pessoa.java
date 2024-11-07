@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public abstract class Pessoa implements Serializable {
+public class Pessoa implements Serializable {
     private String nome;
     private String CPF;
     private LocalDate dataNascimento;
@@ -18,7 +18,6 @@ public abstract class Pessoa implements Serializable {
         this.livrosEmprestados = new ArrayList<>();
     }
 
-
     public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco, String tipo) {
         this.nome = nome;
         this.CPF = CPF;
@@ -28,8 +27,9 @@ public abstract class Pessoa implements Serializable {
         this.tipo = tipo;
     }
 
-
-
+    public Pessoa(String nome) {
+        this.livrosEmprestados = new ArrayList<>();
+    }
 
     public void emprestarLivro(Livro livro) {
         if (livro != null) {

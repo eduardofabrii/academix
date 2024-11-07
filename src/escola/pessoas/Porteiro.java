@@ -14,6 +14,11 @@ public class Porteiro extends Funcionario {
         registroSaida = new ArrayList<>();
     }
 
+    public Porteiro() {
+        registroEntrada = new ArrayList<>();
+        registroSaida = new ArrayList<>();
+    }
+
     public void registrarEntrada(Pessoa pessoa) {
         registroEntrada.add(pessoa);
         System.out.println("Entrada registrada para: " + pessoa.getNome());

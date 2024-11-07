@@ -146,4 +146,20 @@ public class Escola {
     public ArrayList<Turma> getTurmas() {
         return turmas;
     }
+
+    public ArrayList<Funcionario> getFuncionarios() {
+        return funcionarios;
+    }
+
+    public ArrayList<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public ArrayList<Pessoa> getPessoas() {
+        return pessoas;
+    }
+
+    public ArrayList<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
 }

@@ -38,4 +38,8 @@ public class Merendeiro extends Funcionario {
             System.out.println(p.getNomeProduto() + " : " + p.getUnidadesProduto());
         }
     }
+
+    public static ArrayList<Produto> getEstoque() {
+        return estoque;
+    }
 }
