@@ -14,7 +14,7 @@ public class ArquivoTxt {
         this.caminhoArquivo = "src/escola/minibanco/" + nomeArquivo;
     }
 
-    public void salvarFuncionario(List<Funcionario> funcionarios) throws IOException {
+    public void salvarFuncionario(Funcionario funcionario) throws IOException {
         try (FileWriter writer = new FileWriter(caminhoArquivo, true);
              BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
 
@@ -24,13 +24,12 @@ public class ArquivoTxt {
             bufferedWriter.write(formatarDivisoria());
             bufferedWriter.newLine();
 
-         
-            for (Funcionario f : funcionarios) {
-                bufferedWriter.write(formatarFuncionario(f));
-                bufferedWriter.newLine();
-                bufferedWriter.write(formatarDivisoria());
-                bufferedWriter.newLine();
-            }
+
+            bufferedWriter.write(formatarFuncionario(funcionario));
+            bufferedWriter.newLine();
+            bufferedWriter.write(formatarDivisoria());
+            bufferedWriter.newLine();
+
         }
     }
 
