@@ -1,10 +1,13 @@
 package escola.UI.cadastro.pessoas;
 
+import escola.minibanco.ArquivoTxt;
+import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Aluno;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.time.LocalDate;
 
 public class CadastroAlunoUI {
@@ -33,6 +36,12 @@ public class CadastroAlunoUI {
                 LocalDate dataNascimento = LocalDate.parse(nascTextField.getText());
 
                 Aluno novoAluno = new Aluno(nome, cpf, dataNascimento, endereco, matricula);
+
+                try{
+                    PessoaTxt.salvarPessoa(novoAluno);
+                } catch(IOException i){
+                    System.out.println("Erro: Aluno não salvo");
+                }
 
                 System.out.println(novoAluno.exibirInformacoes());
 
