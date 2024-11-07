@@ -2,10 +2,12 @@ package escola.UI.cadastro.outros;
 
 import escola.biblioteca.Biblioteca;
 import escola.biblioteca.Livro;
+import escola.minibanco.biblioteca.LivroTxt;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class CadastroLivroUI {
     public JPanel painelPrincipal;
@@ -37,6 +39,11 @@ public class CadastroLivroUI {
                 }
 
                 Livro novoLivro = new Livro(titulo, autor, anoPublicacao);
+                try {
+                    LivroTxt.salvarLivro(novoLivro);
+                } catch(IOException i){
+                    System.out.println("Erro: Arquivo não salvo");
+                }
 
                 biblioteca.adicionarLivro(novoLivro);
 
