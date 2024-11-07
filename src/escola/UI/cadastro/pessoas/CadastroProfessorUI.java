@@ -39,9 +39,8 @@ public class CadastroProfessorUI {
 
                 try{
                     PessoaTxt.salvarPessoa(novoProfessor);
-                    new ArquivoTxt("Professor").salvarFuncionario(novoProfessor);
                 } catch(IOException i){
-                    i.getStackTrace();
+                    System.out.println("Erro: Professor não salvo");
                 }
 
                 System.out.println(novoProfessor.exibirInformacoes());
