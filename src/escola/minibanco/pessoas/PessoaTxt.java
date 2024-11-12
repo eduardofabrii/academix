@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class PessoaTxt{
 
     public static void salvarPessoa(Pessoa p) throws IOException {
-        File f = new File("src/escola/minibanco/pessoas/pessoa.txt");
+        File f = new File("src/escola/minibanco/pessoas/pessoa.ser");
         FileOutputStream fos = new FileOutputStream(f);
         ObjectOutputStream os = new ObjectOutputStream(fos);
 
@@ -20,7 +20,7 @@ public class PessoaTxt{
     }
 
     public static Pessoa carregarPessoa() throws IOException, ClassNotFoundException{
-        FileInputStream fis = new FileInputStream("src/escola/minibanco/pessoas/pessoa.txt");
+        FileInputStream fis = new FileInputStream("src/escola/minibanco/pessoas/pessoa.ser");
         ObjectInputStream is = new ObjectInputStream(fis);
 
         Pessoa p = (Pessoa) is.readObject();

@@ -8,7 +8,7 @@ public class Teste {
     public static void main(String[] args) {
         try{
             Pessoa pessoa = PessoaTxt.carregarPessoa();
-            System.out.println(pessoa);
+            System.out.println(pessoa.exibirInformacoes());
         } catch (IOException i){
             System.out.println("Arquivo não encontrado");
         } catch (ClassNotFoundException c){

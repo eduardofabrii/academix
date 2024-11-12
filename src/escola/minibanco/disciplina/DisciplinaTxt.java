@@ -6,7 +6,7 @@ import java.io.*;
 
 public class DisciplinaTxt {
     public static void salvarDisciplina(Disciplina d) throws IOException {
-        FileOutputStream fos = new FileOutputStream("escola/minibanco/disciplina/disciplina.txt");
+        FileOutputStream fos = new FileOutputStream("escola/minibanco/disciplina/disciplina.ser");
         ObjectOutputStream os = new ObjectOutputStream(fos);
         os.writeObject(d);
 
@@ -15,7 +15,7 @@ public class DisciplinaTxt {
     }
 
     public static Disciplina carregarDisciplina() throws IOException, ClassNotFoundException{
-        FileInputStream fis = new FileInputStream("escola/minibanco/disciplina/disciplina.txt");
+        FileInputStream fis = new FileInputStream("escola/minibanco/disciplina/disciplina.ser");
         ObjectInputStream is = new ObjectInputStream(fis);
         Disciplina disciplina = (Disciplina) is.readObject();
 
