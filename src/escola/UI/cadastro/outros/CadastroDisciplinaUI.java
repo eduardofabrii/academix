@@ -63,14 +63,11 @@ public class CadastroDisciplinaUI {
     }
 
     public void atualizarComboBox() {
-        professorComboBox.removeAllItems();
-
-        for (Professor professor : GerenciadorProfessores.getInstance().getListaProfessores()) {
-            professorComboBox.addItem(professor);
-        }
+        // Atualiza os JComboBox com os professores e salas
+        atualizarComboBoxProfessores();
+        atualizarComboBoxSalas();
     }
 
-    // Atualiza o JComboBox com os professores do Gerenciador
     private void atualizarComboBoxProfessores() {
         professorComboBox.removeAllItems();
         for (Professor professor : GerenciadorProfessores.getInstance().getListaProfessores()) {
@@ -78,7 +75,6 @@ public class CadastroDisciplinaUI {
         }
     }
 
-    // Atualiza o JComboBox com as salas do Gerenciador
     private void atualizarComboBoxSalas() {
         salaComboBox.removeAllItems();
         for (SalaAula sala : GerenciadorSalas.getInstance().getListaSalas()) {

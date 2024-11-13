@@ -1,11 +1,11 @@
 package escola.UI.cadastro.outros;
 
 import escola.sala.SalaAula;
+import escola.minibanco.GerenciadorSalas;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class CadastroSalaUI {
     public JPanel painelPrincipal;
@@ -19,11 +19,7 @@ public class CadastroSalaUI {
     private JTextField capacidadeSalaTextField;
     private JTextField idSalaTextField;
 
-    ArrayList<SalaAula> listaSalas = new ArrayList<>(); // Cria a lista de salas
-
     public CadastroSalaUI() {
-        this.listaSalas = listaSalas;
-
         // Atualiza o campo de ID com o próximo ID disponível
         atualizarIdSala();
 
@@ -42,10 +38,10 @@ public class CadastroSalaUI {
                     }
 
                     // Cria uma nova SalaAula com o ID incrementado automaticamente
-                    SalaAula novaSala = new SalaAula(listaSalas.size() + 1, nomeSala, capacidade);
+                    SalaAula novaSala = new SalaAula(GerenciadorSalas.getInstance().getListaSalas().size() + 1, nomeSala, capacidade);
 
-                    // Adiciona a nova sala à lista
-                    listaSalas.add(novaSala);
+                    // Adiciona a nova sala ao GerenciadorSalas
+                    GerenciadorSalas.getInstance().adicionarSala(novaSala);
 
                     // Exibe uma mensagem de sucesso
                     JOptionPane.showMessageDialog(null, "Sala " + nomeSala + " cadastrada com sucesso!");
@@ -63,13 +59,11 @@ public class CadastroSalaUI {
 
     // Método para atualizar o campo ID da sala
     private void atualizarIdSala() {
-        idSalaTextField.setText(String.valueOf(listaSalas.size() + 1));
+        idSalaTextField.setText(String.valueOf(GerenciadorSalas.getInstance().getListaSalas().size() + 1));
         idSalaTextField.setEditable(false); // Torna o campo de ID não editável
     }
 
     public static void main(String[] args) {
-        ArrayList<SalaAula> listaSalas = new ArrayList<>(); // Cria a lista de salas
-
         // Cria a tela de cadastro de sala
         CadastroSalaUI cadastroSalaUI = new CadastroSalaUI();
 
