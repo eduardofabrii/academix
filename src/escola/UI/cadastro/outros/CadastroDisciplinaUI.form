@@ -118,7 +118,7 @@
                   <grid row="1" column="4" row-span="4" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
-              <component id="879ca" class="javax.swing.JLabel" binding="cargaHoráriaLabel">
+              <component id="879ca" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -127,7 +127,7 @@
                   <text value="Carga Horária"/>
                 </properties>
               </component>
-              <component id="dfcca" class="javax.swing.JLabel" binding="salaDeAulaNullLabel">
+              <component id="dfcca" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -151,7 +151,7 @@
                   <grid row="1" column="5" row-span="4" col-span="3" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
               </hspacer>
-              <component id="f8c5e" class="javax.swing.JLabel" binding="professorLabel1">
+              <component id="f8c5e" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>

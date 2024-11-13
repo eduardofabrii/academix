@@ -83,7 +83,7 @@ public class CadastroFuncionariosUI {
 
     public static void abrirCadastroProfessor() {
         JFrame frame = new JFrame("Tela de Cadastro Professor");
-        frame.setContentPane(new CadastroProfessorUI(new CadastroDisciplinaUI()).painelPrincipal);
+        frame.setContentPane(new CadastroProfessorUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
