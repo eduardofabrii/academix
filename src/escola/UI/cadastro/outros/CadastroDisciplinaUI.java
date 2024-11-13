@@ -3,8 +3,8 @@ package escola.UI.cadastro.outros;
 import escola.administracao.Disciplina;
 import escola.pessoas.Professor;
 import escola.sala.SalaAula;
-import escola.minibanco.GerenciadorProfessores;
-import escola.minibanco.GerenciadorSalas;
+import escola.UI.gerenciadores.GerenciadorProfessores;
+import escola.UI.gerenciadores.GerenciadorSalas;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -46,6 +46,16 @@ public class CadastroDisciplinaUI {
                 Professor professor = (Professor) professorComboBox.getSelectedItem();
                 SalaAula sala = (SalaAula) salaComboBox.getSelectedItem();
 
+                // Verifica se professor ou sala são nulos
+                if (professor == null) {
+                    JOptionPane.showMessageDialog(null, "Selecione um professor válido.");
+                    return;
+                }
+                if (sala == null) {
+                    JOptionPane.showMessageDialog(null, "Selecione uma sala válida.");
+                    return;
+                }
+
                 // Cria a nova disciplina com os dados informados
                 Disciplina novaDisciplina = new Disciplina(nome, cargaHoraria, sala, professor);
 
@@ -62,25 +72,37 @@ public class CadastroDisciplinaUI {
         });
     }
 
+
     public void atualizarComboBox() {
         // Atualiza os JComboBox com os professores e salas
         atualizarComboBoxProfessores();
         atualizarComboBoxSalas();
     }
 
-    private void atualizarComboBoxProfessores() {
+    public void atualizarComboBoxSalas() {
+        salaComboBox.removeAllItems();
+        var salas = GerenciadorSalas.getInstance().getListaSalas();
+        if (salas.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Não há salas cadastradas. Por favor, cadastre uma sala primeiro.");
+            return;
+        }
+        for (SalaAula sala : salas) {
+            salaComboBox.addItem(sala);
+        }
+    }
+
+    public void atualizarComboBoxProfessores() {
         professorComboBox.removeAllItems();
-        for (Professor professor : GerenciadorProfessores.getInstance().getListaProfessores()) {
+        var professores = GerenciadorProfessores.getInstance().getListaProfessores();
+        if (professores.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Não há professores cadastrados. Por favor, cadastre um professor primeiro.");
+            return;
+        }
+        for (Professor professor : professores) {
             professorComboBox.addItem(professor);
         }
     }
 
-    private void atualizarComboBoxSalas() {
-        salaComboBox.removeAllItems();
-        for (SalaAula sala : GerenciadorSalas.getInstance().getListaSalas()) {
-            salaComboBox.addItem(sala);
-        }
-    }
 
     public static void main(String[] args) {
         // Cria a tela de cadastro de disciplina

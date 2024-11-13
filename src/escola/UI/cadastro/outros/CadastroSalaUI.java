@@ -1,7 +1,7 @@
 package escola.UI.cadastro.outros;
 
 import escola.sala.SalaAula;
-import escola.minibanco.GerenciadorSalas;
+import escola.UI.gerenciadores.GerenciadorSalas;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package escola.minibanco;
+package escola.UI.gerenciadores;
 
 import escola.sala.SalaAula;
 
