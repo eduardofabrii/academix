@@ -32,10 +32,8 @@ public class Disciplina {
     }
 
     public String exibirInformacoes() {
-        return "Disciplina: " + getNome() +
-                ", Carga Horária: " + getCargaHoraria() +
-                ", Sala: " + sala.getNome() +
-                ", Professor: " + professor.getNome();
+        String salaNome = (sala != null) ? sala.getNome() : "Sala não definida"; // Verificação de null
+        return "Disciplina: " + nome + "\nCarga Horária: " + cargaHoraria + " horas\nSala: " + salaNome + "\nProfessor: " + professor.getNome();
     }
 
     public void adicionarAluno(Aluno aluno) {

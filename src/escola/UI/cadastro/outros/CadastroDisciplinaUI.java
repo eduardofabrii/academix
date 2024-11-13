@@ -79,15 +79,11 @@ public class CadastroDisciplinaUI {
         atualizarComboBoxSalas();
     }
 
-    public void atualizarComboBoxSalas() {
-        salaComboBox.removeAllItems();
-        var salas = GerenciadorSalas.getInstance().getListaSalas();
-        if (salas.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não há salas cadastradas. Por favor, cadastre uma sala primeiro.");
-            return;
-        }
-        for (SalaAula sala : salas) {
-            salaComboBox.addItem(sala);
+    private void atualizarComboBoxSalas() {
+        salaComboBox.removeAllItems(); // Remove itens antigos
+        for (SalaAula sala : GerenciadorSalas.getInstance().getListaSalas()) {
+            System.out.println("Adicionando sala: " + sala.getNome()); // Verificação
+            salaComboBox.addItem(sala); // Adiciona salas ao JComboBox
         }
     }
 

@@ -38,7 +38,14 @@ public class CadastroSalaUI {
                     }
 
                     // Cria uma nova SalaAula com o ID incrementado automaticamente
-                    SalaAula novaSala = new SalaAula(GerenciadorSalas.getInstance().getListaSalas().size() + 1, nomeSala, capacidade);
+                    SalaAula novaSala = new SalaAula(
+                            GerenciadorSalas.getInstance().getListaSalas().size() + 1,
+                            nomeSala,
+                            capacidade
+                    );
+
+                    // Exibe o nome da sala criada para debug
+                    System.out.println("Sala criada: " + novaSala.getNome());
 
                     // Adiciona a nova sala ao GerenciadorSalas
                     GerenciadorSalas.getInstance().adicionarSala(novaSala);
@@ -59,6 +66,7 @@ public class CadastroSalaUI {
 
     // Método para atualizar o campo ID da sala
     private void atualizarIdSala() {
+        // Garantir que o ID está correto
         idSalaTextField.setText(String.valueOf(GerenciadorSalas.getInstance().getListaSalas().size() + 1));
         idSalaTextField.setEditable(false); // Torna o campo de ID não editável
     }
