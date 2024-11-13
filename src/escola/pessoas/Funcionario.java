@@ -22,6 +22,15 @@ public abstract class Funcionario extends Pessoa {
         this.salario = salario;
     }
 
+    public String exibirInformacoes() {
+        return "Nome: " + getNome() +
+                ", CPF: " + getCPF() +
+                ", Nascimento: " + getDataNascimento() +
+                ", Endereço: " + getEndereco() +
+                ", Tipo: " + getTipo() +
+                ", Salário: " + getSalario();
+    }
+
     public String baterPontoEntrada(Pessoa pessoa) {
         String mascara = "dd 'de' MMMM 'de' yyyy ' | Horário:' HH:mm";
         SimpleDateFormat sdf = new SimpleDateFormat(mascara);

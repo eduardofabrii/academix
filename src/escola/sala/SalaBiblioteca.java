@@ -20,7 +20,5 @@ public class SalaBiblioteca extends Sala {
     @Override
     public void reservarSala() {
         System.out.println("Sala Biblioteca: " + getNome() + "Capacidade: " + getCapacidade() + "Qauntidade de livros: " +getQuantidadeLivros());
-
-
     }
 }

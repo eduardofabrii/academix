@@ -36,6 +36,7 @@ public abstract class Sala {
     }
 
     public abstract boolean verificarDisponibilidade();
+
     public abstract void reservarSala();
 }
 

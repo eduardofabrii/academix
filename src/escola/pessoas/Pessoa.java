@@ -93,7 +93,6 @@ public class Pessoa implements Serializable {
         this.tipo = tipo;
     }
 
-
     public String exibirInformacoes() {
         return "Nome: " + nome +
                 ", CPF: " + CPF +
