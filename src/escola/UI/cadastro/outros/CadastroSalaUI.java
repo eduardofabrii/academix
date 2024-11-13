@@ -66,13 +66,11 @@ public class CadastroSalaUI {
 
     // Método para atualizar o campo ID da sala
     private void atualizarIdSala() {
-        // Garantir que o ID está correto
         idSalaTextField.setText(String.valueOf(GerenciadorSalas.getInstance().getListaSalas().size() + 1));
         idSalaTextField.setEditable(false); // Torna o campo de ID não editável
     }
 
     public static void main(String[] args) {
-        // Cria a tela de cadastro de sala
         CadastroSalaUI cadastroSalaUI = new CadastroSalaUI();
 
         JFrame frame = new JFrame("Cadastro de Sala");

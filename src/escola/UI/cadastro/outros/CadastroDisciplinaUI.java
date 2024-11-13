@@ -46,7 +46,7 @@ public class CadastroDisciplinaUI {
                 Professor professor = (Professor) professorComboBox.getSelectedItem();
                 SalaAula sala = (SalaAula) salaComboBox.getSelectedItem();
 
-                // Verifica se professor ou sala são nulos
+                // Verifica se professor, sala ou turma são nulos
                 if (professor == null) {
                     JOptionPane.showMessageDialog(null, "Selecione um professor válido.");
                     return;
@@ -59,7 +59,7 @@ public class CadastroDisciplinaUI {
                 // Cria a nova disciplina com os dados informados
                 Disciplina novaDisciplina = new Disciplina(nome, cargaHoraria, sala, professor);
 
-                System.out.println(novaDisciplina.exibirInformacoes());
+                // Adiciona a disciplina à turma selecionada
 
                 JOptionPane.showMessageDialog(null, "Disciplina " + nome + " cadastrada com sucesso!");
 
@@ -68,25 +68,27 @@ public class CadastroDisciplinaUI {
                 cargaHorariaTextField.setText("");
                 professorComboBox.setSelectedIndex(0);
                 salaComboBox.setSelectedIndex(0);
+
+                System.out.println("Disciplina cadastrada!" + novaDisciplina.exibirInformacoes());
             }
         });
     }
 
-
+    // Atualiza os JComboBox com as listas de professores e salas
     public void atualizarComboBox() {
-        // Atualiza os JComboBox com os professores e salas
         atualizarComboBoxProfessores();
         atualizarComboBoxSalas();
     }
 
+    // Atualiza o JComboBox de salas
     private void atualizarComboBoxSalas() {
         salaComboBox.removeAllItems(); // Remove itens antigos
         for (SalaAula sala : GerenciadorSalas.getInstance().getListaSalas()) {
-            System.out.println("Adicionando sala: " + sala.getNome()); // Verificação
             salaComboBox.addItem(sala); // Adiciona salas ao JComboBox
         }
     }
 
+    // Atualiza o JComboBox de professores
     public void atualizarComboBoxProfessores() {
         professorComboBox.removeAllItems();
         var professores = GerenciadorProfessores.getInstance().getListaProfessores();
@@ -99,9 +101,7 @@ public class CadastroDisciplinaUI {
         }
     }
 
-
     public static void main(String[] args) {
-        // Cria a tela de cadastro de disciplina
         CadastroDisciplinaUI cadastroDisciplinaUI = new CadastroDisciplinaUI();
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
