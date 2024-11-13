@@ -5,6 +5,9 @@ public abstract class Sala {
     private String nome;
     private int capacidade;
 
+    public Sala() {
+    }
+
     public Sala(int id, String nome, int capacidade) {
         this.id = id;
         this.nome = nome;

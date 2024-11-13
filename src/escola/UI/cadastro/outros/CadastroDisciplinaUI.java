@@ -2,12 +2,13 @@ package escola.UI.cadastro.outros;
 
 import escola.administracao.Disciplina;
 import escola.pessoas.Professor;
+import escola.sala.SalaAula;
 import escola.minibanco.GerenciadorProfessores;
+import escola.minibanco.GerenciadorSalas;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 public class CadastroDisciplinaUI {
     public JPanel painelPrincipal;
@@ -19,44 +20,62 @@ public class CadastroDisciplinaUI {
     private JTextField nomeTextField;
     private JTextField cargaHorariaTextField;
     private JComboBox<Professor> professorComboBox;
-    private JTextField salaAulaTextField;
+    private JComboBox<SalaAula> salaComboBox;
     private JLabel professorLabel1;
-    private JLabel salaDeAulaNullLabel;
-    private JLabel cargaHoráriaLabel;
+    private JLabel cargaHorariaLabel;
     private JLabel nomeLabel;
 
     public CadastroDisciplinaUI() {
-        // Atualiza o JComboBox com a lista de professores inicial
-        atualizarComboBox();
+        // Inicializa os JComboBox com as listas de professores e salas
+        atualizarComboBoxProfessores();
+        atualizarComboBoxSalas();
 
         cadastrarDisciplinaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String nome = nomeTextField.getText();
-                int cargaHoraria = Integer.parseInt(cargaHorariaTextField.getText());
-                Professor professor = (Professor) professorComboBox.getSelectedItem();
+                int cargaHoraria;
 
-                Disciplina novaDisciplina = new Disciplina(nome, cargaHoraria, professor);
+                // Tenta converter a carga horária para int
+                try {
+                    cargaHoraria = Integer.parseInt(cargaHorariaTextField.getText());
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Insira um número válido para a carga horária.");
+                    return;
+                }
+
+                Professor professor = (Professor) professorComboBox.getSelectedItem();
+                SalaAula sala = (SalaAula) salaComboBox.getSelectedItem();
+
+                // Cria a nova disciplina com os dados informados
+                Disciplina novaDisciplina = new Disciplina(nome, cargaHoraria, sala, professor);
 
                 System.out.println(novaDisciplina.exibirInformacoes());
 
                 JOptionPane.showMessageDialog(null, "Disciplina " + nome + " cadastrada com sucesso!");
 
+                // Limpa os campos de entrada após o cadastro
                 nomeTextField.setText("");
                 cargaHorariaTextField.setText("");
                 professorComboBox.setSelectedIndex(0);
+                salaComboBox.setSelectedIndex(0);
             }
         });
     }
 
-    // Método que atualiza o JComboBox com os professores
-    public void atualizarComboBox() {
-        // Limpa os itens existentes no combo box
+    // Atualiza o JComboBox com os professores do Gerenciador
+    private void atualizarComboBoxProfessores() {
         professorComboBox.removeAllItems();
-
-        // Preenche o combo box com os professores da lista
         for (Professor professor : GerenciadorProfessores.getInstance().getListaProfessores()) {
             professorComboBox.addItem(professor);
+        }
+    }
+
+    // Atualiza o JComboBox com as salas do Gerenciador
+    private void atualizarComboBoxSalas() {
+        salaComboBox.removeAllItems();
+        for (SalaAula sala : GerenciadorSalas.getInstance().getListaSalas()) {
+            salaComboBox.addItem(sala);
         }
     }
 

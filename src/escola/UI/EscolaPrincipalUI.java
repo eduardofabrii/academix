@@ -50,7 +50,7 @@ public class EscolaPrincipalUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(900, 450);
+        frame.setSize(1100, 450);
         frame.setVisible(true);
     }
 

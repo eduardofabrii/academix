@@ -2,10 +2,12 @@ package escola.UI.serum.entrada;
 
 import escola.UI.cadastro.outros.CadastroDisciplinaUI;
 import escola.UI.cadastro.outros.CadastroLivroUI;
+import escola.UI.cadastro.outros.CadastroSalaUI;
 import escola.UI.cadastro.outros.CadastroTurmaUI;
 import escola.UI.cadastro.pessoas.CadastroAlunoUI;
 import escola.UI.cadastro.pessoas.CadastroFuncionariosUI;
 import escola.pessoas.Professor;
+import escola.sala.SalaAula;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -23,8 +25,9 @@ public class CadastroUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JButton disciplinaButton;
-    private JButton turmaButton;
+    private JButton salaButton;
     private JButton livroButton;
+    private JButton turmaButton;
 
     public CadastroUI() {
         professorButton.addActionListener(new ActionListener() {
@@ -48,10 +51,10 @@ public class CadastroUI {
             }
         });
 
-        turmaButton.addActionListener(new ActionListener() {
+        salaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                abrirCadastroTurma();
+                abrirCadastroSala();
             }
         });
 
@@ -59,6 +62,13 @@ public class CadastroUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 abrirCadastroLivro();
+            }
+        });
+
+        turmaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               abrirCadastroTurma();
             }
         });
     }
@@ -70,6 +80,16 @@ public class CadastroUI {
         frame.pack();
         frame.setResizable(false);
         frame.setSize(740, 600);
+        frame.setVisible(true);
+    }
+
+    public static void abrirCadastroSala() {
+        JFrame frame = new JFrame("Cadastro de Sala");
+        frame.setContentPane(new CadastroSalaUI().painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(400, 300);
         frame.setVisible(true);
     }
 
@@ -86,6 +106,9 @@ public class CadastroUI {
     public static void abrirCadastroDisciplinas() {
         ArrayList<Professor> listaProfessores = new ArrayList<>();
         listaProfessores.add(new Professor());
+
+        ArrayList<SalaAula> listaSalas = new ArrayList<>();
+        listaSalas.add(new SalaAula());
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
         frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
@@ -122,7 +145,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(900, 450);
+        frame.setSize(1000, 450);
         frame.setVisible(true);
     }
 }
