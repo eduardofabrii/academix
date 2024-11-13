@@ -19,7 +19,7 @@ public class Professor extends Funcionario {
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Professor(A)");
         this.disciplinas = new ArrayList<>();
-        new GerenciarDados().gravarPessoa(this);
+        new GerenciarDados().gravarPessoa(this );
     }
 
     public Professor() {
