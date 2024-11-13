@@ -5,6 +5,8 @@ import escola.boletim.Boletim;
 import java.util.ArrayList;
 import escola.administracao.Turma;
 import escola.boletim.Nota;
+import escola.minibanco.Empacotamento;
+import escola.minibanco.GerenciarDados;
 
 public class Aluno extends Pessoa {
     private String matricula;
@@ -15,6 +17,7 @@ public class Aluno extends Pessoa {
 
     public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String tipo) {
         super(nome, CPF, dataNascimento, endereco, tipo);
+        new GerenciarDados().gravarPessoa(this);
     }
 
     public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String matricula, String tipo) {
