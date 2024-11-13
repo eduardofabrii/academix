@@ -88,7 +88,7 @@ public class CadastroUI {
         listaProfessores.add(new Professor());
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
-        frame.setContentPane(new CadastroDisciplinaUI(listaProfessores).painelPrincipal);
+        frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);

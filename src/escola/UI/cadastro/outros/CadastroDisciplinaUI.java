@@ -2,11 +2,11 @@ package escola.UI.cadastro.outros;
 
 import escola.administracao.Disciplina;
 import escola.pessoas.Professor;
+import escola.minibanco.GerenciadorProfessores;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class CadastroDisciplinaUI {
@@ -25,16 +25,9 @@ public class CadastroDisciplinaUI {
     private JLabel cargaHoráriaLabel;
     private JLabel nomeLabel;
 
-    // lista de professores disponíveis
-    private ArrayList<Professor> listaProfessores;
-
-    public CadastroDisciplinaUI(ArrayList<Professor> professores) {
-        this.listaProfessores = professores;
-
-        // preenche o JComboBox com os professores
-        for (Professor professor : listaProfessores) {
-            professorComboBox.addItem(professor);
-        }
+    public CadastroDisciplinaUI() {
+        // Atualiza o JComboBox com a lista de professores inicial
+        atualizarComboBox();
 
         cadastrarDisciplinaButton.addActionListener(new ActionListener() {
             @Override
@@ -56,12 +49,23 @@ public class CadastroDisciplinaUI {
         });
     }
 
+    // Método que atualiza o JComboBox com os professores
+    public void atualizarComboBox() {
+        // Limpa os itens existentes no combo box
+        professorComboBox.removeAllItems();
+
+        // Preenche o combo box com os professores da lista
+        for (Professor professor : GerenciadorProfessores.getInstance().getListaProfessores()) {
+            professorComboBox.addItem(professor);
+        }
+    }
+
     public static void main(String[] args) {
-        ArrayList<Professor> listaProfessores = new ArrayList<>();
-        listaProfessores.add(new Professor());
+        // Cria a tela de cadastro de disciplina
+        CadastroDisciplinaUI cadastroDisciplinaUI = new CadastroDisciplinaUI();
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
-        frame.setContentPane(new CadastroDisciplinaUI(listaProfessores).painelPrincipal);
+        frame.setContentPane(cadastroDisciplinaUI.painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);

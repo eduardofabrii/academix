@@ -1,5 +1,6 @@
 package escola.administracao;
 
+import escola.minibanco.GerenciarDados;
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
 import escola.sala.SalaAula;
@@ -22,6 +23,7 @@ public class Disciplina {
 
     public Disciplina(String nome) {
         this.nome = nome;
+        this.alunos = new ArrayList<>();
     }
 
     public Disciplina(String nome, int cargaHoraria, SalaAula sala, Professor professor) {

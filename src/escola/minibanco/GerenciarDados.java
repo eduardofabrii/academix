@@ -20,7 +20,7 @@ public class GerenciarDados {
         lerPessoa();
     }
 
-    public void gravarPessoa (Pessoa p){
+    public void gravarPessoa(Pessoa p){
         ArrayList<Serializable> listaPessoa = dados.get(1);
         if(listaPessoa == null) {
             listaPessoa = new ArrayList<>();

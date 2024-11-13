@@ -23,12 +23,11 @@ public class Aluno extends Pessoa {
     public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String matricula, String tipo) {
         super(nome, CPF, dataNascimento, endereco, tipo);
         this.matricula = matricula;
+        new GerenciarDados().gravarPessoa(this);
     }
 
     public Aluno(String nomeAluno) {
-    }
-
-    public Aluno(String eduardoHenriqueFabri, String number, LocalDate of, String robertoTeste) {
+        new GerenciarDados().gravarPessoa(this);
     }
 
     @Override
@@ -63,11 +62,9 @@ public class Aluno extends Pessoa {
         return soma / boletim.getNotas().size();
     }
 
-
     public boolean isMatriculado() {
         return matriculado;
     }
-
 
     public void setMatriculado(boolean matriculado) {
         this.matriculado = matriculado;

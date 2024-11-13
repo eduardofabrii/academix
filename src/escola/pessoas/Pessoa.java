@@ -18,6 +18,7 @@ public class Pessoa implements Serializable {
 
     public Pessoa() {
         this.livrosEmprestados = new ArrayList<>();
+        new GerenciarDados().gravarPessoa(this);
     }
 
     public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco, String tipo) {
@@ -27,10 +28,12 @@ public class Pessoa implements Serializable {
         this.endereco = endereco;
         this.livrosEmprestados = new ArrayList<>();
         this.tipo = tipo;
+        new GerenciarDados().gravarPessoa(this);
     }
 
     public Pessoa(String nome) {
         this.livrosEmprestados = new ArrayList<>();
+        new GerenciarDados().gravarPessoa(this);
     }
 
     public void emprestarLivro(Livro livro) {

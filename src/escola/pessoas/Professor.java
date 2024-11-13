@@ -20,17 +20,17 @@ public class Professor extends Funcionario {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Professor(A)");
         this.disciplinas = new ArrayList<>();
         new GerenciarDados().gravarPessoa(this);
-
     }
 
     public Professor() {
         this.disciplinas = new ArrayList<>();
-
+        new GerenciarDados().gravarPessoa(this);
     }
 
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, ArrayList<Disciplina> disciplinas) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Professor(A)");
         this.disciplinas = new ArrayList<>();
+        new GerenciarDados().gravarPessoa(this);
     }
 
     @Override

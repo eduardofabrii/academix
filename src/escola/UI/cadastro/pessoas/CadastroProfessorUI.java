@@ -1,11 +1,12 @@
 package escola.UI.cadastro.pessoas;
 
 import escola.pessoas.Professor;
+import escola.minibanco.GerenciadorProfessores;
+import escola.UI.cadastro.outros.CadastroDisciplinaUI;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
 import java.time.LocalDate;
 
 public class CadastroProfessorUI {
@@ -22,7 +23,11 @@ public class CadastroProfessorUI {
     private JTextField enderecTextField;
     private JTextField salarioTextField;
 
-    public CadastroProfessorUI() {
+    private CadastroDisciplinaUI cadastroDisciplinaUI; // Referência ao CadastroDisciplinaUI
+
+    public CadastroProfessorUI(CadastroDisciplinaUI cadastroDisciplinaUI) {
+        this.cadastroDisciplinaUI = cadastroDisciplinaUI;  // Agora o cadastroDisciplinaUI é inicializado corretamente
+
         cadastrarProfessor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -34,6 +39,12 @@ public class CadastroProfessorUI {
 
                 Professor novoProfessor = new Professor(nome, cpf, dataNascimento, endereco, 0, salario);
 
+                // Adiciona o novo professor à lista de professores
+                GerenciadorProfessores.getInstance().adicionarProfessor(novoProfessor);
+
+                // Atualiza o JComboBox na CadastroDisciplinaUI
+                cadastroDisciplinaUI.atualizarComboBox();  // Aqui o método já vai ser chamado corretamente
+
                 System.out.println(novoProfessor.exibirInformacoes());
 
                 JOptionPane.showMessageDialog(null, "Professor " + nome + " cadastrado com sucesso!");
@@ -42,8 +53,14 @@ public class CadastroProfessorUI {
     }
 
     public static void main(String[] args) {
+        // Cria a tela de cadastro de disciplina
+        CadastroDisciplinaUI cadastroDisciplinaUI = new CadastroDisciplinaUI();
+
+        // Passa a instância do CadastroDisciplinaUI para o CadastroProfessorUI
+        CadastroProfessorUI cadastroProfessorUI = new CadastroProfessorUI(cadastroDisciplinaUI);
+
         JFrame frame = new JFrame("Tela de Cadastro Professor");
-        frame.setContentPane((new CadastroProfessorUI()).painelPrincipal);
+        frame.setContentPane(cadastroProfessorUI.painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
