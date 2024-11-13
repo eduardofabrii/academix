@@ -1,6 +1,5 @@
 package escola.UI.cadastro.pessoas;
 
-import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Merendeiro;
 
 import javax.swing.*;
@@ -34,12 +33,6 @@ public class CadastroMerendeiroUI {
                 double salario = Double.parseDouble(salarioTextField.getText());
 
                 Merendeiro novoMerendeiro = new Merendeiro(nome, cpf, dataNascimento, endereco, 0, salario);
-
-                try{
-                    PessoaTxt.salvarPessoa(novoMerendeiro);
-                } catch(IOException i){
-                    System.out.println("Erro: Merendeiro não salvo");
-                }
 
                 System.out.println(novoMerendeiro.exibirInformacoes());
 

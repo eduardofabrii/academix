@@ -1,6 +1,5 @@
 package escola.UI.cadastro.pessoas;
 
-import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Faxineiro;
 
 import javax.swing.*;
@@ -34,12 +33,6 @@ public class CadastroFaxineiroUI {
                 double salario = Double.parseDouble(salarioTextField.getText());
 
                 Faxineiro novoFaxineiro = new Faxineiro(nome, cpf, dataNascimento, endereco, 0, salario);
-
-                try{
-                    PessoaTxt.salvarPessoa(novoFaxineiro);
-                } catch(IOException i){
-                    System.out.println("Erro: Faxineiro não salvo");
-                }
 
                 System.out.println(novoFaxineiro.exibirInformacoes());
 

@@ -1,6 +1,5 @@
 package escola.UI.cadastro.pessoas;
 
-import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Bibliotecario;
 
 import javax.swing.*;
@@ -34,12 +33,6 @@ public class CadatroBibliotecarioUI {
                 double salario = Double.parseDouble(salarioTextField.getText());
 
                 Bibliotecario novoBibliotecario = new Bibliotecario(nome, cpf, dataNascimento, endereco, 0, salario);
-
-                try{
-                    PessoaTxt.salvarPessoa(novoBibliotecario);
-                } catch(IOException i){
-                    System.out.println("Erro: Bibliotecario não salvo");
-                }
 
                 System.out.println(novoBibliotecario.exibirInformacoes());
 

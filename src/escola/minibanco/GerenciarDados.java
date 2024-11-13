@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GerenciarDados {
-    private static final String FILE_PATH = "escola/minibanco/dados.ser";
+    private static final String FILE_PATH = "src\\escola\\minibanco\\dados.ser";
     private HashMap<Integer, ArrayList<Serializable>> dados = new HashMap<>();
     private ArrayList<Pessoa> pessoas = new ArrayList();
 

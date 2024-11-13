@@ -1,7 +1,5 @@
 package escola.UI.cadastro.pessoas;
 
-import escola.minibanco.ArquivoTxt;
-import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Diretor;
 
 import javax.swing.*;
@@ -35,12 +33,6 @@ public class CadastroDiretorUI {
                 double salario = Double.parseDouble(salarioTextField.getText());
 
                 Diretor novoDiretor = new Diretor(nome, cpf, dataNascimento, endereco, 0, salario);
-                try{
-                    PessoaTxt.salvarPessoa(novoDiretor);
-                } catch(IOException i){
-                    System.out.println("Erro: Diretor não salvo");
-                }
-                System.out.println(novoDiretor.exibirInformacoes());
 
                 JOptionPane.showMessageDialog(null, "Diretor " + nome + " cadastrado com sucesso!");
             }

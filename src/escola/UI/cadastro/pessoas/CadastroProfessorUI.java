@@ -1,7 +1,5 @@
 package escola.UI.cadastro.pessoas;
 
-import escola.minibanco.ArquivoTxt;
-import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Professor;
 
 import javax.swing.*;
@@ -9,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.List;
 
 public class CadastroProfessorUI {
     public JPanel painelPrincipal;
@@ -36,12 +33,6 @@ public class CadastroProfessorUI {
                 double salario = Double.parseDouble(salarioTextField.getText());
 
                 Professor novoProfessor = new Professor(nome, cpf, dataNascimento, endereco, 0, salario);
-
-                try{
-                    PessoaTxt.salvarPessoa(novoProfessor);
-                } catch(IOException i){
-                    System.out.println("Erro: Professor não salvo");
-                }
 
                 System.out.println(novoProfessor.exibirInformacoes());
 

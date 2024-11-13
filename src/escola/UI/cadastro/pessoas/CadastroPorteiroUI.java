@@ -1,6 +1,5 @@
 package escola.UI.cadastro.pessoas;
 
-import escola.minibanco.pessoas.PessoaTxt;
 import escola.pessoas.Porteiro;
 
 import javax.swing.*;
@@ -34,12 +33,6 @@ public class CadastroPorteiroUI {
                 double salario = Double.parseDouble(salarioTextField.getText());
 
                 Porteiro novoPorteiro = new Porteiro(nome, cpf, dataNascimento, endereco, 0, salario);
-
-                try{
-                    PessoaTxt.salvarPessoa(novoPorteiro);
-                } catch(IOException i){
-                    System.out.println("Erro: Porteiro não salvo");
-                }
 
                 System.out.println(novoPorteiro.exibirInformacoes());
 
