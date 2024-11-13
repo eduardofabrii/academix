@@ -21,7 +21,6 @@ public class CadastroDisciplinaUI {
     private JTextField cargaHorariaTextField;
     private JComboBox<Professor> professorComboBox;
     private JComboBox<SalaAula> salaComboBox;
-    private JLabel professorLabel1;
     private JLabel cargaHorariaLabel;
     private JLabel nomeLabel;
 
@@ -61,6 +60,14 @@ public class CadastroDisciplinaUI {
                 salaComboBox.setSelectedIndex(0);
             }
         });
+    }
+
+    public void atualizarComboBox() {
+        professorComboBox.removeAllItems();
+
+        for (Professor professor : GerenciadorProfessores.getInstance().getListaProfessores()) {
+            professorComboBox.addItem(professor);
+        }
     }
 
     // Atualiza o JComboBox com os professores do Gerenciador
