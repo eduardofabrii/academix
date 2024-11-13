@@ -7,6 +7,8 @@ import escola.administracao.Escola;
 import escola.excecoes.BoletimNaoRegistradoException;
 import escola.excecoes.DisciplinaInvalidaException;
 import escola.excecoes.TurmaSemAlunosException;
+import escola.minibanco.GerenciarDados;
+
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -17,6 +19,7 @@ public class Professor extends Funcionario {
     public Professor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Professor(A)");
         this.disciplinas = new ArrayList<>();
+        new GerenciarDados().gravarPessoa(this);
 
     }
 

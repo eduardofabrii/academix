@@ -1,9 +1,12 @@
 package escola.pessoas;
 
 import escola.biblioteca.Livro;
+import escola.minibanco.GerenciarDados;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
+
 
 public class Pessoa implements Serializable {
     private String nome;
@@ -12,7 +15,6 @@ public class Pessoa implements Serializable {
     private String endereco;
     private ArrayList<Livro> livrosEmprestados;
     private String tipo;
-
 
     public Pessoa() {
         this.livrosEmprestados = new ArrayList<>();
