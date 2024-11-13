@@ -14,6 +14,11 @@ public abstract class Sala {
         this.capacidade = capacidade;
     }
 
+    @Override
+    public String toString() {
+        return getNome() + " Capacidade: " + getCapacidade();
+    }
+
     public int getId() {
         return id;
     }

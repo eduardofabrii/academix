@@ -1,7 +1,7 @@
 package escola.UI.cadastro.pessoas;
 
 import escola.pessoas.Professor;
-import escola.minibanco.GerenciadorProfessores;
+import escola.UI.gerenciadores.GerenciadorProfessores;
 import escola.UI.cadastro.outros.CadastroDisciplinaUI;
 
 import javax.swing.*;
