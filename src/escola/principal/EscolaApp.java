@@ -6,7 +6,7 @@ import escola.boletim.Boletim;
 import escola.excecoes.BoletimNaoRegistradoException;
 import escola.excecoes.DisciplinaInvalidaException;
 import escola.excecoes.TurmaSemAlunosException;
-import escola.minibanco.ArquivoTxt;
+//import escola.minibanco.ArquivoTxt;
 import escola.pessoas.*;
 
 import java.io.IOException;

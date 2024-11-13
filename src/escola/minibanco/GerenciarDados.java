@@ -10,6 +10,7 @@ public class GerenciarDados {
     private static final String FILE_PATH = "src\\escola\\minibanco\\dados.ser";
     private HashMap<Integer, ArrayList<Serializable>> dados = new HashMap<>();
     private ArrayList<Pessoa> pessoas = new ArrayList();
+//    private Arraylist<>
 
     public GerenciarDados(){
         lerDados();
