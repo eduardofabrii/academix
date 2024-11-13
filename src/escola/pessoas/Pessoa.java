@@ -14,20 +14,18 @@ public class Pessoa implements Serializable {
     private LocalDate dataNascimento;
     private String endereco;
     private ArrayList<Livro> livrosEmprestados;
-    private String tipo;
 
     public Pessoa() {
         this.livrosEmprestados = new ArrayList<>();
         new GerenciarDados().gravarPessoa(this);
     }
 
-    public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco, String tipo) {
+    public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco) {
         this.nome = nome;
         this.CPF = CPF;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
         this.livrosEmprestados = new ArrayList<>();
-        this.tipo = tipo;
         new GerenciarDados().gravarPessoa(this);
     }
 
@@ -90,19 +88,11 @@ public class Pessoa implements Serializable {
         return livrosEmprestados;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     public String exibirInformacoes() {
         return "Nome: " + nome +
                 ", CPF: " + CPF +
                 ", Nascimento: " + dataNascimento +
                 ", Endereço: " + endereco +
-                ", Tipo: " + tipo;
+                ", Tipo: ";
     }
 }

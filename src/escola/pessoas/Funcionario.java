@@ -20,7 +20,7 @@ public abstract class Funcionario extends Pessoa {
     }
 
     public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String tipo) {
-        super(nome, CPF, dataNascimento, endereco, tipo);
+        super(nome, CPF, dataNascimento, endereco);
         this.codigo = ++contador;
         this.salario = salario;
         new GerenciarDados().gravarPessoa(this);
@@ -31,7 +31,6 @@ public abstract class Funcionario extends Pessoa {
                 ", CPF: " + getCPF() +
                 ", Nascimento: " + getDataNascimento() +
                 ", Endereço: " + getEndereco() +
-                ", Tipo: " + getTipo() +
                 ", Salário: " + getSalario();
     }
 
