@@ -24,14 +24,6 @@ public class CadastroProfessorUI {
     private JTextField enderecTextField;
     private JTextField salarioTextField;
 
-    // Instância estática da interface CadastroDisciplinaUI
-    private static CadastroDisciplinaUI cadastroDisciplinaUI;
-
-    // Método estático para setar a instância de CadastroDisciplinaUI
-    public static void setCadastroDisciplinaUI(CadastroDisciplinaUI cadastroDisciplinaUI) {
-        CadastroProfessorUI.cadastroDisciplinaUI = cadastroDisciplinaUI;
-    }
-
     public CadastroProfessorUI() {
         cadastrarProfessor.addActionListener(new ActionListener() {
             @Override
