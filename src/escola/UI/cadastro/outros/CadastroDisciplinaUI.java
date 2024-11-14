@@ -1,6 +1,7 @@
 package escola.UI.cadastro.outros;
 
 import escola.administracao.Disciplina;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.pessoas.Professor;
 import escola.sala.SalaAula;
 import escola.UI.gerenciadores.GerenciadorProfessores;
@@ -26,8 +27,10 @@ public class CadastroDisciplinaUI {
 
     public CadastroDisciplinaUI() {
         // Inicializa os JComboBox com as listas de professores e salas
-        atualizarComboBoxProfessores();
-        atualizarComboBoxSalas();
+        for (Professor p: new GerenciarDadosPessoas().getProfessores())
+            professorComboBox.addItem(p);
+
+
 
         cadastrarDisciplinaButton.addActionListener(new ActionListener() {
             @Override
@@ -72,33 +75,6 @@ public class CadastroDisciplinaUI {
                 System.out.println("Disciplina cadastrada!" + novaDisciplina.exibirInformacoes());
             }
         });
-    }
-
-    // Atualiza os JComboBox com as listas de professores e salas
-    public void atualizarComboBox() {
-        atualizarComboBoxProfessores();
-        atualizarComboBoxSalas();
-    }
-
-    // Atualiza o JComboBox de salas
-    private void atualizarComboBoxSalas() {
-        salaComboBox.removeAllItems(); // Remove itens antigos
-        for (SalaAula sala : GerenciadorSalas.getInstance().getListaSalas()) {
-            salaComboBox.addItem(sala); // Adiciona salas ao JComboBox
-        }
-    }
-
-    // Atualiza o JComboBox de professores
-    public void atualizarComboBoxProfessores() {
-        professorComboBox.removeAllItems();
-        var professores = GerenciadorProfessores.getInstance().getListaProfessores();
-        if (professores.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não há professores cadastrados. Por favor, cadastre um professor primeiro.");
-            return;
-        }
-        for (Professor professor : professores) {
-            professorComboBox.addItem(professor);
-        }
     }
 
     public static void main(String[] args) {
