@@ -2,7 +2,6 @@ package escola.UI.cadastro.outros;
 
 import escola.administracao.Disciplina;
 import escola.administracao.Turma;
-import escola.UI.gerenciadores.GerenciadorTurmas;
 import escola.minibanco.administracao.GerenciarDadosAdministracao;
 
 import javax.swing.*;
@@ -45,7 +44,6 @@ public class CadastroTurmaUI {
     }
 
     public static void main(String[] args) {
-        // Configura o JFrame e a interface gráfica
         JFrame frame = new JFrame("Cadastro de Turma");
         frame.setContentPane(new CadastroTurmaUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

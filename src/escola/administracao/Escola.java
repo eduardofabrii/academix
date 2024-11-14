@@ -130,7 +130,7 @@ public class Escola implements Serializable {
 
         System.out.println("Disciplinas registradas:");
         for (Disciplina d : disciplinas) {
-            System.out.println(d.exibirInformacoes());
+            System.out.println(d.toString());
         }
     }
 

@@ -21,7 +21,6 @@ public class SecretarioUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JLabel professorLabel;
-    private JComboBox alunoComboBox;
     private JButton atualizarButton;
     private ArrayList<Secretario> secretarios = new GerenciarDadosPessoas().getSecretarios();
     private JComboBox secretarioCombox;

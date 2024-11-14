@@ -32,7 +32,7 @@ public class GerenciarDadosAdministracao {
 
     public void gravarDisciplina(Disciplina d){
         ArrayList<Serializable> listaDisciplina = dados.get("disciplina");
-        if(listaDisciplina == null) {
+        if (listaDisciplina == null) {
             listaDisciplina = new ArrayList<>();
             dados.put("disciplina", listaDisciplina);
         }
@@ -40,10 +40,11 @@ public class GerenciarDadosAdministracao {
         dados.put("boletim", listaDisciplina);
         EmpacotamentoAdministracao.salvarArquivo(dados, FILE_PATH);
     }
-    public void lerDisciplina(){
+
+    public void lerDisciplina() {
         ArrayList<Serializable> listaDisciplina = dados.get("disciplina");
-        if (listaDisciplina != null ){
-            for (Serializable d : listaDisciplina){
+        if (listaDisciplina != null) {
+            for (Serializable d : listaDisciplina) {
                 Disciplina disciplina = (Disciplina) d;
                 disciplinas.add(disciplina);
             }

@@ -1,6 +1,5 @@
 package escola.sala;
 
-import escola.UI.gerenciadores.GerenciadorSalas;
 import escola.minibanco.salas.GerenciarDadosSalas;
 
 import java.util.ArrayList;

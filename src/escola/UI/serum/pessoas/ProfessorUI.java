@@ -169,7 +169,7 @@ public class ProfessorUI {
         frame.setVisible(true);
     }
 
-    private void atualizarComboBox() {
+    public void atualizarComboBox() {
         professorsComboBox.removeAllItems();
         for (Professor professor: professores) {
             professorsComboBox.addItem(professor.getNome());
