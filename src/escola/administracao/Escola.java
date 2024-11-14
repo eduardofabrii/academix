@@ -4,9 +4,10 @@ import escola.pessoas.Aluno;
 import escola.pessoas.Funcionario;
 import escola.pessoas.Pessoa;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Escola {
+public class Escola implements Serializable {
     private ArrayList<Funcionario> funcionarios = new ArrayList<>();
     private ArrayList<Aluno> alunos = new ArrayList<>();
     private ArrayList<Pessoa> pessoas = new ArrayList<>();

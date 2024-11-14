@@ -1,13 +1,15 @@
 package escola.administracao;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import escola.minibanco.administracao.GerenciarDadosAdministracao;
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
 import escola.administracao.Disciplina;
 
-public class Turma {
+public class Turma implements Serializable {
     private String nome;
     private int ano;
     private ArrayList<Aluno> listaAlunos;
@@ -18,12 +20,16 @@ public class Turma {
         this.ano = ano;
         this.listaAlunos = new ArrayList<>();
         this.listaDisciplinas = new ArrayList<>();
+        new GerenciarDadosAdministracao().gravarTurma(this);
+
     }
 
     public Turma(String nome) {
         this.nome = nome;
         this.listaAlunos = new ArrayList<>();
         this.listaDisciplinas = new ArrayList<>();
+        new GerenciarDadosAdministracao().gravarTurma(this);
+
     }
 
     public void verAlunos() {

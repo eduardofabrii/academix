@@ -1,12 +1,14 @@
 package escola.administracao;
 
+import escola.minibanco.administracao.GerenciarDadosAdministracao;
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
 import escola.sala.SalaAula;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Disciplina {
+public class Disciplina implements Serializable {
     private String nome;
     private int cargaHoraria;
     private SalaAula sala;
@@ -18,16 +20,21 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
         this.professor = professor;
         this.alunos = new ArrayList<>();
+        new GerenciarDadosAdministracao().gravarDisciplina(this);
     }
 
     public Disciplina(String nome) {
         this.nome = nome;
         this.alunos = new ArrayList<>();
+        new GerenciarDadosAdministracao().gravarDisciplina(this);
+
     }
 
     public Disciplina(String nome, int cargaHoraria, SalaAula sala, Professor professor) {
         this(nome, cargaHoraria, professor);
         this.alunos = new ArrayList<>();
+        new GerenciarDadosAdministracao().gravarDisciplina(this);
+
     }
 
     public String exibirInformacoes() {
