@@ -1,8 +1,14 @@
 package escola.UI.serum.pessoas;
 
+import escola.administracao.Escola;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+import escola.pessoas.Professor;
+import escola.pessoas.Secretario;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class SecretarioUI {
     public JPanel painelPrincipal;
@@ -17,6 +23,10 @@ public class SecretarioUI {
     private JLabel professorLabel;
     private JComboBox alunoComboBox;
     private JButton atualizarButton;
+    private ArrayList<Secretario> secretarios = new GerenciarDadosPessoas().getSecretarios();
+    private JComboBox secretarioCombox;
+
+    Escola escola = new Escola();
 
     public SecretarioUI() {
         gerenciarMatriculaButton.addActionListener(new ActionListener() {
@@ -32,6 +42,20 @@ public class SecretarioUI {
                 }
             }
         });
+
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de secretarios atualizada.");
+            }
+        });
+
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Secretario s : secretarios) {
+            escola.adicionarProfessor(s);
+        }
+        atualizarComboBox();
 
         agendarReuniaoButton.addActionListener(new ActionListener() {
             @Override
@@ -79,6 +103,13 @@ public class SecretarioUI {
             }
         });
 
+    }
+
+    private void atualizarComboBox() {
+        secretarioCombox.removeAllItems();
+        for (Secretario secretario: secretarios) {
+            secretarioCombox.addItem(secretario.getNome());
+        }
     }
 
     public static void main(String[] args) {

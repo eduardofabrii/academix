@@ -1,12 +1,16 @@
 package escola.UI.serum.pessoas;
 
+import escola.administracao.Escola;
 import escola.cantina.Produto;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+import escola.pessoas.Faxineiro;
 import escola.pessoas.Merendeiro;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class MerendeiroUI {
     public JPanel painelPrincipal;
@@ -17,10 +21,14 @@ public class MerendeiroUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JLabel professorLabel;
+    private JComboBox merendeiroCombobox;
     private JButton imprimirEstoqueButton;
     private JButton registrarSaidaDeProdutoButton;
+    private ArrayList<Merendeiro> merendeiros = new GerenciarDadosPessoas().getMerendeiros();
     private JComboBox merendeiroComboBox;
     private JButton atualizarButton;
+
+    Escola escola = new Escola();
 
     public MerendeiroUI() {
         criarMerendaButton.addActionListener(new ActionListener() {
@@ -41,6 +49,23 @@ public class MerendeiroUI {
 //                }
             }
         });
+
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de Merendeiro atualizada.");
+            }
+        });
+
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Merendeiro m : merendeiros) {
+            escola.adicionarMerendeiro(m);
+        }
+        atualizarComboBox();
+
+
+
 
         imprimirEstoqueButton.addActionListener(new ActionListener() {
             @Override
@@ -91,6 +116,9 @@ public class MerendeiroUI {
         });
     }
 
+
+
+
     // Método para buscar produto por nome
     private Produto buscarProdutoPorNome(String nomeProduto) {
         for (Produto p : Merendeiro.getEstoque()) {
@@ -99,6 +127,11 @@ public class MerendeiroUI {
             }
         }
         return null;
+    } private void atualizarComboBox() {
+        merendeiroComboBox.removeAllItems();
+        for (Merendeiro merendeiro: merendeiros) {
+            merendeiroComboBox.addItem(merendeiro.getNome());
+        }
     }
 
     public static void main(String[] args) {

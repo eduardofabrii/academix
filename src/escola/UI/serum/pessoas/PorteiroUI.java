@@ -1,11 +1,15 @@
 package escola.UI.serum.pessoas;
 
+import escola.administracao.Escola;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+import escola.pessoas.Merendeiro;
 import escola.pessoas.Pessoa;
 import escola.pessoas.Porteiro;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PorteiroUI {
@@ -20,10 +24,12 @@ public class PorteiroUI {
     private JButton consultarRegistroEntradaButton;
     private JButton consultarRegistroSaidaButton;
     private JButton reportarOcorrenciaButton;
+    private ArrayList<Porteiro> porteiros = new GerenciarDadosPessoas().getPorteiros();
     private JComboBox porteiroComboBox;
     private JButton atualizarButton;
 
     Porteiro porteiro = new Porteiro();
+    Escola escola = new Escola();
 
     public PorteiroUI() {
         registrarEntradaButton.addActionListener(new ActionListener() {
@@ -65,6 +71,20 @@ public class PorteiroUI {
             }
         });
 
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de Porteiro atualizada.");
+            }
+        });
+
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Porteiro p : porteiros) {
+            escola.adicionarPorteiro(p);
+        }
+        atualizarComboBox();
+
         consultarRegistroSaidaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -89,6 +109,13 @@ public class PorteiroUI {
                 }
             }
         });
+    }
+
+    private void atualizarComboBox() {
+        porteiroComboBox.removeAllItems();
+        for (Porteiro porteiro: porteiros) {
+            porteiroComboBox.addItem(porteiro.getNome());
+        }
     }
 
     public static void main(String[] args) {

@@ -1,12 +1,16 @@
 package escola.UI.serum.pessoas;
 
 import escola.administracao.Escola;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+import escola.pessoas.Bibliotecario;
+import escola.pessoas.Diretor;
 import escola.pessoas.Funcionario;
 import escola.pessoas.Pessoa;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class DiretorUI {
     public JPanel painelPrincipal;
@@ -20,8 +24,9 @@ public class DiretorUI {
     private JLabel escolhasLabel;
     private JLabel professorLabel;
     private JButton relatorioGeralButton;
-    private JComboBox diretorComboBox;
+    private JComboBox  diretorComboBox;
     private JButton atualizarButton;
+    private ArrayList<Diretor> diretores = new GerenciarDadosPessoas().getDiretores();
 
     Escola escola = new Escola();
 
@@ -51,6 +56,21 @@ public class DiretorUI {
             }
         });
 
+
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de Diretor atualizada.");
+            }
+        });
+
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Diretor d : diretores) {
+            escola.adicionarDiretor(d);
+        }
+        atualizarComboBox();
+
         avaliarDesTurmaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -77,6 +97,14 @@ public class DiretorUI {
                 JOptionPane.showMessageDialog(painelPrincipal, relatorio, "Relatório Geral", JOptionPane.INFORMATION_MESSAGE);
             }
         });
+    }
+
+
+    private void atualizarComboBox() {
+        diretorComboBox.removeAllItems();
+        for (Diretor diretor: diretores) {
+            diretorComboBox.addItem(diretor.getNome());
+        }
     }
 
     public static void main(String[] args) {

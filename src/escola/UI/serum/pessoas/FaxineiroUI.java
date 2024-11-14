@@ -1,10 +1,13 @@
 package escola.UI.serum.pessoas;
 
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+import escola.administracao.Escola;
 import escola.pessoas.Faxineiro;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class FaxineiroUI {
     public JPanel painelPrincipal;
@@ -16,8 +19,12 @@ public class FaxineiroUI {
     private JLabel professorLabel;
     private JComboBox faxineiroComboBox;
     private JButton atualizarButton;
+    private ArrayList<Faxineiro> faxineiros = new GerenciarDadosPessoas().getFaxineiros();
 
     Faxineiro faxineiro = new Faxineiro();
+    Escola escola = new Escola();
+
+
 
     public FaxineiroUI() {
         reportarButton.addActionListener(new ActionListener() {
@@ -32,6 +39,21 @@ public class FaxineiroUI {
                 }
             }
         });
+
+
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de Faxineiro atualizada.");
+            }
+        });
+
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Faxineiro f : faxineiros) {
+            escola.adicionarFaxineiro(f);
+        }
+        atualizarComboBox();
 
         // Ação para gerar o relatório geral dos problemas reportados
         relatorioGeralButton.addActionListener(new ActionListener() {
@@ -50,6 +72,15 @@ public class FaxineiroUI {
             }
         });
     }
+
+    private void atualizarComboBox() {
+        faxineiroComboBox.removeAllItems();
+        for (Faxineiro faxineiro: faxineiros) {
+            faxineiroComboBox.addItem(faxineiro.getNome());
+        }
+    }
+
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Faxineiro");

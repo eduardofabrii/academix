@@ -3,6 +3,7 @@ package escola.UI.serum.pessoas;
 import escola.administracao.Escola;
 import escola.biblioteca.Biblioteca;
 import escola.biblioteca.Livro;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.pessoas.Aluno;
 import escola.pessoas.Bibliotecario;
 import escola.pessoas.Pessoa;
@@ -29,6 +30,7 @@ public class BibliotecarioUI {
     private JButton gerarRelatorioButton;
     private JComboBox bibliotecarioComboBox;
     private JButton atualizarButton;
+    private ArrayList<Bibliotecario> bibliotecarios = new GerenciarDadosPessoas().getBibliotecarios();
 
     Biblioteca biblioteca = new Biblioteca();
     Bibliotecario bibliotecario = new Bibliotecario();
@@ -77,6 +79,22 @@ public class BibliotecarioUI {
                 }
             }
         });
+
+        // Ação para atualizar o ComboBox
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de bibliotecario atualizada.");
+            }
+        });
+
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Bibliotecario b : bibliotecarios) {
+            escola.adicionarBibliotecario(b);
+        }
+        atualizarComboBox();
+
 
         atualizarLivroButton.addActionListener(new ActionListener() {
             @Override
@@ -209,9 +227,16 @@ public class BibliotecarioUI {
             }
         });
 
-        // Método para atualizar o ComboBox de alunos
-//        private void atualizarComboBox() {
-        // fazer
+
+    }
+
+
+
+    private void atualizarComboBox() {
+        bibliotecarioComboBox.removeAllItems();
+        for (Bibliotecario bibliotecario : bibliotecarios) {
+            bibliotecarioComboBox.addItem(bibliotecario.getNome());
+        }
     }
 
 

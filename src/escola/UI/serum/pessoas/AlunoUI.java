@@ -105,7 +105,7 @@ public class AlunoUI {
         });
     }
 
-    // Método para atualizar o ComboBox de alunos
+
     private void atualizarComboBox() {
         alunoComboBox.removeAllItems();
         for (Aluno aluno : alunos) {

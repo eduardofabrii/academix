@@ -2,10 +2,12 @@ package escola.UI.serum.pessoas;
 
 import escola.UI.serum.entrada.ListaAlunosUI;
 import escola.administracao.Disciplina;
+import escola.administracao.Escola;
 import escola.administracao.Turma;
 import escola.boletim.Nota;
 import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.pessoas.Aluno;
+import escola.pessoas.Porteiro;
 import escola.pessoas.Professor;
 
 import javax.swing.*;
@@ -27,7 +29,10 @@ public class ProfessorUI {
     private JButton consultarTurmaButton;
     private JButton lecionarDisciplina;
     private JButton atualizarButton;
-    private JComboBox<Professor> professorsComboBox;
+    private ArrayList<Professor> professores = new GerenciarDadosPessoas().getProfessores();
+    private JComboBox professorsComboBox;
+
+    Escola escola = new Escola();
 
     Professor p = new Professor();
     private ArrayList<Professor> professoresCadastrados = new GerenciarDadosPessoas().getProfessores();
@@ -63,6 +68,20 @@ public class ProfessorUI {
                 }
             }
         });
+
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de professor atualizada.");
+            }
+        });
+
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Professor pr : professores) {
+            escola.adicionarProfessor(pr);
+        }
+        atualizarComboBox();
 
         lecionarDisciplina.addActionListener(new ActionListener() {
             @Override
@@ -148,6 +167,13 @@ public class ProfessorUI {
         frame.setSize(400, 300);
         frame.setLocationRelativeTo(null); // centraliza a janela
         frame.setVisible(true);
+    }
+
+    private void atualizarComboBox() {
+        professorsComboBox.removeAllItems();
+        for (Professor professor: professores) {
+            professorsComboBox.addItem(professor.getNome());
+        }
     }
 
     public static void main(String[] args) {
