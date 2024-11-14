@@ -11,7 +11,6 @@ public class CadastroFuncionariosUI {
     private JPanel painelBase2;
     private JPanel painelBase;
     private JButton professorButton;
-    private JLabel professorLabel;
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JButton diretorButton;
@@ -21,6 +20,7 @@ public class CadastroFuncionariosUI {
     private JButton porteiroButton;
     private JButton bibliotecarioButton;
     private JButton faxineiroButton;
+    private JLabel professorLabel;
 
     public CadastroFuncionariosUI() {
         professorButton.addActionListener(new ActionListener() {

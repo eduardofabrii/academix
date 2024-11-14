@@ -23,6 +23,7 @@ public class CadastroAlunoUI {
     private JTextField nomeTextField;
     private JTextField matriculaTextField;
     private JComboBox<Turma> comboBoxTurmas;
+    private JButton atualizarButton;
 
     public CadastroAlunoUI() {
         ArrayList<Turma> turmas = new ArrayList<>();

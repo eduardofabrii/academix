@@ -86,15 +86,6 @@
                   </component>
                 </children>
               </grid>
-              <component id="79d1a" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <foreground color="-1"/>
-                  <text value="Nome"/>
-                </properties>
-              </component>
               <vspacer id="e8dd3">
                 <constraints>
                   <grid row="1" column="2" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
@@ -132,42 +123,6 @@
                   <grid row="1" column="4" row-span="3" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
-              <component id="6e0a8" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <foreground color="-1"/>
-                  <text value="CPF"/>
-                </properties>
-              </component>
-              <component id="e4273" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <foreground color="-1"/>
-                  <text value="Nascimento"/>
-                </properties>
-              </component>
-              <component id="40c2" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <foreground color="-1"/>
-                  <text value="Endereço"/>
-                </properties>
-              </component>
-              <component id="358fa" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <foreground color="-1"/>
-                  <text value="Salário"/>
-                </properties>
-              </component>
               <component id="cbaa2" class="javax.swing.JTextField" binding="enderecTextField">
                 <constraints>
                   <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -209,6 +164,56 @@
                 <properties>
                   <background color="-1"/>
                   <foreground color="-16711420"/>
+                </properties>
+              </component>
+              <component id="8de1a" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Calibri" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="Nome"/>
+                </properties>
+              </component>
+              <component id="a290b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Calibri" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="CPF"/>
+                </properties>
+              </component>
+              <component id="5e16b" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Calibri" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="Nascimento"/>
+                </properties>
+              </component>
+              <component id="627ea" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Calibri" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="Endereço"/>
+                </properties>
+              </component>
+              <component id="600a8" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Calibri" size="16" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="Salário"/>
                 </properties>
               </component>
             </children>
