@@ -100,7 +100,7 @@ public class EntrarComoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(500, 430);
         frame.setVisible(true);
     }
 
@@ -110,7 +110,7 @@ public class EntrarComoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(800, 400);
+        frame.setSize(600, 400);
         frame.setVisible(true);
     }
 
@@ -120,7 +120,7 @@ public class EntrarComoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 225);
+        frame.setSize(500, 350);
         frame.setVisible(true);
     }
 
@@ -130,7 +130,7 @@ public class EntrarComoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 225);
+        frame.setSize(500, 330);
         frame.setVisible(true);
     }
 
@@ -140,7 +140,7 @@ public class EntrarComoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(650, 300);
         frame.setVisible(true);
     }
 
@@ -160,7 +160,7 @@ public class EntrarComoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(600, 230);
+        frame.setSize(600, 330);
         frame.setVisible(true);
     }
 
@@ -170,7 +170,7 @@ public class EntrarComoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(500, 400);
         frame.setVisible(true);
     }
 
