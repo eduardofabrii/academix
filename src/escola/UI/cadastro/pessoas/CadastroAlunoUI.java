@@ -1,5 +1,6 @@
 package escola.UI.cadastro.pessoas;
 import escola.administracao.Turma;
+import escola.minibanco.administracao.GerenciarDadosAdministracao;
 import escola.pessoas.Aluno;
 
 import javax.swing.*;
@@ -26,9 +27,7 @@ public class CadastroAlunoUI {
     private JButton atualizarButton;
 
     public CadastroAlunoUI() {
-        ArrayList<Turma> turmas = new ArrayList<>();
-        turmas.add(new Turma("Largo da Ordem", 2024));
-        for (Turma t : turmas){
+        for (Turma t : new GerenciarDadosAdministracao().getTurmas()){
             comboBoxTurmas.addItem(t);
         }
 

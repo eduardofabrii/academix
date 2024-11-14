@@ -16,12 +16,14 @@ public class Aluno extends Pessoa {
 
     public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco){
         super(nome, CPF, dataNascimento, endereco);
+        boletim = new Boletim(this);
         new GerenciarDadosPessoas().gravarAluno(this);
     }
 
     public Aluno(String nome, String CPF, LocalDate dataNascimento, String endereco, String matricula) {
         super(nome, CPF, dataNascimento, endereco);
         this.matricula = matricula;
+        boletim = new Boletim(this);
         new GerenciarDadosPessoas().gravarAluno(this);
     }
 
