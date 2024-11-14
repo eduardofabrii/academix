@@ -3,16 +3,13 @@ package escola.UI.serum.pessoas;
 import escola.administracao.Disciplina;
 import escola.administracao.Turma;
 import escola.boletim.Nota;
-import escola.excecoes.BoletimNaoRegistradoException;
-import escola.excecoes.DisciplinaInvalidaException;
-import escola.excecoes.TurmaSemAlunosException;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,10 +25,18 @@ public class ProfessorUI {
     private JButton consultarNotaButton;
     private JButton consultarTurmaButton;
     private JButton lecionarDisciplina;
+    private JComboBox<Professor> professorsComboBox;
 
-    private Professor p = new Professor();
+    Professor p = new Professor();
+    private ArrayList<Professor> professoresCadastrados = new GerenciarDadosPessoas().getProfessores();
 
     public ProfessorUI() {
+        inicializarProfessores();
+
+        for (Professor professor : professoresCadastrados) {
+            professorsComboBox.addItem(professor);
+        }
+
         atribuirNotaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,8 +49,11 @@ public class ProfessorUI {
                     Aluno aluno = new Aluno(nomeAluno);
                     Disciplina disciplina = new Disciplina(nomeDisciplina);
 
-                    p.atribuirNota(aluno, disciplina, nota);
-                    System.out.println("Nota atribuída com sucesso!");
+                    Professor professorSelecionado = (Professor) professorsComboBox.getSelectedItem();
+                    if (professorSelecionado != null) {
+                        professorSelecionado.atribuirNota(aluno, disciplina, nota);
+                        System.out.println("Nota atribuída com sucesso!");
+                    }
                 } catch (NumberFormatException ex) {
                     System.out.println("Por favor, insira uma nota válida!");
                 } catch (Exception ex) {
@@ -61,8 +69,12 @@ public class ProfessorUI {
 
                 try {
                     Disciplina disciplina = new Disciplina(nomeDisciplina);
-                    p.lecionarDisciplina(disciplina);
-                    System.out.println("Disciplina lecionada com sucesso!");
+
+                    Professor professorSelecionado = (Professor) professorsComboBox.getSelectedItem();
+                    if (professorSelecionado != null) {
+                        professorSelecionado.lecionarDisciplina(disciplina);
+                        System.out.println("Disciplina lecionada com sucesso!");
+                    }
                 } catch (Exception ex) {
                     System.out.println("Erro ao lecionar disciplina: " + ex.getMessage());
                 }
@@ -132,6 +144,11 @@ public class ProfessorUI {
                 }
             }
         });
+    }
+
+
+    private void inicializarProfessores() {
+        new GerenciarDadosPessoas().lerProfessores();
     }
 
     public static void main(String[] args) {

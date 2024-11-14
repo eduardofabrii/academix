@@ -30,8 +30,6 @@ public class CadastroDisciplinaUI {
         for (Professor p: new GerenciarDadosPessoas().getProfessores())
             professorComboBox.addItem(p);
 
-
-
         cadastrarDisciplinaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
