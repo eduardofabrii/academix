@@ -1,6 +1,8 @@
 package escola.sala;
 
-public abstract class Sala {
+import java.io.Serializable;
+
+public abstract class Sala implements Serializable {
     private int id;
     private String nome;
     private int capacidade;

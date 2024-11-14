@@ -81,6 +81,15 @@ public class Disciplina implements Serializable {
         return null;
     }
 
+    @Override
+    public String toString() {
+        return "Disciplina{" +
+                "sala=" + sala +
+                ", nome='" + nome + '\'' +
+                ", professor=" + professor +
+                '}';
+    }
+
     public String getNome() {
         return nome;
     }
