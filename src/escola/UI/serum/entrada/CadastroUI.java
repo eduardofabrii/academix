@@ -145,7 +145,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(1000, 450);
+        frame.setSize(500, 450);
         frame.setVisible(true);
     }
 }
