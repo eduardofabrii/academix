@@ -60,7 +60,7 @@ public class CadastroAlunoUI {
         frame.setContentPane(new CadastroAlunoUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setResizable(true);
+        frame.setResizable(false);
         frame.setSize(500, 300);
         frame.setVisible(true);
     }

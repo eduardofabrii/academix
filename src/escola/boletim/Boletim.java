@@ -2,10 +2,12 @@ package escola.boletim;
 
 import escola.administracao.Disciplina;
 import escola.pessoas.Aluno;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Boletim {
+public class Boletim implements Serializable {
     private List<Disciplina> disciplinas;
     private double mediaFinal;
     private ArrayList<Nota> notas;

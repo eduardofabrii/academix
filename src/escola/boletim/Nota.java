@@ -4,7 +4,9 @@ package escola.boletim;
 import escola.administracao.Disciplina;
 import escola.pessoas.Aluno;
 
-public class Nota {
+import java.io.Serializable;
+
+public class Nota implements Serializable {
     private Disciplina disciplina;
     private Aluno aluno;
     private double valor;
