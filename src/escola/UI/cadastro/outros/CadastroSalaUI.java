@@ -75,7 +75,7 @@ public class CadastroSalaUI {
 
         JFrame frame = new JFrame("Cadastro de Sala");
         frame.setContentPane(cadastroSalaUI.painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(400, 300);

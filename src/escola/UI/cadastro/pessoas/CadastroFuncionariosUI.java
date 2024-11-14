@@ -84,7 +84,7 @@ public class CadastroFuncionariosUI {
     public static void abrirCadastroProfessor() {
         JFrame frame = new JFrame("Tela de Cadastro Professor");
         frame.setContentPane(new CadastroProfessorUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -94,22 +94,22 @@ public class CadastroFuncionariosUI {
     public static void abrirCadastroFaxineiro() {
         JFrame frame = new JFrame("Tela de Cadastro Faxineiro");
         frame.setContentPane((new CadastroFaxineiroUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
         frame.setVisible(true);
     }
 
-//    public static void abrirCadastroPedagogo() {
-//        JFrame frame = new JFrame("Tela de Cadastro Pedagogo");
-////        frame.setContentPane((new CadastroPedagogoUI()).painelPrincipal);
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.pack();
-//        frame.setResizable(false);
-//        frame.setSize(500, 300);
-//        frame.setVisible(true);
-//    }
+    public static void abrirCadastroPedagogo() {
+        JFrame frame = new JFrame("Tela de Cadastro Pedagogo");
+        frame.setContentPane((new CadastroPedagogoUI()).painelPrincipal);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setResizable(false);
+        frame.setSize(500, 300);
+        frame.setVisible(true);
+    }
 
     public static void abrirCadastroSecretario() {
         JFrame frame = new JFrame("Tela de Cadastro Secretario");

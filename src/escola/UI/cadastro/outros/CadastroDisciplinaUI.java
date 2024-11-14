@@ -80,7 +80,7 @@ public class CadastroDisciplinaUI {
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
         frame.setContentPane(cadastroDisciplinaUI.painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);

@@ -54,7 +54,7 @@ public class FaxineiroUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Faxineiro");
         frame.setContentPane(new FaxineiroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);

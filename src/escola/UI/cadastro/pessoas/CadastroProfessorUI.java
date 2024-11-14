@@ -99,7 +99,7 @@ public class CadastroProfessorUI {
 
         JFrame frame = new JFrame("Tela de Cadastro Professor");
         frame.setContentPane(cadastroProfessorUI.painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);

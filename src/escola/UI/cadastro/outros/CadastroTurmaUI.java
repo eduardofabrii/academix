@@ -104,7 +104,7 @@ public class CadastroTurmaUI {
         // Configura o JFrame e a interface gráfica
         JFrame frame = new JFrame("Cadastro de Turma");
         frame.setContentPane(new CadastroTurmaUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(400, 300);

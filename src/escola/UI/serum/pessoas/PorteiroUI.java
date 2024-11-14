@@ -93,7 +93,7 @@ public class PorteiroUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Porteiro");
         frame. setContentPane(new PorteiroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 225);

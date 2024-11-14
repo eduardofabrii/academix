@@ -213,7 +213,7 @@ public class BibliotecarioUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Bibliotecário");
         frame.setContentPane(new BibliotecarioUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(800, 400);

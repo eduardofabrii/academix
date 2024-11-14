@@ -97,7 +97,7 @@ public class EntrarComoUI {
     public static void entrarComoProfessor() {
         JFrame frame = new JFrame("Professor");
         frame.setContentPane((new ProfessorUI().painelPrincipal));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -107,7 +107,7 @@ public class EntrarComoUI {
     public static void entrarComoBibliotecario() {
         JFrame frame = new JFrame("Bibliotecário");
         frame.setContentPane(new BibliotecarioUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(800, 400);
@@ -117,7 +117,7 @@ public class EntrarComoUI {
     public static void entrarComoPedagogo() {
         JFrame frame = new JFrame("Pedagogo");
         frame.setContentPane(new PedagogoUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 225);
@@ -127,7 +127,7 @@ public class EntrarComoUI {
     public static void entrarComoPorteiro() {
         JFrame frame = new JFrame("Porteiro");
         frame.setContentPane(new PorteiroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 225);
@@ -137,7 +137,7 @@ public class EntrarComoUI {
     public static void entrarComoFaxineiro() {
         JFrame frame = new JFrame("Faxineiro");
         frame.setContentPane(new FaxineiroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -147,7 +147,7 @@ public class EntrarComoUI {
     public static void entrarComoSecretario() {
         JFrame frame = new JFrame("Secretário");
         frame.setContentPane(new SecretarioUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -157,7 +157,7 @@ public class EntrarComoUI {
     public static void entrarComoMerendeiro() {
         JFrame frame = new JFrame("Merendeiro");
         frame.setContentPane(new MerendeiroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(600, 230);
@@ -167,7 +167,7 @@ public class EntrarComoUI {
     public static void entrarComoDiretor() {
         JFrame frame = new JFrame("Tela do Diretor");
         frame.setContentPane(new DiretorUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -177,7 +177,7 @@ public class EntrarComoUI {
     public static void entrarComoAluno() {
         JFrame frame = new JFrame("Aluno");
         frame.setContentPane((new AlunoUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -187,7 +187,7 @@ public class EntrarComoUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela de Cadastro Funcionarios");
         frame.setContentPane((new EntrarComoUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(740, 600);
