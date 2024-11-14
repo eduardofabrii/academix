@@ -20,37 +20,42 @@ public class AlunoUI {
     private JLabel escolhasLabel;
     private JLabel alunoLabel;
     private JButton consultarTurmaButton;
-    private JComboBox alunoComboBox;
+    private JComboBox<String> alunoComboBox;
+    private JButton atualizarButton;
 
     private ArrayList<Aluno> alunos = new GerenciarDadosPessoas().getAlunos();
     private Escola escola;
 
     public AlunoUI() {
         escola = new Escola();
-        for (Aluno a : alunos) {
-            escola.adicionarAluno(a); // Adiciona os alunos à escola
-        }
 
+        // Adiciona os alunos à escola e popula o ComboBox inicialmente
+        for (Aluno a : alunos) {
+            escola.adicionarAluno(a);
+        }
+        atualizarComboBox();
+
+        // Ação para visualizar boletim do aluno
         visualizarBoletimButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String cpf = JOptionPane.showInputDialog(painelPrincipal, "Digite o cpf do aluno:");
-                for (Aluno aluno : alunos){
+                for (Aluno aluno : alunos) {
                     if (aluno.getCPF().equals(cpf)) {
                         aluno.visualizarBoletim();
                         return;
                     }
                 }
                 JOptionPane.showMessageDialog(painelPrincipal, "Aluno não encontrado.");
-
             }
         });
 
+        // Ação para calcular média do aluno
         calcularMediaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String cpf = JOptionPane.showInputDialog(painelPrincipal, "Digite o cpf do aluno:");
-                for (Aluno aluno : alunos){
+                for (Aluno aluno : alunos) {
                     if (aluno.getCPF().equals(cpf)) {
                         System.out.println(aluno.calcularMedia());
                         return;
@@ -60,35 +65,52 @@ public class AlunoUI {
             }
         });
 
+        // Ação para consultar turma do aluno
         consultarTurmaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String cpf = JOptionPane.showInputDialog(painelPrincipal, "Digite o cpf do aluno:");
-                for (Aluno aluno : alunos){
+                for (Aluno aluno : alunos) {
                     if (aluno.getCPF().equals(cpf)) {
                         System.out.println(aluno.getTurma());
                         return;
                     }
                 }
                 JOptionPane.showMessageDialog(painelPrincipal, "Aluno não encontrado.");
-
             }
         });
 
+        // Ação para consultar frequência do aluno
         consultarFrequenciaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String cpf = JOptionPane.showInputDialog(painelPrincipal, "Digite o cpf do aluno:");
-                for (Aluno aluno : alunos){
+                for (Aluno aluno : alunos) {
                     if (aluno.getCPF().equals(cpf)) {
                         System.out.println(aluno.getFrequencia());
                         return;
                     }
                 }
                 JOptionPane.showMessageDialog(painelPrincipal, "Aluno não encontrado.");
-
             }
         });
+
+        // Ação para atualizar o ComboBox
+        atualizarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                atualizarComboBox();
+                JOptionPane.showMessageDialog(painelPrincipal, "Lista de alunos atualizada.");
+            }
+        });
+    }
+
+    // Método para atualizar o ComboBox de alunos
+    private void atualizarComboBox() {
+        alunoComboBox.removeAllItems();
+        for (Aluno aluno : alunos) {
+            alunoComboBox.addItem(aluno.getNome()); // Adiciona o nome de cada aluno no ComboBox
+        }
     }
 
     public static void main(String[] args) {
@@ -97,7 +119,7 @@ public class AlunoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(500, 400);
         frame.setVisible(true);
     }
 }

@@ -42,6 +42,7 @@
                     </constraints>
                     <properties>
                       <background color="-1"/>
+                      <font name="Calibri" size="16" style="1"/>
                       <foreground color="-1"/>
                       <text value="Escolha o que quer fazer"/>
                     </properties>
@@ -69,7 +70,7 @@
                       <font name="Calibri" size="16" style="1"/>
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
-                      <text value="Cadastrar"/>
+                      <text value="   Cadastrar    "/>
                     </properties>
                   </component>
                   <component id="bddf6" class="javax.swing.JLabel">
@@ -90,7 +91,7 @@
                       <font name="Calibri" size="16" style="1"/>
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
-                      <text value="Entrar Como"/>
+                      <text value="  Entrar Como  "/>
                     </properties>
                   </component>
                 </children>

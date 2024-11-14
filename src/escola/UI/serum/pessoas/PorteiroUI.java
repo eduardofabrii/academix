@@ -21,6 +21,7 @@ public class PorteiroUI {
     private JButton consultarRegistroSaidaButton;
     private JButton reportarOcorrenciaButton;
     private JComboBox porteiroComboBox;
+    private JButton atualizarButton;
 
     Porteiro porteiro = new Porteiro();
 
@@ -96,7 +97,7 @@ public class PorteiroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 225);
+        frame.setSize(500, 325);
         frame.setVisible(true);
     }
 }

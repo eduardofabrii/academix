@@ -9,13 +9,13 @@ import java.awt.event.ActionListener;
 public class FaxineiroUI {
     public JPanel painelPrincipal;
     private JPanel painelBase2;
-    private JPanel painelBase;
     private JButton reportarButton;
     private JButton relatorioGeralButton;
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JLabel professorLabel;
-    private JComboBox faxineiraComboBox;
+    private JComboBox faxineiroComboBox;
+    private JButton atualizarButton;
 
     Faxineiro faxineiro = new Faxineiro();
 
@@ -57,7 +57,7 @@ public class FaxineiroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(650, 300);
         frame.setVisible(true);
     }
 }

@@ -21,6 +21,7 @@ public class DiretorUI {
     private JLabel professorLabel;
     private JButton relatorioGeralButton;
     private JComboBox diretorComboBox;
+    private JButton atualizarButton;
 
     Escola escola = new Escola();
 
@@ -84,7 +85,7 @@ public class DiretorUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(500, 400);
         frame.setVisible(true);
     }
 }

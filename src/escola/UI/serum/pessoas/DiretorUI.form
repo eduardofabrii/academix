@@ -16,7 +16,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="825b3" binding="painelBase2" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="825b3" binding="painelBase2" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -26,10 +26,10 @@
             </properties>
             <border type="none"/>
             <children>
-              <grid id="9113d" binding="painelBase" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="9113d" binding="painelBase" layout-manager="GridLayoutManager" row-count="5" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-16102913"/>
@@ -38,7 +38,7 @@
                 <children>
                   <component id="db234" class="javax.swing.JButton" binding="gerenciarProfsButton">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <background color="-16119286"/>
@@ -50,55 +50,100 @@
                   </component>
                   <component id="1f897" class="javax.swing.JButton" binding="reuniaoButton">
                     <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <background color="-16119286"/>
                       <font name="Calibri" size="16" style="1"/>
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
-                      <text value="Realizar Reunião"/>
+                      <text value="    Realizar Reunião    "/>
                     </properties>
                   </component>
-                  <component id="e2426" class="javax.swing.JButton" binding="relatorioGeralButton">
+                  <component id="e4b7" class="javax.swing.JComboBox" binding="diretorComboBox">
                     <constraints>
-                      <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <maximum-size width="180" height="50"/>
+                      </grid>
                     </constraints>
                     <properties>
-                      <background color="-16119286"/>
+                      <background color="-16449023"/>
                       <font name="Calibri" size="16" style="1"/>
-                      <foreground color="-592129"/>
-                      <hideActionText value="false"/>
-                      <text value="Relatório Geral"/>
+                      <foreground color="-1"/>
+                      <model/>
                     </properties>
                   </component>
-                  <component id="470f5" class="javax.swing.JButton" binding="gerenciarAlunosButton">
+                  <component id="1b2f7" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="1" row-span="1" col-span="8" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <background color="-16119286"/>
                       <font name="Calibri" size="16" style="1"/>
-                      <foreground color="-592129"/>
-                      <hideActionText value="false"/>
-                      <text value="Gerenciar Alunos"/>
+                      <foreground color="-1"/>
+                      <text value="Atualizar"/>
+                    </properties>
+                  </component>
+                  <component id="3c5c9" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="Calibri" size="16" style="1"/>
+                      <foreground color="-1"/>
+                      <text value="Qual diretor você é: "/>
                     </properties>
                   </component>
                   <component id="c3dff" class="javax.swing.JButton" binding="avaliarDesTurmaButton">
                     <constraints>
-                      <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="4" column="0" row-span="1" col-span="10" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <background color="-16119286"/>
                       <font name="Calibri" size="16" style="1"/>
                       <foreground color="-592129"/>
                       <hideActionText value="false"/>
-                      <text value="Avaliar Desempenho de Turma"/>
+                      <text value="                        Avaliar Desempenho de Turma                     "/>
+                    </properties>
+                  </component>
+                  <component id="e2426" class="javax.swing.JButton" binding="relatorioGeralButton">
+                    <constraints>
+                      <grid row="3" column="1" row-span="1" col-span="9" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16119286"/>
+                      <font name="Calibri" size="16" style="1"/>
+                      <foreground color="-592129"/>
+                      <hideActionText value="false"/>
+                      <text value="    Relatório Geral   "/>
+                    </properties>
+                  </component>
+                  <component id="470f5" class="javax.swing.JButton" binding="gerenciarAlunosButton">
+                    <constraints>
+                      <grid row="2" column="1" row-span="1" col-span="9" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16119286"/>
+                      <font name="Calibri" size="16" style="1"/>
+                      <foreground color="-592129"/>
+                      <hideActionText value="false"/>
+                      <text value="  Gerenciar Alunos  "/>
+                    </properties>
+                  </component>
+                  <component id="aaeb2" class="javax.swing.JButton" binding="atualizarButton">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="9" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16119286"/>
+                      <font name="Calibri" size="16" style="1"/>
+                      <foreground color="-592129"/>
+                      <hideActionText value="false"/>
+                      <text value="              ⟲︎               "/>
                     </properties>
                   </component>
                 </children>
               </grid>
-              <grid id="f4857" binding="painelTitulo" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="f4857" binding="painelTitulo" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -120,41 +165,11 @@
                   </component>
                   <component id="365f6" class="javax.swing.JLabel" binding="professorLabel">
                     <constraints>
-                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <icon value="escola/UI/images/diretor-de-filme.png"/>
                       <text value=""/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-              <grid id="60a99" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-16711420"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <component id="abcdc" class="javax.swing.JComboBox" binding="diretorComboBox">
-                    <constraints>
-                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <background color="-16449023"/>
-                      <foreground color="-1"/>
-                    </properties>
-                  </component>
-                  <component id="5d9c5" class="javax.swing.JLabel">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <foreground color="-1"/>
-                      <text value="Qual diretor você é: "/>
                     </properties>
                   </component>
                 </children>

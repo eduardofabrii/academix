@@ -20,6 +20,7 @@ public class MerendeiroUI {
     private JButton imprimirEstoqueButton;
     private JButton registrarSaidaDeProdutoButton;
     private JComboBox merendeiroComboBox;
+    private JButton atualizarButton;
 
     public MerendeiroUI() {
         criarMerendaButton.addActionListener(new ActionListener() {
@@ -106,7 +107,7 @@ public class MerendeiroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(600, 230);
+        frame.setSize(700, 330);
         frame.setVisible(true);
     }
 }

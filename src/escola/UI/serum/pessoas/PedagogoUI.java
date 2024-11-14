@@ -17,6 +17,7 @@ public class PedagogoUI {
     private JLabel professorLabel;
     private JButton consultarDesempenhoButton;
     private JComboBox pedagogoComboBox;
+    private JButton atualizarButton;
 
     Pedagogo pedagogo = new Pedagogo();
     Escola escola = new Escola();
@@ -47,7 +48,7 @@ public class PedagogoUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 225);
+        frame.setSize(500, 325);
         frame.setVisible(true);
     }
 }
