@@ -73,14 +73,6 @@ public class CadastroProfessorUI {
                     // Cria o novo professor
                     Professor novoProfessor = new Professor(nome, cpf, dataNascimento, endereco, 0, salario);
 
-                    // Adiciona o novo professor ao gerenciador
-                    GerenciadorProfessores.getInstance().adicionarProfessor(novoProfessor);
-
-                    // Atualiza o JComboBox na interface de disciplinas
-                    if (cadastroDisciplinaUI != null) {
-                        cadastroDisciplinaUI.atualizarComboBox();
-                    }
-
                     // Exibe mensagem de sucesso e limpa os campos
                     JOptionPane.showMessageDialog(null, "Professor " + nome + " cadastrado com sucesso!");
                     nomeTextField.setText("");
