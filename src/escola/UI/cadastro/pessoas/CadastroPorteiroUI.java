@@ -32,7 +32,7 @@ public class CadastroPorteiroUI {
                 String endereco = enderecTextField.getText();
                 double salario = Double.parseDouble(salarioTextField.getText());
 
-                Porteiro novoPorteiro = new Porteiro(nome, cpf, dataNascimento, endereco, 0, salario);
+                Porteiro novoPorteiro = new Porteiro(nome, cpf, dataNascimento, endereco, salario);
 
                 System.out.println(novoPorteiro.exibirInformacoes());
 

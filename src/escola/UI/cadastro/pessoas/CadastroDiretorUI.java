@@ -32,7 +32,7 @@ public class CadastroDiretorUI {
                 String endereco = enderecTextField.getText();
                 double salario = Double.parseDouble(salarioTextField.getText());
 
-                Diretor novoDiretor = new Diretor(nome, cpf, dataNascimento, endereco, 0, salario);
+                Diretor novoDiretor = new Diretor(nome, cpf, dataNascimento, endereco, salario);
 
                 JOptionPane.showMessageDialog(null, "Diretor " + nome + " cadastrado com sucesso!");
             }

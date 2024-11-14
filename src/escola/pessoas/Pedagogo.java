@@ -10,8 +10,8 @@ public class Pedagogo extends Funcionario {
         new GerenciarDadosPessoas().gravarPedagogo(this);
     }
 
-    public Pedagogo(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String tipo) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario, tipo);
+    public Pedagogo(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
         new GerenciarDadosPessoas().gravarPedagogo(this);
 
     }

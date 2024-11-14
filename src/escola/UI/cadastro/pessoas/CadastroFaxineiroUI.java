@@ -32,7 +32,7 @@ public class CadastroFaxineiroUI {
                 String endereco = enderecTextField.getText();
                 double salario = Double.parseDouble(salarioTextField.getText());
 
-                Faxineiro novoFaxineiro = new Faxineiro(nome, cpf, dataNascimento, endereco, 0, salario);
+                Faxineiro novoFaxineiro = new Faxineiro(nome, cpf, dataNascimento, endereco, salario);
 
                 System.out.println(novoFaxineiro.exibirInformacoes());
 

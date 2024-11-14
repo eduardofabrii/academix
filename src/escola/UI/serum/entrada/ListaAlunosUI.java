@@ -84,4 +84,8 @@ public class ListaAlunosUI {
         frame.setLocationRelativeTo(null); // centraliza a janela
         frame.setVisible(true);
     }
+
+    public JPanel getPainelPrincipal() {
+        return painelPrincipal;
+    }
 }

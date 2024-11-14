@@ -63,7 +63,7 @@ public class CadastroProfessorUI {
                     }
 
                     // Cria o novo professor
-                    Professor novoProfessor = new Professor(nome, cpf, dataNascimento, endereco, 0, salario);
+                    Professor novoProfessor = new Professor(nome, cpf, dataNascimento, endereco, salario);
 
                     // Exibe mensagem de sucesso e limpa os campos
                     JOptionPane.showMessageDialog(null, "Professor " + nome + " cadastrado com sucesso!");

@@ -1,5 +1,6 @@
 package escola.UI.serum.pessoas;
 
+import escola.UI.serum.entrada.ListaAlunosUI;
 import escola.administracao.Disciplina;
 import escola.administracao.Turma;
 import escola.boletim.Nota;
@@ -126,22 +127,7 @@ public class ProfessorUI {
         consultarTurmaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String nomeTurma = JOptionPane.showInputDialog("Digite o nome da turma:");
-
-                try {
-                    List<Aluno> alunos = p.consultarTurma(nomeTurma);
-
-                    if (alunos != null && !alunos.isEmpty()) {
-                        System.out.println("Alunos da turma " + nomeTurma + ":");
-                        for (Aluno aluno : alunos) {
-                            System.out.println(aluno.getNome());
-                        }
-                    } else {
-                        System.out.println("Não há alunos na turma " + nomeTurma + " ou turma não encontrada.");
-                    }
-                } catch (Exception ex) {
-                    System.out.println("Erro ao consultar a turma: " + ex.getMessage());
-                }
+                abrirLista();
             }
         });
     }
@@ -149,6 +135,18 @@ public class ProfessorUI {
 
     private void inicializarProfessores() {
         new GerenciarDadosPessoas().lerProfessores();
+    }
+
+    public static void abrirLista() {
+        // Exemplo de turmas
+        List<String> turmas = List.of("Turma A", "Turma B", "Turma C");
+
+        JFrame frame = new JFrame("Lista de Alunos");
+        frame.setContentPane(new ListaAlunosUI(turmas, new ArrayList<>()).getPainelPrincipal());
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(400, 300);
+        frame.setLocationRelativeTo(null); // centraliza a janela
+        frame.setVisible(true);
     }
 
     public static void main(String[] args) {

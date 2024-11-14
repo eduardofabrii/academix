@@ -32,7 +32,7 @@ public class CadastroMerendeiroUI {
                 String endereco = enderecTextField.getText();
                 double salario = Double.parseDouble(salarioTextField.getText());
 
-                Merendeiro novoMerendeiro = new Merendeiro(nome, cpf, dataNascimento, endereco, 0, salario);
+                Merendeiro novoMerendeiro = new Merendeiro(nome, cpf, dataNascimento, endereco, salario);
 
                 System.out.println(novoMerendeiro.exibirInformacoes());
 

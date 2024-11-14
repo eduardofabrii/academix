@@ -32,7 +32,7 @@ public class CadastroSecretarioUI {
                 String endereco = enderecTextField.getText();
                 double salario = Double.parseDouble(salarioTextField.getText());
 
-                Secretario novoSecretario = new Secretario(nome, cpf, dataNascimento, endereco, 0, salario);
+                Secretario novoSecretario = new Secretario(nome, cpf, dataNascimento, endereco, salario);
 
                 System.out.println(novoSecretario.exibirInformacoes());
 

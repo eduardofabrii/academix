@@ -29,15 +29,15 @@ public class MerendeiroUI {
                 String nomeProduto = JOptionPane.showInputDialog(painelPrincipal, "Informe o nome do produto:");
                 String descricaoProduto = JOptionPane.showInputDialog(painelPrincipal, "Informe a descrição do produto:");
 
-                if (nomeProduto != null && !nomeProduto.trim().isEmpty() && descricaoProduto != null && !descricaoProduto.trim().isEmpty()) {
-                    // Criar um novo produto e adicionar ao estoque
-                    Produto novoProduto = new Produto(nomeProduto, descricaoProduto, 0);
-                    Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
-                    merendeiro.criarNovoProduto(nomeProduto, descricaoProduto); // Adiciona o novo produto ao estoque
-                    JOptionPane.showMessageDialog(painelPrincipal, "Produto criado: " + nomeProduto);
-                } else {
-                    JOptionPane.showMessageDialog(painelPrincipal, "Dados inválidos.", "Erro", JOptionPane.ERROR_MESSAGE);
-                }
+//                if (nomeProduto != null && !nomeProduto.trim().isEmpty() && descricaoProduto != null && !descricaoProduto.trim().isEmpty()) {
+//                    // Criar um novo produto e adicionar ao estoque
+//                    Produto novoProduto = new Produto(nomeProduto, descricaoProduto, 0);
+//                    Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
+//                    merendeiro.criarNovoProduto(nomeProduto, descricaoProduto); // Adiciona o novo produto ao estoque
+//                    JOptionPane.showMessageDialog(painelPrincipal, "Produto criado: " + nomeProduto);
+//                } else {
+//                    JOptionPane.showMessageDialog(painelPrincipal, "Dados inválidos.", "Erro", JOptionPane.ERROR_MESSAGE);
+//                }
             }
         });
 
@@ -45,9 +45,9 @@ public class MerendeiroUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Exibir o estoque de produtos
-                Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
-                merendeiro.imprimirEstoque(); // Imprime o estoque de produtos no console
-                JOptionPane.showMessageDialog(painelPrincipal, "Estoque impresso no console.");
+//                Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
+//                merendeiro.imprimirEstoque(); // Imprime o estoque de produtos no console
+//                JOptionPane.showMessageDialog(painelPrincipal, "Estoque impresso no console.");
             }
         });
 
@@ -57,16 +57,16 @@ public class MerendeiroUI {
                 // Solicitar o nome do produto para registrar a saída
                 String nomeProduto = JOptionPane.showInputDialog(painelPrincipal, "Informe o nome do produto para registrar a saída:");
 
-                if (nomeProduto != null && !nomeProduto.trim().isEmpty()) {
-                    Produto produto = buscarProdutoPorNome(nomeProduto);
-                    if (produto != null) {
-                        Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
-                        merendeiro.registrarSaidaProduto(produto); // Registra a saída do produto
-                        JOptionPane.showMessageDialog(painelPrincipal, "Saída registrada para o produto: " + nomeProduto);
-                    } else {
-                        JOptionPane.showMessageDialog(painelPrincipal, "Produto não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
-                    }
-                }
+//                if (nomeProduto != null && !nomeProduto.trim().isEmpty()) {
+//                    Produto produto = buscarProdutoPorNome(nomeProduto);
+//                    if (produto != null) {
+//                        Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
+//                        merendeiro.registrarSaidaProduto(produto); // Registra a saída do produto
+//                        JOptionPane.showMessageDialog(painelPrincipal, "Saída registrada para o produto: " + nomeProduto);
+//                    } else {
+//                        JOptionPane.showMessageDialog(painelPrincipal, "Produto não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
+//                    }
+//                }
             }
         });
 
@@ -76,16 +76,16 @@ public class MerendeiroUI {
                 // Solicitar o nome do produto para registrar a entrada
                 String nomeProduto = JOptionPane.showInputDialog(painelPrincipal, "Informe o nome do produto para registrar a entrada:");
 
-                if (nomeProduto != null && !nomeProduto.trim().isEmpty()) {
-                    Produto produto = buscarProdutoPorNome(nomeProduto);
-                    if (produto != null) {
-                        Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
-                        merendeiro.registrarEntradaProduto(produto); // Registra a entrada do produto
-                        JOptionPane.showMessageDialog(painelPrincipal, "Entrada registrada para o produto: " + nomeProduto);
-                    } else {
-                        JOptionPane.showMessageDialog(painelPrincipal, "Produto não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
-                    }
-                }
+//                if (nomeProduto != null && !nomeProduto.trim().isEmpty()) {
+//                    Produto produto = buscarProdutoPorNome(nomeProduto);
+//                    if (produto != null) {
+//                        Merendeiro merendeiro = new Merendeiro("Nome do Merendeiro", "CPF", LocalDate.now(), "Endereço", 123, 1500);
+//                        merendeiro.registrarEntradaProduto(produto); // Registra a entrada do produto
+//                        JOptionPane.showMessageDialog(painelPrincipal, "Entrada registrada para o produto: " + nomeProduto);
+//                    } else {
+//                        JOptionPane.showMessageDialog(painelPrincipal, "Produto não encontrado.", "Erro", JOptionPane.ERROR_MESSAGE);
+//                    }
+//                }
             }
         });
     }

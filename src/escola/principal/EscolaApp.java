@@ -30,8 +30,8 @@ public class EscolaApp {
 
 
         // TESTE DAS EXCECOES
-        Professor marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 1, 14900.0D);
-        Professor paradise = new Professor("Ermelino Paradise", "098765432112", LocalDate.of(1970, 3, 30), "Rua das Armelinas", 1, 16000.0D);
+        Professor marina = new Professor("Marina de Lara", "1234567890", LocalDate.of(1998, 4, 12), "Rua das Flores", 14900.0D);
+        Professor paradise = new Professor("Ermelino Paradise", "098765432112", LocalDate.of(1970, 3, 30), "Rua das Armelinas", 16000.0D);
         Aluno eduardo = new Aluno("Eduardo Henrique Fabri", "12345678911", LocalDate.of(2006,8,23),"Rua HAHAHA", "Aluno");
 
         Disciplina poo = new Disciplina("POO", 120, marina);
