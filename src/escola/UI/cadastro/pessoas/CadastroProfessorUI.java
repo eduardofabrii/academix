@@ -88,17 +88,8 @@ public class CadastroProfessorUI {
     }
 
     public static void main(String[] args) {
-        // Cria a tela de cadastro de disciplina
-        CadastroDisciplinaUI cadastroDisciplinaUI = new CadastroDisciplinaUI();
-
-        // Passa a instância do CadastroDisciplinaUI para o CadastroProfessorUI
-        CadastroProfessorUI.setCadastroDisciplinaUI(cadastroDisciplinaUI);
-
-        // Cria a tela de cadastro de professor
-        CadastroProfessorUI cadastroProfessorUI = new CadastroProfessorUI();
-
         JFrame frame = new JFrame("Tela de Cadastro Professor");
-        frame.setContentPane(cadastroProfessorUI.painelPrincipal);
+        frame.setContentPane(new CadastroProfessorUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);

@@ -11,8 +11,8 @@ public class Biblioteca implements Serializable {
 
     public Biblioteca() {
         catalogo = new ArrayList<>(); // Inicializa o catálogo de livros
-        listaSalas = new ArrayList<>(); // Inicializa a lista de salas
-        livrosEmprestados = new ArrayList<>(); // Inicializa a lista de livros emprestados
+        listaSalas = new ArrayList<>();
+        livrosEmprestados = new ArrayList<>();
     }
 
     public void adicionarLivro(Livro livro){

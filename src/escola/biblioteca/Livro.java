@@ -1,7 +1,6 @@
 package escola.biblioteca;
 
 import escola.minibanco.biblioteca.GerenciarDadosBiblioteca;
-import escola.minibanco.pessoa.GerenciarDadosPessoas;
 
 import java.io.Serializable;
 
@@ -26,7 +25,7 @@ public class Livro implements Serializable {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicado = anoPublicado;
-//        new GerenciarDadosBiblioteca().gravarLivro(this);
+        new GerenciarDadosBiblioteca().gravarLivro(this);
     }
 
     public String getTitulo() {
