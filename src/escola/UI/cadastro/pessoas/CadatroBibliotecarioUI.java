@@ -32,7 +32,7 @@ public class CadatroBibliotecarioUI {
                 String endereco = enderecTextField.getText();
                 double salario = Double.parseDouble(salarioTextField.getText());
 
-                Bibliotecario novoBibliotecario = new Bibliotecario(nome, cpf, dataNascimento, endereco, 0, salario);
+                Bibliotecario novoBibliotecario = new Bibliotecario(nome, cpf, dataNascimento, endereco, salario);
 
                 System.out.println(novoBibliotecario.exibirInformacoes());
 

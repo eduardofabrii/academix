@@ -8,17 +8,14 @@ import java.util.List;
 
 public abstract class Funcionario extends Pessoa {
     private static int contador = 0;
-    private int codigo;
     private double salario;
     private List<String> registrosPonto;
 
     public Funcionario() {
-        this.codigo = ++contador;
     }
 
-    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String tipo) {
+    public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
         super(nome, CPF, dataNascimento, endereco);
-        this.codigo = ++contador;
         this.salario = salario;
     }
 
@@ -58,10 +55,6 @@ public abstract class Funcionario extends Pessoa {
         return Period.between(getDataNascimento(), hoje).getYears();
     }
 
-    public int getCodigo() {
-        return codigo;
-    }
-
     public List<String> getRegistrosPonto() {
         return registrosPonto;
     }
@@ -76,10 +69,6 @@ public abstract class Funcionario extends Pessoa {
 
     public static void setContador(int contador) {
         Funcionario.contador = contador;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
     }
 
     public double getSalario() {

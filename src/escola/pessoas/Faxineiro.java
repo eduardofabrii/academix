@@ -14,8 +14,8 @@ public class Faxineiro extends Funcionario {
         new GerenciarDadosPessoas().gravarFaxineiro(this);
     }
 
-    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
-        super(nome, CPF, dataNascimento, endereco, codigo, salario, "Faxineiro(a)");
+    public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, double salario) {
+        super(nome, CPF, dataNascimento, endereco, salario);
         this.problemasReportados = new ArrayList<>();
         new GerenciarDadosPessoas().gravarFaxineiro(this);
 
