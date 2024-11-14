@@ -19,6 +19,7 @@ public class MerendeiroUI {
     private JLabel professorLabel;
     private JButton imprimirEstoqueButton;
     private JButton registrarSaidaDeProdutoButton;
+    private JComboBox merendeiroComboBox;
 
     public MerendeiroUI() {
         criarMerendaButton.addActionListener(new ActionListener() {

@@ -27,6 +27,7 @@ public class BibliotecarioUI {
     private JButton receberDevolucaoButton;
     private JButton consultarEmprestimoButton;
     private JButton gerarRelatorioButton;
+    private JComboBox professorsComboBox;
 
     Biblioteca biblioteca = new Biblioteca();
     Bibliotecario bibliotecario = new Bibliotecario();

@@ -20,6 +20,7 @@ public class PorteiroUI {
     private JButton consultarRegistroEntradaButton;
     private JButton consultarRegistroSaidaButton;
     private JButton reportarOcorrenciaButton;
+    private JComboBox porteiroComboBox;
 
     Porteiro porteiro = new Porteiro();
 

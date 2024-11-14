@@ -15,6 +15,7 @@ public class SecretarioUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JLabel professorLabel;
+    private JComboBox secretarioComboBox;
 
     public SecretarioUI() {
         gerenciarMatriculaButton.addActionListener(new ActionListener() {

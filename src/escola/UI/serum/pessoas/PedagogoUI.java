@@ -5,7 +5,6 @@ import escola.pessoas.Aluno;
 import escola.pessoas.Pedagogo;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +16,7 @@ public class PedagogoUI {
     private JLabel escolhasLabel;
     private JLabel professorLabel;
     private JButton consultarDesempenhoButton;
+    private JComboBox pedagogoComboBox;
 
     Pedagogo pedagogo = new Pedagogo();
     Escola escola = new Escola();

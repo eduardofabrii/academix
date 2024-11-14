@@ -12,4 +12,5 @@ public class ResponsavelUI {
     private JLabel escolhasLabel;
     private JLabel professorLabel;
     private JButton calcularMediaButton;
+    private JComboBox responsavelComboBox;
 }

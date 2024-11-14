@@ -7,7 +7,6 @@ import escola.pessoas.Aluno;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class AlunoUI {
@@ -21,6 +20,7 @@ public class AlunoUI {
     private JLabel escolhasLabel;
     private JLabel alunoLabel;
     private JButton consultarTurmaButton;
+    private JComboBox alunoComboBox;
 
     private ArrayList<Aluno> alunos = new GerenciarDadosPessoas().getAlunos();
     private Escola escola;

@@ -20,6 +20,7 @@ public class DiretorUI {
     private JLabel escolhasLabel;
     private JLabel professorLabel;
     private JButton relatorioGeralButton;
+    private JComboBox diretorComboBox;
 
     Escola escola = new Escola();
 

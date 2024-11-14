@@ -15,6 +15,7 @@ public class FaxineiroUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JLabel professorLabel;
+    private JComboBox faxineiraComboBox;
 
     Faxineiro faxineiro = new Faxineiro();
 

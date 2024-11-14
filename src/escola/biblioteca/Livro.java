@@ -1,5 +1,6 @@
 package escola.biblioteca;
 
+import escola.minibanco.biblioteca.GerenciarDadosBiblioteca;
 import escola.minibanco.pessoa.GerenciarDadosPessoas;
 
 import java.io.Serializable;
