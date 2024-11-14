@@ -1,6 +1,7 @@
 package escola.boletim;
 
 import escola.administracao.Disciplina;
+import escola.minibanco.boletim.GerenciarDadosBoletim;
 import escola.pessoas.Aluno;
 
 import java.io.Serializable;
@@ -17,6 +18,7 @@ public class Boletim implements Serializable {
         this.aluno = aluno;
         this.disciplinas = new ArrayList<>();
         this.notas = new ArrayList<>();
+        new GerenciarDadosBoletim().gravarBoletim(this);
     }
 
     public double calcularMedia() {
