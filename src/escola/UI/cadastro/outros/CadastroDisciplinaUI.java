@@ -25,6 +25,7 @@ public class CadastroDisciplinaUI {
     private JComboBox<SalaAula> salaComboBox;
     private JLabel cargaHorariaLabel;
     private JLabel nomeLabel;
+    private JButton atualizarButton;
 
     public CadastroDisciplinaUI() {
         // Inicializa os JComboBox com as listas de professores e salas

@@ -79,7 +79,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(740, 600);
+        frame.setSize(450, 550);
         frame.setVisible(true);
     }
 
@@ -89,7 +89,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);
         frame.setVisible(true);
     }
 
@@ -104,12 +104,6 @@ public class CadastroUI {
     }
 
     public static void abrirCadastroDisciplinas() {
-        ArrayList<Professor> listaProfessores = new ArrayList<>();
-        listaProfessores.add(new Professor());
-
-        ArrayList<SalaAula> listaSalas = new ArrayList<>();
-        listaSalas.add(new SalaAula());
-
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
         frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -125,7 +119,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);
         frame.setVisible(true);
     }
 
@@ -135,7 +129,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);
         frame.setVisible(true);
     }
 
