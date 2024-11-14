@@ -1,6 +1,5 @@
 package escola.administracao;
 
-import escola.minibanco.GerenciarDados;
 import escola.pessoas.Aluno;
 import escola.pessoas.Professor;
 import escola.sala.SalaAula;
