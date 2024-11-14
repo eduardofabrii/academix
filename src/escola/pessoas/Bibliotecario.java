@@ -2,6 +2,7 @@ package escola.pessoas;
 
 import escola.biblioteca.Biblioteca;
 import escola.biblioteca.Livro;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,10 +11,13 @@ public class Bibliotecario extends Funcionario {
     private Biblioteca biblioteca;
 
     public Bibliotecario() {
+        new GerenciarDadosPessoas().gravarBibliotecario(this);
     }
 
     public Bibliotecario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Bibliotecario(a)");
+        new GerenciarDadosPessoas().gravarBibliotecario(this);
+
     }
 
     public void adicionarLivro(Livro livro) {

@@ -1,6 +1,7 @@
 package escola.pessoas;
 
 import escola.cantina.Produto;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,6 +12,8 @@ public class Merendeiro extends Funcionario {
 
     public Merendeiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Merendeiro(a)");
+        new GerenciarDadosPessoas().gravarMerendeiro(this);
+
     }
 
     public void criarNovoProduto(String nomeProduto, String descricaoProduto) {

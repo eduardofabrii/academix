@@ -1,7 +1,5 @@
 package escola.pessoas;
 
-import escola.minibanco.GerenciarDados;
-
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Period;
@@ -16,14 +14,12 @@ public abstract class Funcionario extends Pessoa {
 
     public Funcionario() {
         this.codigo = ++contador;
-        new GerenciarDados().gravarPessoa(this);
     }
 
     public Funcionario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario, String tipo) {
         super(nome, CPF, dataNascimento, endereco);
         this.codigo = ++contador;
         this.salario = salario;
-        new GerenciarDados().gravarPessoa(this);
     }
 
     public String exibirInformacoes() {

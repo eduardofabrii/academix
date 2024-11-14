@@ -2,6 +2,8 @@ package escola.pessoas;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.pessoas.Aluno;
 
 public class Responsavel extends Pessoa {
@@ -10,6 +12,8 @@ public class Responsavel extends Pessoa {
     public Responsavel(String nome, String CPF, LocalDate dataNascimento, String endereco) {
         super(nome, CPF, dataNascimento, endereco);
         this.alunos = new ArrayList<>();
+        new GerenciarDadosPessoas().gravarResponsavel(this);
+
     }
 
     public void adicionarAluno(Aluno aluno) {

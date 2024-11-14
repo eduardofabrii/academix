@@ -1,5 +1,7 @@
 package escola.pessoas;
 
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,11 +11,14 @@ public class Faxineiro extends Funcionario {
 
     public Faxineiro() {
         this.problemasReportados = new ArrayList<>();
+        new GerenciarDadosPessoas().gravarFaxineiro(this);
     }
 
     public Faxineiro(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Faxineiro(a)");
         this.problemasReportados = new ArrayList<>();
+        new GerenciarDadosPessoas().gravarFaxineiro(this);
+
     }
 
     public void reportarProblemasDeManutencao(String problema) {

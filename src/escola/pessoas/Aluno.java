@@ -5,8 +5,6 @@ import escola.boletim.Boletim;
 import java.util.ArrayList;
 import escola.administracao.Turma;
 import escola.boletim.Nota;
-import escola.minibanco.Empacotamento;
-import escola.minibanco.GerenciarDados;
 import escola.minibanco.pessoa.GerenciarDadosPessoas;
 
 public class Aluno extends Pessoa {
@@ -28,7 +26,7 @@ public class Aluno extends Pessoa {
     }
 
     public Aluno(String nomeAluno) {
-        new GerenciarDados().gravarPessoa(this);
+        new GerenciarDadosPessoas().gravarAluno(this);
     }
 
     @Override

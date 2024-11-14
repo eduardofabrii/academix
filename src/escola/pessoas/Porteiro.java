@@ -1,5 +1,7 @@
 package escola.pessoas;
 
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +14,15 @@ public class Porteiro extends Funcionario {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Porteiro");
         registroEntrada = new ArrayList<>();
         registroSaida = new ArrayList<>();
+        new GerenciarDadosPessoas().gravarPorteiro(this);
+
     }
 
     public Porteiro() {
         registroEntrada = new ArrayList<>();
         registroSaida = new ArrayList<>();
+        new GerenciarDadosPessoas().gravarPorteiro(this);
+
     }
 
     public void registrarEntrada(Pessoa pessoa) {

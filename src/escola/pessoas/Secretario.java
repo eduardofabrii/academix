@@ -2,6 +2,8 @@ package escola.pessoas;
 
 import java.time.LocalDate;
 import java.util.Date;
+
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.pessoas.Aluno;
 import java.util.List;
 
@@ -9,6 +11,8 @@ public class Secretario extends Funcionario {
 
     public Secretario(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario ,"Secretario(a)");
+        new GerenciarDadosPessoas().gravarSecretario(this);
+
     }
 
     public void gerenciarMatriculas(Aluno aluno) {

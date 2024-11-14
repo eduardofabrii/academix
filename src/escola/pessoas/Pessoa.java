@@ -1,7 +1,6 @@
 package escola.pessoas;
 
 import escola.biblioteca.Livro;
-import escola.minibanco.GerenciarDados;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -17,7 +16,6 @@ public class Pessoa implements Serializable {
 
     public Pessoa() {
         this.livrosEmprestados = new ArrayList<>();
-        new GerenciarDados().gravarPessoa(this);
     }
 
     public Pessoa(String nome, String CPF, LocalDate dataNascimento, String endereco) {
@@ -26,12 +24,10 @@ public class Pessoa implements Serializable {
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
         this.livrosEmprestados = new ArrayList<>();
-        new GerenciarDados().gravarPessoa(this);
     }
 
     public Pessoa(String nome) {
         this.livrosEmprestados = new ArrayList<>();
-        new GerenciarDados().gravarPessoa(this);
     }
 
     public void emprestarLivro(Livro livro) {

@@ -1,12 +1,15 @@
 package escola.pessoas;
 
 import escola.administracao.Turma;
+import escola.minibanco.pessoa.GerenciarDadosPessoas;
+
 import java.time.LocalDate;
 import java.util.List;
 
 public class Diretor extends Funcionario {
     public Diretor(String nome, String CPF, LocalDate dataNascimento, String endereco, int codigo, double salario) {
         super(nome, CPF, dataNascimento, endereco, codigo, salario, "Diretor(a)");
+        new GerenciarDadosPessoas().gravarDiretor(this);
     }
 
     public void gerenciarProfessores(List<Professor> professores) {
