@@ -7,7 +7,6 @@ import escola.pessoas.Aluno;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class AlunoUI {
@@ -21,6 +20,7 @@ public class AlunoUI {
     private JLabel escolhasLabel;
     private JLabel alunoLabel;
     private JButton consultarTurmaButton;
+    private JComboBox alunoComboBox;
 
     private ArrayList<Aluno> alunos = new GerenciarDadosPessoas().getAlunos();
     private Escola escola;
@@ -94,7 +94,7 @@ public class AlunoUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela do Aluno");
         frame.setContentPane((new AlunoUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);

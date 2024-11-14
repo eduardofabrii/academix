@@ -1,6 +1,11 @@
 package escola.UI.cadastro.pessoas;
 
+import escola.pessoas.Pedagogo;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.time.LocalDate;
 
 public class CadastroPedagogoUI {
     public JPanel painelPrincipal;
@@ -34,7 +39,7 @@ public class CadastroPedagogoUI {
 //                } catch(IOException i){
 //                    System.out.println("Erro: Pedagogo não salvo");
 //                }
-
+//
 //                System.out.println(novoPedagogo.exibirInformacoes());
 //
 //                JOptionPane.showMessageDialog(null, "Pedagogo " + nome + " cadastrado com sucesso!");
@@ -45,7 +50,7 @@ public class CadastroPedagogoUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela de Cadastro Pedagogo");
         frame.setContentPane((new CadastroPedagogoUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);

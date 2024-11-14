@@ -20,6 +20,7 @@ public class DiretorUI {
     private JLabel escolhasLabel;
     private JLabel professorLabel;
     private JButton relatorioGeralButton;
+    private JComboBox diretorComboBox;
 
     Escola escola = new Escola();
 
@@ -80,7 +81,7 @@ public class DiretorUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela do Diretor");
         frame.setContentPane(new DiretorUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);

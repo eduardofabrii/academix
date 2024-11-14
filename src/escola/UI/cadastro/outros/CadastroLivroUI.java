@@ -55,7 +55,7 @@ public class CadastroLivroUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Cadastro de Livro");
         frame.setContentPane(new CadastroLivroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(400, 300);

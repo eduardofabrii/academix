@@ -1,9 +1,7 @@
 package escola.UI;
 
-import escola.UI.cadastro.pessoas.CadastroFuncionariosUI;
 import escola.UI.serum.entrada.CadastroUI;
 import escola.UI.serum.entrada.EntrarComoUI;
-import escola.administracao.Escola;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

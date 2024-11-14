@@ -112,7 +112,7 @@ public class CadastroUI {
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
         frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -122,7 +122,7 @@ public class CadastroUI {
     public static void abrirCadastroTurma() {
         JFrame frame = new JFrame("Cadastro de Turma");
         frame.setContentPane(new CadastroTurmaUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(400, 300);
@@ -132,7 +132,7 @@ public class CadastroUI {
     public static void abrirCadastroLivro() {
         JFrame frame = new JFrame("Cadastro de Livro");
         frame.setContentPane(new CadastroLivroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(400, 300);
@@ -142,7 +142,7 @@ public class CadastroUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela de Cadastros");
         frame.setContentPane((new CadastroUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(1000, 450);

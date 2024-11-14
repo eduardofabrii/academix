@@ -15,6 +15,7 @@ public class SecretarioUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JLabel professorLabel;
+    private JComboBox secretarioComboBox;
 
     public SecretarioUI() {
         gerenciarMatriculaButton.addActionListener(new ActionListener() {
@@ -82,7 +83,7 @@ public class SecretarioUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Secretario");
         frame.setContentPane(new SecretarioUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);

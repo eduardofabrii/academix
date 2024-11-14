@@ -19,6 +19,7 @@ public class MerendeiroUI {
     private JLabel professorLabel;
     private JButton imprimirEstoqueButton;
     private JButton registrarSaidaDeProdutoButton;
+    private JComboBox merendeiroComboBox;
 
     public MerendeiroUI() {
         criarMerendaButton.addActionListener(new ActionListener() {
@@ -102,7 +103,7 @@ public class MerendeiroUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Merendeiro");
         frame.setContentPane(new MerendeiroUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(600, 230);
