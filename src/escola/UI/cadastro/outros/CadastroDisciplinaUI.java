@@ -5,8 +5,6 @@ import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.minibanco.salas.GerenciarDadosSalas;
 import escola.pessoas.Professor;
 import escola.sala.SalaAula;
-import escola.UI.gerenciadores.GerenciadorProfessores;
-import escola.UI.gerenciadores.GerenciadorSalas;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -52,7 +50,7 @@ public class CadastroDisciplinaUI {
                 Professor professor = (Professor) professorComboBox.getSelectedItem();
                 SalaAula sala = (SalaAula) salaComboBox.getSelectedItem();
 
-                // Verifica se professor, sala ou turma são nulos
+//                 Verifica se professor, sala ou turma são nulos
                 if (professor == null) {
                     JOptionPane.showMessageDialog(null, "Selecione um professor válido.");
                     return;
@@ -65,7 +63,7 @@ public class CadastroDisciplinaUI {
                 // Cria a nova disciplina com os dados informados
                 Disciplina novaDisciplina = new Disciplina(nome, cargaHoraria, sala, professor);
 
-                // Adiciona a disciplina à turma selecionada
+//                 Adiciona a disciplina à turma selecionada
 
                 JOptionPane.showMessageDialog(null, "Disciplina " + nome + " cadastrada com sucesso!");
 
@@ -75,13 +73,12 @@ public class CadastroDisciplinaUI {
                 professorComboBox.setSelectedIndex(0);
                 salaComboBox.setSelectedIndex(0);
 
-                System.out.println("Disciplina cadastrada!" + novaDisciplina.exibirInformacoes());
+                System.out.println("Disciplina cadastrada!" + novaDisciplina);
             }
         });
     }
 
     public static void main(String[] args) {
-
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
         frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

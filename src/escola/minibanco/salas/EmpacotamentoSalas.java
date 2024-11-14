@@ -1,6 +1,7 @@
 package escola.minibanco.salas;
 
 
+import escola.administracao.Disciplina;
 import escola.sala.Sala;
 
 import java.io.*;
@@ -20,7 +21,7 @@ public class EmpacotamentoSalas {
     }
 
     @SuppressWarnings("unchecked")
-    public static HashMap<String, ArrayList<Sala>> lerArquivo(String diretorio){
+    public static HashMap<String, ArrayList<Sala>> lerArquivo(String diretorio) {
         HashMap<String, ArrayList<Sala>> map = new HashMap<>();
         try {
             File arq = new File(diretorio);

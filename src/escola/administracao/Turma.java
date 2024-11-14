@@ -21,7 +21,6 @@ public class Turma implements Serializable {
         this.listaAlunos = new ArrayList<>();
         this.listaDisciplinas = new ArrayList<>();
         new GerenciarDadosAdministracao().gravarTurma(this);
-
     }
 
     public Turma(String nome) {
@@ -29,7 +28,6 @@ public class Turma implements Serializable {
         this.listaAlunos = new ArrayList<>();
         this.listaDisciplinas = new ArrayList<>();
         new GerenciarDadosAdministracao().gravarTurma(this);
-
     }
 
     public void verAlunos() {
@@ -87,7 +85,6 @@ public class Turma implements Serializable {
     public String toString() {
         return "Turma: " + nome;
     }
-
 
 
     public String getNome() {

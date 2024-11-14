@@ -20,7 +20,7 @@ public class AlunoUI {
     private JLabel escolhasLabel;
     private JLabel alunoLabel;
     private JButton consultarTurmaButton;
-    private JComboBox<String> alunoComboBox;
+    private JComboBox alunoComboBox;
     private JButton atualizarButton;
 
     private ArrayList<Aluno> alunos = new GerenciarDadosPessoas().getAlunos();

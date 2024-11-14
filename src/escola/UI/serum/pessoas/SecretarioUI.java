@@ -21,7 +21,6 @@ public class SecretarioUI {
     private JPanel painelTitulo;
     private JLabel escolhasLabel;
     private JLabel professorLabel;
-    private JComboBox alunoComboBox;
     private JButton atualizarButton;
     private ArrayList<Secretario> secretarios = new GerenciarDadosPessoas().getSecretarios();
     private JComboBox secretarioCombox;
@@ -53,7 +52,7 @@ public class SecretarioUI {
 
         // Adiciona os alunos à escola e popula o ComboBox inicialmente
         for (Secretario s : secretarios) {
-            escola.adicionarProfessor(s);
+            escola.adicionarSecretario(s);
         }
         atualizarComboBox();
 
