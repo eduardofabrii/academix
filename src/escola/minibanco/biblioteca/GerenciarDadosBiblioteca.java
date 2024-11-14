@@ -3,12 +3,14 @@ package escola.minibanco.biblioteca;
 import escola.biblioteca.Biblioteca;
 import escola.biblioteca.Livro;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GerenciarDadosBiblioteca {
     private static final String FILE_PATH = "src\\escola\\minibanco\\biblioteca\\dadosLivro.ser";
-    private HashMap<String, ArrayList<Biblioteca>> dados = new HashMap<>();
+    private HashMap<String, ArrayList<Serializable>> dados = new HashMap<>();
+    private ArrayList<Biblioteca> bibliotecas = new ArrayList<>();
     private ArrayList<Livro> livros = new ArrayList<>();
 
     public GerenciarDadosBiblioteca(){
@@ -21,7 +23,7 @@ public class GerenciarDadosBiblioteca {
     }
 
     public void gravarLivro(Livro l){
-        ArrayList<Biblioteca> listaLivro = dados.get("livro");
+        ArrayList<Serializable> listaLivro = dados.get("livro");
         if(listaLivro == null) {
             listaLivro = new ArrayList<>();
             dados.put("livro", listaLivro);
@@ -31,17 +33,13 @@ public class GerenciarDadosBiblioteca {
         EmpacotamentoBiblioteca.salvarArquivo(dados, FILE_PATH);
     }
     public void lerLivro(){
-        ArrayList<Biblioteca> listaLivro = dados.get("livro");
+        ArrayList<Serializable> listaLivro = dados.get("livro");
         if (listaLivro != null ){
-            for (Biblioteca l : listaLivro){
+            for (Serializable l : listaLivro){
                 Livro livro = (Livro) l;
                 livros.add(livro);
             }
         }
-    }
-
-    public HashMap<String, ArrayList<Biblioteca>> getDados() {
-        return dados;
     }
 
     public ArrayList<Livro> getLivros() {

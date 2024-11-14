@@ -1,9 +1,10 @@
 package escola.biblioteca;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import escola.sala.SalaBiblioteca;
 
-public class Biblioteca {
+public class Biblioteca implements Serializable {
     private ArrayList<Livro> catalogo;
     private ArrayList<SalaBiblioteca> listaSalas;
     private ArrayList<Livro> livrosEmprestados;

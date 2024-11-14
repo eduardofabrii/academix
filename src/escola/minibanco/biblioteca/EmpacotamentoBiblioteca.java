@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class EmpacotamentoBiblioteca {
-    public static void salvarArquivo(HashMap<String, ArrayList<Biblioteca>> map, String diretorio) {
+    public static void salvarArquivo(HashMap<String, ArrayList<Serializable>> map, String diretorio) {
         try{
             FileOutputStream fos = new FileOutputStream(diretorio);
             ObjectOutputStream os = new ObjectOutputStream(fos);
@@ -20,14 +20,14 @@ public class EmpacotamentoBiblioteca {
     }
 
     @SuppressWarnings("unchecked")
-    public static HashMap<String, ArrayList<Biblioteca>> lerArquivo(String diretorio){
-        HashMap<String, ArrayList<Biblioteca>> map = new HashMap<>();
+    public static HashMap<String, ArrayList<Serializable>> lerArquivo(String diretorio){
+        HashMap<String, ArrayList<Serializable>> map = new HashMap<>();
         try {
             File arq = new File(diretorio);
             if (arq.exists()){
                 FileInputStream fis = new FileInputStream(diretorio);
                 ObjectInputStream os = new ObjectInputStream(fis);
-                map = (HashMap <String, ArrayList<Biblioteca>>) os.readObject();
+                map = (HashMap <String, ArrayList<Serializable>>) os.readObject();
                 os.close();
             }
         } catch (IOException i){

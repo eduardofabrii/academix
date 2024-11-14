@@ -2,7 +2,9 @@ package escola.biblioteca;
 
 import escola.minibanco.pessoa.GerenciarDadosPessoas;
 
-public class Livro {
+import java.io.Serializable;
+
+public class Livro implements Serializable {
     private String titulo;
     private String autor;
     private int anoPublicado;
