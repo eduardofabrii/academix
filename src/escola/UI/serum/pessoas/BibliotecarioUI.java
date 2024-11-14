@@ -1,9 +1,9 @@
 package escola.UI.serum.pessoas;
 
-import escola.UI.cadastro.outros.CadastroLivroUI;
 import escola.administracao.Escola;
 import escola.biblioteca.Biblioteca;
 import escola.biblioteca.Livro;
+import escola.pessoas.Aluno;
 import escola.pessoas.Bibliotecario;
 import escola.pessoas.Pessoa;
 
@@ -27,7 +27,8 @@ public class BibliotecarioUI {
     private JButton receberDevolucaoButton;
     private JButton consultarEmprestimoButton;
     private JButton gerarRelatorioButton;
-    private JComboBox professorsComboBox;
+    private JComboBox bibliotecarioComboBox;
+    private JButton atualizarButton;
 
     Biblioteca biblioteca = new Biblioteca();
     Bibliotecario bibliotecario = new Bibliotecario();
@@ -208,7 +209,11 @@ public class BibliotecarioUI {
             }
         });
 
+        // Método para atualizar o ComboBox de alunos
+//        private void atualizarComboBox() {
+        // fazer
     }
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Bibliotecário");
@@ -216,7 +221,7 @@ public class BibliotecarioUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(800, 400);
+        frame.setSize(600, 400);
         frame.setVisible(true);
     }
 }

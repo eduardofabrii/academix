@@ -26,6 +26,7 @@ public class ProfessorUI {
     private JButton consultarNotaButton;
     private JButton consultarTurmaButton;
     private JButton lecionarDisciplina;
+    private JButton atualizarButton;
     private JComboBox<Professor> professorsComboBox;
 
     Professor p = new Professor();
@@ -155,7 +156,7 @@ public class ProfessorUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(500, 400);
         frame.setVisible(true);
     }
 }
