@@ -74,12 +74,11 @@ public class GerenciarDadosPessoas {
 
     public void lerProfessores(){
         ArrayList<Pessoa> listaProfessor = dados.get("professor");
-        if(listaProfessor != null){
+        if (listaProfessor != null){
             for (Pessoa p : listaProfessor){
                 Professor professor = (Professor) p;
                 professores.add(professor);
             }
-
         }
     }
 
@@ -101,7 +100,6 @@ public class GerenciarDadosPessoas {
                 Bibliotecario bibliotecario = (Bibliotecario) b;
                 bibliotecarios.add(bibliotecario);
             }
-
         }
     }
 

@@ -76,7 +76,7 @@ public class CadastroUI {
     public static void abrirCadastroFuncionariosUI() {
         JFrame frame = new JFrame("Tela de Cadastro Funcionarios");
         frame.setContentPane((new CadastroFuncionariosUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(740, 600);
@@ -86,7 +86,7 @@ public class CadastroUI {
     public static void abrirCadastroSala() {
         JFrame frame = new JFrame("Cadastro de Sala");
         frame.setContentPane(new CadastroSalaUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(400, 300);
@@ -96,7 +96,7 @@ public class CadastroUI {
     public static void abrirCadastroAluno() {
         JFrame frame = new JFrame("Tela de Cadastro Aluno");
         frame.setContentPane(new CadastroAlunoUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
