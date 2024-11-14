@@ -31,7 +31,6 @@ public class Disciplina implements Serializable {
         this.alunos = new ArrayList<>();
         this.sala = sala;
         new GerenciarDadosAdministracao().gravarDisciplina(this);
-
     }
 
     public String exibirInformacoes() {
