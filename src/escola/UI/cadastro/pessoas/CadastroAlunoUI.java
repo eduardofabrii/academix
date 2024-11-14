@@ -1,4 +1,5 @@
 package escola.UI.cadastro.pessoas;
+import escola.administracao.Turma;
 import escola.pessoas.Aluno;
 
 import javax.swing.*;
@@ -6,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class CadastroAlunoUI {
     public JPanel painelPrincipal;
@@ -20,8 +22,14 @@ public class CadastroAlunoUI {
     private JTextField enderecTextField;
     private JTextField nomeTextField;
     private JTextField matriculaTextField;
+    private JComboBox<Turma> comboBoxTurmas;
 
     public CadastroAlunoUI() {
+        ArrayList<Turma> turmas = new ArrayList<>();
+        turmas.add(new Turma("Largo da Ordem", 2024));
+        for (Turma t : turmas){
+            comboBoxTurmas.addItem(t);
+        }
         cadastrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,9 +58,9 @@ public class CadastroAlunoUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela de Cadastro Aluno");
         frame.setContentPane(new CadastroAlunoUI().painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
-        frame.setResizable(false);
+        frame.setResizable(true);
         frame.setSize(500, 300);
         frame.setVisible(true);
     }

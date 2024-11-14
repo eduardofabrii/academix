@@ -37,7 +37,7 @@ public class EscolaPrincipalUI {
     public static void entrarComo() {
         JFrame frame = new JFrame("Tela de Entrar Como");
         frame.setContentPane((new EntrarComoUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(900, 450);
@@ -47,7 +47,7 @@ public class EscolaPrincipalUI {
     public static void cadastros() {
         JFrame frame = new JFrame("Tela de Cadastros");
         frame.setContentPane((new CadastroUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(1100, 450);
@@ -57,7 +57,7 @@ public class EscolaPrincipalUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Escola Principal");
         frame.setContentPane((new EscolaPrincipalUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
