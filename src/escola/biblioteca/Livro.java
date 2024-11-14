@@ -1,5 +1,7 @@
 package escola.biblioteca;
 
+import escola.minibanco.biblioteca.GerenciarDadosBiblioteca;
+
 public class Livro {
     private String titulo;
     private String autor;
@@ -21,6 +23,7 @@ public class Livro {
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicado = anoPublicado;
+        new GerenciarDadosBiblioteca().gravarLivro(this);
     }
 
     public String getTitulo() {
