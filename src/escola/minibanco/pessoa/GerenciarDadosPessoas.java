@@ -2,7 +2,7 @@ package escola.minibanco.pessoa;
 
 import escola.pessoas.*;
 
-import java.io.Serializable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
