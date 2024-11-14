@@ -53,7 +53,7 @@ public class SecretarioUI {
 
         // Adiciona os alunos à escola e popula o ComboBox inicialmente
         for (Secretario s : secretarios) {
-            escola.adicionarProfessor(s);
+            escola.adicionarSecretario(s);
         }
         atualizarComboBox();
 
