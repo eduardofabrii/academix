@@ -22,7 +22,7 @@ public class SalaAula extends Sala {
 
     @Override
     public void reservarSala() {
-        System.out.println("Sala" + getNome() + "Capacidade" + getCapacidade() );
+        System.out.println("Sala" + getNome() + " - Capacidade" + getCapacidade() );
     }
 }
 

@@ -39,7 +39,7 @@ public class Disciplina implements Serializable {
 
     public String exibirInformacoes() {
         String salaNome = (sala != null) ? sala.getNome() : "Sala não definida"; // Verificação de null
-        return "Disciplina: " + nome + "\nCarga Horária: " + cargaHoraria + " horas\nSala: " + salaNome + "\nProfessor: " + professor.getNome();
+        return "Disciplina: " + nome + "\n - Carga Horária: " + cargaHoraria + " horas\nSala: " + salaNome + "\nProfessor: " + professor.getNome();
     }
 
     public void adicionarAluno(Aluno aluno) {

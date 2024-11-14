@@ -114,7 +114,7 @@ public class CadastroFuncionariosUI {
     public static void abrirCadastroSecretario() {
         JFrame frame = new JFrame("Tela de Cadastro Secretario");
         frame.setContentPane((new CadastroSecretarioUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -124,7 +124,7 @@ public class CadastroFuncionariosUI {
     public static void abrirCadastroMerendeiro() {
         JFrame frame = new JFrame("Tela de Cadastro Merendeiro");
         frame.setContentPane((new CadastroMerendeiroUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -134,7 +134,7 @@ public class CadastroFuncionariosUI {
     public static void abrirCadastroDiretor() {
         JFrame frame = new JFrame("Tela de Cadastro Diretor");
         frame.setContentPane((new CadastroDiretorUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -144,7 +144,7 @@ public class CadastroFuncionariosUI {
     public static void abrirCadastroBibliotecario() {
         JFrame frame = new JFrame("Tela de Cadastro Bibliotecario");
         frame.setContentPane((new CadatroBibliotecarioUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -154,7 +154,7 @@ public class CadastroFuncionariosUI {
     public static void abrirCadastroPorteiro() {
         JFrame frame = new JFrame("Tela de Cadastro Porteiro");
         frame.setContentPane((new CadastroPorteiroUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(500, 300);
@@ -164,7 +164,7 @@ public class CadastroFuncionariosUI {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tela de Cadastro Funcionarios");
         frame.setContentPane((new CadastroFuncionariosUI()).painelPrincipal);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
         frame.setSize(740, 600);

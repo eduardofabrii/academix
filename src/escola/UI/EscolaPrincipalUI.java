@@ -38,7 +38,7 @@ public class EscolaPrincipalUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(900, 450);
+        frame.setSize(750, 500);
         frame.setVisible(true);
     }
 
@@ -48,7 +48,7 @@ public class EscolaPrincipalUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(1100, 450);
+        frame.setSize(550, 450);
         frame.setVisible(true);
     }
 
@@ -58,7 +58,7 @@ public class EscolaPrincipalUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(500, 300);
+        frame.setSize(600, 350);
         frame.setVisible(true);
     }
 }

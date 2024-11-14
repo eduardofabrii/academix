@@ -239,7 +239,7 @@
                     <properties>
                       <font name="Calibri" size="28" style="1"/>
                       <foreground color="-1"/>
-                      <text value="Cadastro de Funcinarios"/>
+                      <text value="Cadastro de Funcionarios"/>
                     </properties>
                   </component>
                 </children>
