@@ -42,6 +42,11 @@ public class Disciplina implements Serializable {
         return "Disciplina: " + nome + "\n - Carga Horária: " + cargaHoraria + " horas\nSala: " + salaNome + "\nProfessor: " + professor.getNome();
     }
 
+    @Override
+    public String toString() {
+        return "Disciplina: " + nome + "\n - Carga Horária: " + cargaHoraria + " horas\n" + "\n - Professor: " + professor.getNome();
+    }
+
     public void adicionarAluno(Aluno aluno) {
         if (aluno != null) {
             alunos.add(aluno);
@@ -79,15 +84,6 @@ public class Disciplina implements Serializable {
             }
         }
         return null;
-    }
-
-    @Override
-    public String toString() {
-        return "Disciplina{" +
-                "sala=" + sala +
-                ", nome='" + nome + '\'' +
-                ", professor=" + professor +
-                '}';
     }
 
     public String getNome() {
