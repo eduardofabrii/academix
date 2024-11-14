@@ -88,7 +88,6 @@ public class Pessoa implements Serializable {
         return "Nome: " + nome +
                 ", CPF: " + CPF +
                 ", Nascimento: " + dataNascimento +
-                ", Endereço: " + endereco +
-                ", Tipo: ";
+                ", Endereço: " + endereco;
     }
 }

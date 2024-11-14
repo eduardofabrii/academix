@@ -20,30 +20,28 @@ public class Disciplina implements Serializable {
         this.cargaHoraria = cargaHoraria;
         this.professor = professor;
         this.alunos = new ArrayList<>();
-        new GerenciarDadosAdministracao().gravarDisciplina(this);
     }
 
     public Disciplina(String nome) {
         this.nome = nome;
-        this.alunos = new ArrayList<>();
-        new GerenciarDadosAdministracao().gravarDisciplina(this);
-
     }
 
     public Disciplina(String nome, int cargaHoraria, SalaAula sala, Professor professor) {
         this(nome, cargaHoraria, professor);
         this.alunos = new ArrayList<>();
+        this.sala = sala;
         new GerenciarDadosAdministracao().gravarDisciplina(this);
+
     }
 
     public String exibirInformacoes() {
-//        String salaNome = (sala != null) ? sala.getNome() : "Sala não definida"; // Verificação de null
-        return "";
+        String salaNome = (sala != null) ? sala.getNome() : "Sala não definida"; // Verificação de null
+        return "Disciplina: " + nome + "\n - Carga Horária: " + cargaHoraria + " horas\nSala: " + salaNome + "\nProfessor: " + professor.getNome();
     }
 
     @Override
     public String toString() {
-        return "Disciplina: " + nome + "\n - Carga Horária: " + cargaHoraria + " horas" + "\n - Professor: " + professor.getNome();
+        return "Disciplina: " + nome + "\n - Carga Horária: " + cargaHoraria + " horas\n" + "\n - Professor: " + professor.getNome();
     }
 
     public void adicionarAluno(Aluno aluno) {
@@ -85,8 +83,6 @@ public class Disciplina implements Serializable {
         return null;
     }
 
-
-
     public String getNome() {
         return nome;
     }
@@ -118,6 +114,4 @@ public class Disciplina implements Serializable {
     public void setAlunos(ArrayList<Aluno> alunos) {
         this.alunos = alunos;
     }
-
-
 }
