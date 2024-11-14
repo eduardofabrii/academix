@@ -79,7 +79,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(740, 600);
+        frame.setSize(450, 550);
         frame.setVisible(true);
     }
 
@@ -89,7 +89,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);
         frame.setVisible(true);
     }
 
@@ -119,7 +119,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);
         frame.setVisible(true);
     }
 
@@ -129,7 +129,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);
         frame.setVisible(true);
     }
 
@@ -139,7 +139,7 @@ public class CadastroUI {
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);
-        frame.setSize(1000, 450);
+        frame.setSize(500, 450);
         frame.setVisible(true);
     }
 }

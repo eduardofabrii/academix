@@ -20,6 +20,7 @@ public class CadastroTurmaUI {
     private JLabel escolhasLabel;
     private JLabel professorLabel;
     private JComboBox<Disciplina> disciplinaComboBox;
+    private JButton atualizarButton;
 
     public CadastroTurmaUI() {
         for (Disciplina d: new GerenciarDadosAdministracao().getDisciplinas()){

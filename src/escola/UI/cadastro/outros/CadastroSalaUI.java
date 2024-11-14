@@ -18,6 +18,7 @@ public class CadastroSalaUI {
     private JTextField nomeSalaTextField;
     private JTextField capacidadeSalaTextField;
     private JTextField idSalaTextField;
+    private JButton atualizarButton;
 
     public CadastroSalaUI() {
         // Atualiza o campo de ID com o próximo ID disponível

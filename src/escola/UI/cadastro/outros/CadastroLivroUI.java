@@ -19,6 +19,7 @@ public class CadastroLivroUI {
     private JTextField tituloTextField;
     private JTextField autorTextField;
     private JTextField anoPublicacaoTextField;
+    private JButton atualizarButton;
 
     private Biblioteca biblioteca = new Biblioteca();
 

@@ -18,7 +18,7 @@ public abstract class Sala implements Serializable {
 
     @Override
     public String toString() {
-        return getNome() + " Capacidade: " + getCapacidade();
+        return getNome() + " - Capacidade: " + getCapacidade();
     }
 
     public int getId() {
