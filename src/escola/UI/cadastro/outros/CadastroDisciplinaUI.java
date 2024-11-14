@@ -25,15 +25,14 @@ public class CadastroDisciplinaUI {
     private JComboBox<SalaAula> salaComboBox;
     private JLabel cargaHorariaLabel;
     private JLabel nomeLabel;
-
     public CadastroDisciplinaUI() {
         // Inicializa os JComboBox com as listas de professores e salas
-        for (Professor p: new GerenciarDadosPessoas().getProfessores())
+        for (Professor p : new GerenciarDadosPessoas().getProfessores()) {
             professorComboBox.addItem(p);
-
-        for (SalaAula sa: new GerenciarDadosSalas().getSalasAula())
+        }
+        for (SalaAula sa : new GerenciarDadosSalas().getSalasAula()) {
             salaComboBox.addItem(sa);
-
+        }
         cadastrarDisciplinaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -80,9 +79,10 @@ public class CadastroDisciplinaUI {
     }
 
     public static void main(String[] args) {
+        CadastroDisciplinaUI cadastroDisciplinaUI = new CadastroDisciplinaUI();
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
-        frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
+        frame.setContentPane(cadastroDisciplinaUI.painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);

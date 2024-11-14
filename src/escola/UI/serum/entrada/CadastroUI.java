@@ -104,12 +104,6 @@ public class CadastroUI {
     }
 
     public static void abrirCadastroDisciplinas() {
-        ArrayList<Professor> listaProfessores = new ArrayList<>();
-        listaProfessores.add(new Professor());
-
-        ArrayList<SalaAula> listaSalas = new ArrayList<>();
-        listaSalas.add(new SalaAula());
-
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
         frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
