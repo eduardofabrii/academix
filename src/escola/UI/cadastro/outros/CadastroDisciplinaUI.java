@@ -2,6 +2,7 @@ package escola.UI.cadastro.outros;
 
 import escola.administracao.Disciplina;
 import escola.minibanco.pessoa.GerenciarDadosPessoas;
+import escola.minibanco.salas.GerenciarDadosSalas;
 import escola.pessoas.Professor;
 import escola.sala.SalaAula;
 import escola.UI.gerenciadores.GerenciadorProfessores;
@@ -29,6 +30,9 @@ public class CadastroDisciplinaUI {
         // Inicializa os JComboBox com as listas de professores e salas
         for (Professor p: new GerenciarDadosPessoas().getProfessores())
             professorComboBox.addItem(p);
+
+        for (SalaAula sa: new GerenciarDadosSalas().getSalasAula())
+            salaComboBox.addItem(sa);
 
         cadastrarDisciplinaButton.addActionListener(new ActionListener() {
             @Override
@@ -76,10 +80,9 @@ public class CadastroDisciplinaUI {
     }
 
     public static void main(String[] args) {
-        CadastroDisciplinaUI cadastroDisciplinaUI = new CadastroDisciplinaUI();
 
         JFrame frame = new JFrame("Tela de Cadastro de Disciplina");
-        frame.setContentPane(cadastroDisciplinaUI.painelPrincipal);
+        frame.setContentPane(new CadastroDisciplinaUI().painelPrincipal);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         frame.setResizable(false);

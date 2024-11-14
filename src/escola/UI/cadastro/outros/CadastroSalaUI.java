@@ -47,9 +47,6 @@ public class CadastroSalaUI {
                     // Exibe o nome da sala criada para debug
                     System.out.println("Sala criada: " + novaSala.getNome());
 
-                    // Adiciona a nova sala ao GerenciadorSalas
-                    GerenciadorSalas.getInstance().adicionarSala(novaSala);
-
                     // Exibe uma mensagem de sucesso
                     JOptionPane.showMessageDialog(null, "Sala " + nomeSala + " cadastrada com sucesso!");
 
