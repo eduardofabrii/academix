@@ -20,19 +20,16 @@ public class Disciplina implements Serializable {
         this.cargaHoraria = cargaHoraria;
         this.professor = professor;
         this.alunos = new ArrayList<>();
-        new GerenciarDadosAdministracao().gravarDisciplina(this);
     }
 
     public Disciplina(String nome) {
         this.nome = nome;
-        this.alunos = new ArrayList<>();
-        new GerenciarDadosAdministracao().gravarDisciplina(this);
-
     }
 
     public Disciplina(String nome, int cargaHoraria, SalaAula sala, Professor professor) {
         this(nome, cargaHoraria, professor);
         this.alunos = new ArrayList<>();
+        this.sala = sala;
         new GerenciarDadosAdministracao().gravarDisciplina(this);
 
     }
