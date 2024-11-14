@@ -30,6 +30,7 @@ public class CadastroAlunoUI {
         for (Turma t : turmas){
             comboBoxTurmas.addItem(t);
         }
+
         cadastrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
