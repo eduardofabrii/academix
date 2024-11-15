@@ -11,10 +11,9 @@ public class EscolaPrincipalUI {
     private JPanel painelPrincipal;
     private JPanel painelBase2;
     private JPanel painelBase;
-    private JPanel painelTitulo;
-    private JLabel escolhasLabel;
     private JButton cadastroButton;
     private JButton entrarComoButton;
+    private JLabel escolhasLabel;
 
     public EscolaPrincipalUI() {
         cadastroButton.addActionListener(new ActionListener() {
