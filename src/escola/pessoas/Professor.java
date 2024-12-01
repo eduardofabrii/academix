@@ -38,11 +38,17 @@ public class Professor extends Funcionario {
     }
 
     public void atribuirNota(Aluno aluno, Disciplina disciplina, double valor) throws BoletimNaoRegistradoException, DisciplinaInvalidaException {
-        if (!disciplinas.contains(disciplina)) {
-            throw new DisciplinaInvalidaException("O professor não leciona a disciplina: " + disciplina.getNome());
+        boolean disciplinaLecionada = false;
+
+        for (Disciplina d : disciplinas) {
+            if (d.getNome().equalsIgnoreCase(disciplina.getNome())) {
+                disciplinaLecionada = true;
+                break;
+            }
         }
-        if (aluno.getBoletim() == null) {
-            throw new BoletimNaoRegistradoException("O aluno " + aluno.getNome() + " não possui boletim registrado.");
+
+        if (!disciplinaLecionada) {
+            throw new DisciplinaInvalidaException("O professor não leciona a disciplina: " + disciplina.getNome());
         }
 
         Nota nota = new Nota(aluno, disciplina, valor);

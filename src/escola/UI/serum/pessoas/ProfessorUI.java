@@ -34,6 +34,7 @@ public class ProfessorUI {
     private JComboBox professorsComboBox;
     ArrayList<Aluno> alunos = new GerenciarDadosPessoas().getAlunos();
     ArrayList<Disciplina> disciplinas = new GerenciarDadosAdministracao().getDisciplinas();
+    ArrayList<Turma> turmas = new GerenciarDadosAdministracao().getTurmas();
 
     Escola escola = new Escola();
 
@@ -59,10 +60,14 @@ public class ProfessorUI {
                     Aluno aluno = new Aluno(nomeAluno);
                     Disciplina disciplina = new Disciplina(nomeDisciplina);
 
+                    // Obtém o professor selecionado no ComboBox
                     Professor professorSelecionado = (Professor) professorsComboBox.getSelectedItem();
+
                     if (professorSelecionado != null) {
                         professorSelecionado.atribuirNota(aluno, disciplina, nota);
                         System.out.println("Nota atribuída com sucesso!");
+                    } else {
+                        System.out.println("Nenhum professor selecionado.");
                     }
                 } catch (NumberFormatException ex) {
                     System.out.println("Por favor, insira uma nota válida!");
@@ -72,6 +77,10 @@ public class ProfessorUI {
             }
         });
 
+
+
+
+
         atualizarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -80,11 +89,10 @@ public class ProfessorUI {
             }
         });
 
-        // Adiciona os alunos à escola e popula o ComboBox inicialmente
-        for (Professor pr : professores) {
-            escola.adicionarProfessor(pr);
+        professorsComboBox.removeAllItems();
+        for (Professor professor : professores) {
+            professorsComboBox.addItem(professor);
         }
-        atualizarComboBox();
 
         lecionarDisciplina.addActionListener(new ActionListener() {
             @Override
@@ -112,10 +120,23 @@ public class ProfessorUI {
                 String nomeDisciplina = JOptionPane.showInputDialog("Digite o nome da disciplina:");
 
                 try {
-                    Turma turma = new Turma(nomeTurma); // Aqui seria necessário um método para buscar a turma na escola
-                    Disciplina disciplina = new Disciplina(nomeDisciplina);
+                    for (Turma t : turmas) {
+                        if (t.getNome() == null) {
+                            continue; // fazer jqotption pane
+                        }
 
-                    p.gerarRelatorioDesempenho(turma, disciplina);
+                        if (t.getNome().equalsIgnoreCase(nomeTurma)) {
+                            for (Disciplina d : disciplinas) {
+                                if (d.getNome().equalsIgnoreCase(nomeDisciplina)) {
+                                    p.gerarRelatorioDesempenho(t, d);
+                                } else {
+                                    System.out.println("Disciplina inexistente"); //jqpotion
+                                }
+                            }
+                        } else {
+                            // jqoptionpane
+                        }
+                    }
                 } catch (Exception ex) {
                     System.out.println("Erro ao gerar o relatório de desempenho: " + ex.getMessage());
                 }
@@ -156,7 +177,6 @@ public class ProfessorUI {
             }
         });
     }
-
 
     private void inicializarProfessores() {
         new GerenciarDadosPessoas().lerProfessores();
