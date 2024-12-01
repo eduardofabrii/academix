@@ -129,27 +129,19 @@ public class ProfessorUI {
                 String nomeDisciplina = JOptionPane.showInputDialog("Digite o nome da disciplina:");
 
                 try {
-                    for (Aluno a : alunos){
-                        if (a.getNome() == null){
+                    for (Aluno a : alunos) {
+                        if (a.getNome() == null) {
                             continue;
                         }
-                        if (a.getNome().equalsIgnoreCase(nomeAluno)){
-                            for (Disciplina d : disciplinas){
-                                if (d.getNome().equalsIgnoreCase(nomeDisciplina)){
+                        if (a.getNome().equalsIgnoreCase(nomeAluno)) {
+                            for (Disciplina d : disciplinas) {
+                                if (d.getNome().equalsIgnoreCase(nomeDisciplina)) {
                                     ArrayList<Nota> notas = p.consultarNotas(a, d);
                                 } else {
-                                    System.out.println("Aluno não matriculado nessa disciplina");
+                                    System.out.println("Disciplina inexistente");
                                 }
                             }
                         }
-                    }
-                    if (notas != null && !notas.isEmpty()) {
-                        System.out.println("Notas do aluno " + nomeAluno + " na disciplina " + nomeDisciplina + ":");
-                        for (Nota nota : notas) {
-                            System.out.println("Nota: " + nota.getValor());
-                        }
-                    } else {
-                        System.out.println("Não há notas registradas para o aluno " + nomeAluno + " na disciplina " + nomeDisciplina + ".");
                     }
                 } catch (Exception ex) {
                     System.out.println("Erro ao consultar as notas: " + ex.getMessage());
@@ -184,7 +176,7 @@ public class ProfessorUI {
 
     public void atualizarComboBox() {
         professorsComboBox.removeAllItems();
-        for (Professor professor: professores) {
+        for (Professor professor : professores) {
             professorsComboBox.addItem(professor.getNome());
         }
     }

@@ -2,6 +2,7 @@ package escola.boletim;
 
 
 import escola.administracao.Disciplina;
+import escola.minibanco.boletim.GerenciarDadosBoletim;
 import escola.pessoas.Aluno;
 
 import java.io.Serializable;
@@ -15,6 +16,7 @@ public class Nota implements Serializable {
         this.disciplina = disciplina;
         this.aluno = aluno;
         this.valor = valor;
+        new GerenciarDadosBoletim().gravarNota(this);
     }
 
     @Override
