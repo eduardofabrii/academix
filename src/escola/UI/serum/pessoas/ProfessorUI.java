@@ -5,6 +5,7 @@ import escola.administracao.Disciplina;
 import escola.administracao.Escola;
 import escola.administracao.Turma;
 import escola.boletim.Nota;
+import escola.minibanco.administracao.GerenciarDadosAdministracao;
 import escola.minibanco.pessoa.GerenciarDadosPessoas;
 import escola.pessoas.Aluno;
 import escola.pessoas.Porteiro;
@@ -31,6 +32,8 @@ public class ProfessorUI {
     private JButton atualizarButton;
     private ArrayList<Professor> professores = new GerenciarDadosPessoas().getProfessores();
     private JComboBox professorsComboBox;
+    ArrayList<Aluno> alunos = new GerenciarDadosPessoas().getAlunos();
+    ArrayList<Disciplina> disciplinas = new GerenciarDadosAdministracao().getDisciplinas();
 
     Escola escola = new Escola();
 
@@ -126,10 +129,20 @@ public class ProfessorUI {
                 String nomeDisciplina = JOptionPane.showInputDialog("Digite o nome da disciplina:");
 
                 try {
-                    Aluno aluno = new Aluno(nomeAluno); // Aqui seria necessário um método para buscar o aluno
-                    Disciplina disciplina = new Disciplina(nomeDisciplina); // E a disciplina
-                    ArrayList<Nota> notas = p.consultarNotas(aluno, disciplina);
-
+                    for (Aluno a : alunos){
+                        if (a.getNome() == null){
+                            continue;
+                        }
+                        if (a.getNome().equalsIgnoreCase(nomeAluno)){
+                            for (Disciplina d : disciplinas){
+                                if (d.getNome().equalsIgnoreCase(nomeDisciplina)){
+                                    ArrayList<Nota> notas = p.consultarNotas(a, d);
+                                } else {
+                                    System.out.println("Aluno não matriculado nessa disciplina");
+                                }
+                            }
+                        }
+                    }
                     if (notas != null && !notas.isEmpty()) {
                         System.out.println("Notas do aluno " + nomeAluno + " na disciplina " + nomeDisciplina + ":");
                         for (Nota nota : notas) {
